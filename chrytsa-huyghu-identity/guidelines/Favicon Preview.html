@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Favicon Set — Chrytsa · Huyghu</title>
+<meta name="viewport" content="width=1440">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Montserrat:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold-hi:#F4D773; --gold:#D4AF37; --gold-mid:#B8862B; --gold-sh:#8B5E1A;
+    --ink:#0A0A0A; --paper:#fff; --cream:#FAFAF8; --rule:rgba(10,10,10,.10);
+    --serif:'Cinzel',Georgia,serif; --sans:'Montserrat',sans-serif;
+    --body:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:#EAE7DF;color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased}
+  .page{max-width:1440px;margin:0 auto;padding:72px 56px 96px}
+
+  header.brand-hdr{
+    border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);
+    padding:28px 0 24px;display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:24px;margin-bottom:48px;
+  }
+  .eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:.32em;text-transform:uppercase;opacity:.7}
+  .doc-title{font-family:var(--serif);font-weight:500;font-size:38px;letter-spacing:.04em;text-align:center;margin:0;line-height:1}
+  .doc-title small{display:block;font-family:var(--sans);font-weight:500;font-size:10.5px;letter-spacing:.36em;margin-top:14px;color:var(--gold-sh)}
+  .meta{font-family:var(--mono);font-size:11px;text-align:right;opacity:.7;line-height:1.7}
+
+  .sec-hd{display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:20px;margin:64px 0 24px;padding-bottom:14px;border-bottom:1px solid var(--ink)}
+  .sec-no{font-family:var(--mono);font-size:13px;font-weight:500}
+  .sec-title{font-family:var(--serif);font-weight:500;font-size:22px;letter-spacing:.08em;margin:0}
+  .sec-meta{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;opacity:.6}
+
+  .brand-block{margin-bottom:32px}
+  .brand-label{
+    font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--gold-sh);margin:8px 0 16px;
+  }
+
+  /* File-table card */
+  .files-grid{
+    display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:24px;
+  }
+  .file-card{
+    background:#fff;border:1px solid var(--rule);padding:18px;display:flex;flex-direction:column;align-items:center;gap:10px;
+  }
+  .file-card .frame{
+    background:#0A0A0A;width:96px;height:96px;display:flex;align-items:center;justify-content:center;
+    border:1px solid rgba(212,175,55,.18);
+  }
+  .file-card .frame img{display:block;image-rendering:auto}
+  .file-card .nm{font-family:var(--mono);font-size:10.5px;color:#3b3b3b;letter-spacing:.04em;text-align:center}
+  .file-card .nm b{display:block;font-family:var(--sans);font-weight:600;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#0A0A0A;margin-bottom:2px}
+
+  /* === Browser tabs mock === */
+  .browser-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+  .browser{
+    background:#fff;border:1px solid var(--rule);border-radius:8px;overflow:hidden;
+    box-shadow:0 1px 0 rgba(0,0,0,.04);
+  }
+  .browser .chrome-hd{
+    background:#E9E7E1;padding:10px 12px 0;
+    display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(0,0,0,.06);
+  }
+  .browser .dots{display:flex;gap:6px;margin-right:6px}
+  .browser .dots span{width:10px;height:10px;border-radius:50%;background:#d3cfc6}
+  .browser .tab{
+    background:#fff;padding:8px 12px;border-radius:6px 6px 0 0;display:flex;align-items:center;gap:8px;font-family:var(--body);font-size:12px;color:#222;
+    box-shadow:0 -1px 0 rgba(0,0,0,.05);
+    min-width:200px;
+  }
+  .browser .tab img{width:16px;height:16px;display:block}
+  .browser .tab .close{margin-left:auto;color:#888;font-size:14px;line-height:1}
+  .browser .addr{padding:8px 14px 12px;background:#E9E7E1}
+  .browser .addr .inp{
+    background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:14px;padding:6px 12px;
+    font-family:var(--body);font-size:11.5px;color:#555;display:flex;align-items:center;gap:8px;
+  }
+  .browser .addr .inp::before{content:"";width:10px;height:10px;border:1.4px solid #888;border-radius:50%;display:inline-block}
+  .browser .body{height:140px;background:#fff;background-image:repeating-linear-gradient(180deg,#fff 0 10px,#fafafa 10px 11px)}
+  .browser-label{font-family:var(--mono);font-size:10.5px;color:#555;text-align:center;margin-top:8px;letter-spacing:.06em}
+  .safari .chrome-hd{background:#D9D5CB}
+  .safari .tab{border-radius:6px;background:#EFEDE7;color:#222}
+  .safari .tab.active{background:#fff}
+  .firefox .chrome-hd{background:#E9E7E1}
+  .firefox .tab{border-radius:6px 6px 0 0}
+
+  /* iPhone home */
+  .device-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;align-items:start}
+  .iphone{
+    width:280px;height:560px;border-radius:42px;
+    background:linear-gradient(180deg,#1a1a1a,#0a0a0a);
+    padding:14px;position:relative;margin:0 auto;
+    box-shadow:0 30px 60px -30px rgba(0,0,0,.4), inset 0 0 0 1.5px #333;
+  }
+  .iphone .notch{position:absolute;top:18px;left:50%;transform:translateX(-50%);width:84px;height:24px;background:#000;border-radius:14px;z-index:2}
+  .iphone .screen{
+    width:100%;height:100%;border-radius:30px;overflow:hidden;
+    background:
+      radial-gradient(circle at 30% 20%, rgba(212,175,55,.22), transparent 55%),
+      radial-gradient(circle at 80% 70%, rgba(139,94,26,.25), transparent 55%),
+      linear-gradient(160deg,#0c1a2b,#1a1410);
+    position:relative;
+    padding:38px 16px 80px;
+    display:flex;flex-direction:column;
+  }
+  .iphone .status{
+    display:flex;justify-content:space-between;align-items:center;
+    color:#fff;font-family:var(--body);font-size:13px;font-weight:600;
+    padding:0 18px 14px;
+  }
+  .iphone .grid-apps{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:14px 0;
+    flex:1;align-content:start;
+  }
+  .iphone .app{display:flex;flex-direction:column;align-items:center;gap:6px;color:#fff;font-family:var(--body);font-size:10.5px}
+  .iphone .app .ic{width:50px;height:50px;border-radius:12px;background:#222;overflow:hidden;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 2px 4px rgba(0,0,0,.25);}
+  .iphone .app .ic img{width:100%;height:100%;display:block}
+  .iphone .app .ic.gen{
+    background:linear-gradient(135deg,#444,#222);
+  }
+  .iphone .dock{
+    position:absolute;bottom:18px;left:14px;right:14px;
+    background:rgba(255,255,255,.18);backdrop-filter:blur(20px);
+    border-radius:22px;padding:10px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;
+  }
+  .iphone .dock .ic{width:46px;height:46px;border-radius:12px;background:#333;margin:0 auto}
+
+  /* Android home */
+  .android{
+    width:280px;height:560px;border-radius:32px;padding:8px;
+    background:#0c0c0c;position:relative;margin:0 auto;
+    box-shadow:0 30px 60px -30px rgba(0,0,0,.4), inset 0 0 0 1.5px #2a2a2a;
+  }
+  .android .screen{
+    width:100%;height:100%;border-radius:26px;overflow:hidden;
+    background:
+      radial-gradient(circle at 70% 30%, rgba(212,175,55,.18), transparent 50%),
+      linear-gradient(180deg,#0e0e0e,#1a1a1a);
+    padding:36px 14px 70px;display:flex;flex-direction:column;
+  }
+  .android .status{display:flex;justify-content:space-between;color:#ccc;font-family:var(--body);font-size:11px;padding:0 8px 14px}
+  .android .grid-apps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px 0;flex:1;align-content:start}
+  .android .app{display:flex;flex-direction:column;align-items:center;gap:6px;color:#fff;font-family:var(--body);font-size:10px}
+  .android .app .ic{width:48px;height:48px;border-radius:50%;background:#333;overflow:hidden}
+  .android .app .ic img{width:100%;height:100%;display:block;border-radius:50%}
+  .android .dock{position:absolute;bottom:14px;left:14px;right:14px;display:grid;grid-template-columns:repeat(5,1fr);gap:8px;background:rgba(255,255,255,.06);border-radius:18px;padding:8px}
+  .android .dock .ic{width:38px;height:38px;border-radius:50%;background:#444;margin:0 auto}
+
+  /* Windows tile */
+  .winframe{
+    width:280px;height:560px;border-radius:8px;
+    background:linear-gradient(135deg,#0078D4,#005a9e);
+    padding:32px 18px;margin:0 auto;
+    box-shadow:0 30px 60px -30px rgba(0,0,0,.35);
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .winframe .ttl{font-family:var(--body);font-weight:600;color:#fff;font-size:13px;margin-bottom:10px;letter-spacing:.02em}
+  .winframe .tiles{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  .winframe .tile{background:rgba(255,255,255,.08);padding:10px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;font-family:var(--body);font-size:11px;min-height:74px;border:1px solid rgba(255,255,255,.10)}
+  .winframe .tile.lg{grid-column:span 2;min-height:110px;background:#0A0A0A;padding:16px;align-items:flex-start;justify-content:space-between;flex-direction:column}
+  .winframe .tile.lg img{width:64px;height:64px;display:block;margin-bottom:6px}
+  .winframe .tile.lg .nm{font-family:var(--sans);font-weight:600;letter-spacing:.16em;font-size:10px;text-transform:uppercase;color:var(--gold)}
+
+  .device-label{font-family:var(--mono);font-size:10.5px;color:#3b3b3b;text-align:center;margin-top:14px;letter-spacing:.06em}
+
+  /* Code blocks */
+  pre.code{
+    background:#0A0A0A;color:#E7DDB8;font-family:var(--mono);font-size:11.5px;line-height:1.7;
+    padding:24px 28px;border-radius:4px;overflow:auto;white-space:pre;
+    border:1px solid rgba(212,175,55,.18);
+  }
+  pre.code .c{color:#6b6b6b}
+  pre.code .k{color:#F4D773}
+  pre.code .s{color:#9fcf99}
+  pre.code .a{color:#B8862B}
+  .code-hdr{
+    display:flex;align-items:center;justify-content:space-between;
+    background:#1a1612;color:#F4D773;padding:10px 16px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;
+    border:1px solid rgba(212,175,55,.18);border-bottom:none;
+  }
+  .code-hdr button{background:transparent;border:1px solid rgba(244,215,115,.4);color:#F4D773;padding:4px 10px;font-family:var(--mono);font-size:10.5px;cursor:pointer;letter-spacing:.06em}
+  .code-hdr button:hover{background:rgba(244,215,115,.1)}
+
+  .two-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+
+  footer{
+    margin-top:80px;padding-top:24px;border-top:1px solid var(--ink);
+    display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;
+    font-family:var(--mono);font-size:11px;color:#3b3b3b;letter-spacing:.04em;line-height:1.7;
+  }
+  footer .r{text-align:right}
+  footer .c{text-align:center}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="brand-hdr">
+    <div class="eyebrow">Brand Kit · Bloque 02 / 08</div>
+    <h1 class="doc-title">Favicon Set
+      <small>20 ARCHIVOS · PWA · MULTI-PLATAFORMA</small>
+    </h1>
+    <div class="meta">
+      v1.0 · 2026.05<br>
+      10 archivos × 2 marcas<br>
+      .ico · .png · .svg · .json
+    </div>
+  </header>
+
+  <!-- ════════ ARCHIVOS GENERADOS ════════════════════ -->
+  <div class="sec-hd">
+    <div class="sec-no">§ 1.0</div>
+    <h2 class="sec-title">Archivos · 10 por marca</h2>
+    <div class="sec-meta">/favicons/chrytsa · /favicons/huyghu</div>
+  </div>
+
+  <div class="brand-block">
+    <div class="brand-label">Grupo Chrytsa · Asesores</div>
+    <div class="files-grid">
+      <div class="file-card"><div class="frame" style="width:16px;height:16px"><img src="../favicons/chrytsa/favicon-16.png" width="16" height="16" alt=""></div><div class="nm"><b>favicon-16</b>16×16 · ICO inset</div></div>
+      <div class="file-card"><div class="frame" style="width:32px;height:32px"><img src="../favicons/chrytsa/favicon-32.png" width="32" height="32" alt=""></div><div class="nm"><b>favicon-32</b>32×32 · ICO inset</div></div>
+      <div class="file-card"><div class="frame" style="width:48px;height:48px"><img src="../favicons/chrytsa/favicon-48.png" width="48" height="48" alt=""></div><div class="nm"><b>favicon-48</b>48×48 · Win shortcut</div></div>
+      <div class="file-card"><div class="frame"><img src="../favicons/chrytsa/apple-touch-icon-180.png" width="80" height="80" alt=""></div><div class="nm"><b>apple-touch-180</b>180×180 · iOS</div></div>
+      <div class="file-card"><div class="frame"><img src="../favicons/chrytsa/android-chrome-192.png" width="80" height="80" alt=""></div><div class="nm"><b>android-192</b>192×192 · PWA</div></div>
+      <div class="file-card"><div class="frame"><img src="../favicons/chrytsa/android-chrome-512.png" width="80" height="80" alt=""></div><div class="nm"><b>android-512</b>512×512 · PWA</div></div>
+      <div class="file-card"><div class="frame"><img src="../favicons/chrytsa/mstile-150.png" width="80" height="80" alt=""></div><div class="nm"><b>mstile-150</b>150×150 · Windows</div></div>
+      <div class="file-card"><div class="frame"><img src="../favicons/chrytsa/maskable-icon-512.png" width="80" height="80" alt=""></div><div class="nm"><b>maskable-512</b>512×512 · safe zone</div></div>
+      <div class="file-card"><div class="frame" style="background:#fff;border:1px solid #ddd"><img src="../favicons/chrytsa/safari-pinned-tab.svg" width="60" height="60" alt=""></div><div class="nm"><b>safari-pinned</b>SVG monochrome</div></div>
+      <div class="file-card"><div class="frame" style="background:#fff;color:#0A0A0A;font-family:'JetBrains Mono';font-size:11px;letter-spacing:.06em;flex-direction:column;gap:4px">
+        <div style="font-family:var(--sans);font-weight:600;letter-spacing:.16em;font-size:10px">ICO</div>
+        <div style="font-size:9.5px;color:#6b6b6b">16+32+48</div>
+      </div><div class="nm"><b>favicon.ico</b>multi-size pack</div></div>
+    </div>
+  </div>
+
+  <div class="brand-block">
+    <div class="brand-label">Huyghu &amp; Asociados · Contadores Públicos</div>
+    <div class="files-grid">
+      <div class="file-card"><div class="frame" style="width:16px;height:16px"><img src="../favicons/huyghu/favicon-16.png" width="16" height="16" alt=""></div><div class="nm"><b>favicon-16</b>16×16 · ICO inset</div></div>
+      <div class="file-card"><div class="frame" style="width:32px;height:32px"><img src="../favicons/huyghu/favicon-32.png" width="32" height="32" alt=""></div><div class="nm"><b>favicon-32</b>32×32 · ICO inset</div></div>
+      <div class="file-card"><div class="frame" style="width:48px;height:48px"><img src="../favicons/huyghu/favicon-48.png" width="48" height="48" alt=""></div><div class="nm"><b>favicon-48</b>48×48 · Win shortcut</div></div>
+      <div class="file-card"><div class="frame"><img src="../favicons/huyghu/apple-touch-icon-180.png" width="80" height="80" alt=""></div><div class="nm"><b>apple-touch-180</b>180×180 · iOS</div></div>
+      <div class="file-card"><div class="frame"><img src="../favicons/huyghu/android-chrome-192.png" width="80" height="80" alt=""></div><div class="nm"><b>android-192</b>192×192 · PWA</div></div>
+      <div class="file-card"><div class="frame"><img src="../favicons/huyghu/android-chrome-512.png" width="80" height="80" alt=""></div><div class="nm"><b>android-512</b>512×512 · PWA</div></div>
+      <div class="file-card"><div class="frame"><img src="../favicons/huyghu/mstile-150.png" width="80" height="80" alt=""></div><div class="nm"><b>mstile-150</b>150×150 · Windows</div></div>
+      <div class="file-card"><div class="frame"><img src="../favicons/huyghu/maskable-icon-512.png" width="80" height="80" alt=""></div><div class="nm"><b>maskable-512</b>512×512 · safe zone</div></div>
+      <div class="file-card"><div class="frame" style="background:#fff;border:1px solid #ddd"><img src="../favicons/huyghu/safari-pinned-tab.svg" width="60" height="60" alt=""></div><div class="nm"><b>safari-pinned</b>SVG monochrome</div></div>
+      <div class="file-card"><div class="frame" style="background:#fff;color:#0A0A0A;font-family:'JetBrains Mono';font-size:11px;letter-spacing:.06em;flex-direction:column;gap:4px">
+        <div style="font-family:var(--sans);font-weight:600;letter-spacing:.16em;font-size:10px">ICO</div>
+        <div style="font-size:9.5px;color:#6b6b6b">16+32+48</div>
+      </div><div class="nm"><b>favicon.ico</b>multi-size pack</div></div>
+    </div>
+  </div>
+
+  <!-- ════════ BROWSER TABS ═══════════════════════════ -->
+  <div class="sec-hd">
+    <div class="sec-no">§ 2.0</div>
+    <h2 class="sec-title">Browser Tabs · Vista a tamaño real</h2>
+    <div class="sec-meta">favicon-16.png · in situ</div>
+  </div>
+
+  <div class="brand-block">
+    <div class="brand-label">Grupo Chrytsa</div>
+    <div class="browser-row">
+      <div>
+        <div class="browser chrome">
+          <div class="chrome-hd"><div class="dots"><span></span><span></span><span></span></div>
+            <div class="tab"><img src="../favicons/chrytsa/favicon-16.png" alt=""><span>Grupo Chrytsa Asesores</span><span class="close">×</span></div>
+          </div>
+          <div class="addr"><div class="inp">grupochrytsa.com</div></div>
+          <div class="body"></div>
+        </div>
+        <div class="browser-label">CHROME · macOS</div>
+      </div>
+      <div>
+        <div class="browser safari">
+          <div class="chrome-hd"><div class="dots"><span></span><span></span><span></span></div>
+            <div class="tab active"><img src="../favicons/chrytsa/favicon-16.png" alt=""><span>Grupo Chrytsa — Asesores</span></div>
+          </div>
+          <div class="addr"><div class="inp">grupochrytsa.com</div></div>
+          <div class="body"></div>
+        </div>
+        <div class="browser-label">SAFARI · macOS</div>
+      </div>
+      <div>
+        <div class="browser firefox">
+          <div class="chrome-hd"><div class="dots"><span></span><span></span><span></span></div>
+            <div class="tab"><img src="../favicons/chrytsa/favicon-16.png" alt=""><span>Grupo Chrytsa</span><span class="close">×</span></div>
+          </div>
+          <div class="addr"><div class="inp">grupochrytsa.com</div></div>
+          <div class="body"></div>
+        </div>
+        <div class="browser-label">FIREFOX · Windows</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-block">
+    <div class="brand-label">Huyghu &amp; Asociados</div>
+    <div class="browser-row">
+      <div>
+        <div class="browser chrome">
+          <div class="chrome-hd"><div class="dots"><span></span><span></span><span></span></div>
+            <div class="tab"><img src="../favicons/huyghu/favicon-16.png" alt=""><span>Huyghu &amp; Asociados — Contadores</span><span class="close">×</span></div>
+          </div>
+          <div class="addr"><div class="inp">huyghusrl.com</div></div>
+          <div class="body"></div>
+        </div>
+        <div class="browser-label">CHROME · macOS</div>
+      </div>
+      <div>
+        <div class="browser safari">
+          <div class="chrome-hd"><div class="dots"><span></span><span></span><span></span></div>
+            <div class="tab active"><img src="../favicons/huyghu/favicon-16.png" alt=""><span>Huyghu &amp; Asociados</span></div>
+          </div>
+          <div class="addr"><div class="inp">huyghusrl.com</div></div>
+          <div class="body"></div>
+        </div>
+        <div class="browser-label">SAFARI · macOS</div>
+      </div>
+      <div>
+        <div class="browser firefox">
+          <div class="chrome-hd"><div class="dots"><span></span><span></span><span></span></div>
+            <div class="tab"><img src="../favicons/huyghu/favicon-16.png" alt=""><span>Huyghu Contadores</span><span class="close">×</span></div>
+          </div>
+          <div class="addr"><div class="inp">huyghusrl.com</div></div>
+          <div class="body"></div>
+        </div>
+        <div class="browser-label">FIREFOX · Windows</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════ DEVICES ═════════════════════════════════ -->
+  <div class="sec-hd">
+    <div class="sec-no">§ 3.0</div>
+    <h2 class="sec-title">Pantallas de inicio · iPhone · Android · Windows Tile</h2>
+    <div class="sec-meta">Touch icons · maskable</div>
+  </div>
+
+  <div class="brand-block">
+    <div class="brand-label">Grupo Chrytsa</div>
+    <div class="device-row">
+      <div>
+        <div class="iphone">
+          <div class="notch"></div>
+          <div class="screen">
+            <div class="status"><span>9:41</span><span>● ● ●</span></div>
+            <div class="grid-apps">
+              <div class="app"><div class="ic gen"></div><span>Mail</span></div>
+              <div class="app"><div class="ic gen"></div><span>Notes</span></div>
+              <div class="app"><div class="ic gen"></div><span>Maps</span></div>
+              <div class="app"><div class="ic"><img src="../favicons/chrytsa/apple-touch-icon-180.png"></div><span>Chrytsa</span></div>
+              <div class="app"><div class="ic gen"></div><span>Calc</span></div>
+              <div class="app"><div class="ic gen"></div><span>Camera</span></div>
+              <div class="app"><div class="ic gen"></div><span>Photos</span></div>
+              <div class="app"><div class="ic gen"></div><span>Files</span></div>
+            </div>
+            <div class="dock">
+              <div class="ic"></div><div class="ic"></div><div class="ic"></div><div class="ic"></div>
+            </div>
+          </div>
+        </div>
+        <div class="device-label">iPhone · apple-touch-icon-180.png</div>
+      </div>
+      <div>
+        <div class="android">
+          <div class="screen">
+            <div class="status"><span>9:41</span><span>📶 📡 100%</span></div>
+            <div class="grid-apps">
+              <div class="app"><div class="ic" style="background:#1a73e8"></div><span>Gmail</span></div>
+              <div class="app"><div class="ic" style="background:#34a853"></div><span>Maps</span></div>
+              <div class="app"><div class="ic" style="background:#fbbc04"></div><span>Drive</span></div>
+              <div class="app"><div class="ic"><img src="../favicons/chrytsa/android-chrome-192.png"></div><span>Chrytsa</span></div>
+              <div class="app"><div class="ic" style="background:#ea4335"></div><span>Photos</span></div>
+              <div class="app"><div class="ic" style="background:#5f6368"></div><span>Files</span></div>
+              <div class="app"><div class="ic" style="background:#4285f4"></div><span>Calendar</span></div>
+              <div class="app"><div class="ic" style="background:#9c27b0"></div><span>Clock</span></div>
+            </div>
+            <div class="dock"><div class="ic"></div><div class="ic"></div><div class="ic"></div><div class="ic"></div><div class="ic"></div></div>
+          </div>
+        </div>
+        <div class="device-label">Android · android-chrome-192.png</div>
+      </div>
+      <div>
+        <div class="winframe">
+          <div class="ttl">Inicio</div>
+          <div class="tiles">
+            <div class="tile lg">
+              <img src="../favicons/chrytsa/mstile-150.png" alt="">
+              <div class="nm">Grupo Chrytsa</div>
+            </div>
+            <div class="tile">Outlook</div>
+            <div class="tile">Edge</div>
+            <div class="tile">Teams</div>
+            <div class="tile">Word</div>
+            <div class="tile">Excel</div>
+            <div class="tile">PowerPoint</div>
+          </div>
+        </div>
+        <div class="device-label">Windows · mstile-150.png</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brand-block" style="margin-top:40px">
+    <div class="brand-label">Huyghu &amp; Asociados</div>
+    <div class="device-row">
+      <div>
+        <div class="iphone">
+          <div class="notch"></div>
+          <div class="screen">
+            <div class="status"><span>9:41</span><span>● ● ●</span></div>
+            <div class="grid-apps">
+              <div class="app"><div class="ic gen"></div><span>Mail</span></div>
+              <div class="app"><div class="ic gen"></div><span>Notes</span></div>
+              <div class="app"><div class="ic"><img src="../favicons/huyghu/apple-touch-icon-180.png"></div><span>Huyghu</span></div>
+              <div class="app"><div class="ic gen"></div><span>DGII</span></div>
+              <div class="app"><div class="ic gen"></div><span>Calc</span></div>
+              <div class="app"><div class="ic gen"></div><span>Camera</span></div>
+              <div class="app"><div class="ic gen"></div><span>Photos</span></div>
+              <div class="app"><div class="ic gen"></div><span>Files</span></div>
+            </div>
+            <div class="dock">
+              <div class="ic"></div><div class="ic"></div><div class="ic"></div><div class="ic"></div>
+            </div>
+          </div>
+        </div>
+        <div class="device-label">iPhone · apple-touch-icon-180.png</div>
+      </div>
+      <div>
+        <div class="android">
+          <div class="screen">
+            <div class="status"><span>9:41</span><span>📶 📡 100%</span></div>
+            <div class="grid-apps">
+              <div class="app"><div class="ic" style="background:#1a73e8"></div><span>Gmail</span></div>
+              <div class="app"><div class="ic" style="background:#34a853"></div><span>Maps</span></div>
+              <div class="app"><div class="ic"><img src="../favicons/huyghu/android-chrome-192.png"></div><span>Huyghu</span></div>
+              <div class="app"><div class="ic" style="background:#fbbc04"></div><span>Drive</span></div>
+              <div class="app"><div class="ic" style="background:#ea4335"></div><span>Photos</span></div>
+              <div class="app"><div class="ic" style="background:#5f6368"></div><span>Files</span></div>
+              <div class="app"><div class="ic" style="background:#4285f4"></div><span>Calendar</span></div>
+              <div class="app"><div class="ic" style="background:#9c27b0"></div><span>Clock</span></div>
+            </div>
+            <div class="dock"><div class="ic"></div><div class="ic"></div><div class="ic"></div><div class="ic"></div><div class="ic"></div></div>
+          </div>
+        </div>
+        <div class="device-label">Android · android-chrome-192.png</div>
+      </div>
+      <div>
+        <div class="winframe">
+          <div class="ttl">Inicio</div>
+          <div class="tiles">
+            <div class="tile lg">
+              <img src="../favicons/huyghu/mstile-150.png" alt="">
+              <div class="nm">Huyghu</div>
+            </div>
+            <div class="tile">Outlook</div>
+            <div class="tile">Edge</div>
+            <div class="tile">Teams</div>
+            <div class="tile">Word</div>
+            <div class="tile">Excel</div>
+            <div class="tile">PowerPoint</div>
+          </div>
+        </div>
+        <div class="device-label">Windows · mstile-150.png</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════ HEAD SNIPPETS ═════════════════════════ -->
+  <div class="sec-hd">
+    <div class="sec-no">§ 4.0</div>
+    <h2 class="sec-title">Snippet &lt;head&gt; · Listo para copy-paste</h2>
+    <div class="sec-meta">Next.js / vanilla HTML / WordPress</div>
+  </div>
+
+  <div class="two-cols">
+    <div>
+      <div class="code-hdr"><span>// chrytsa · public/index.html &lt;head&gt;</span><button onclick="copyCode('chr-head')">Copiar</button></div>
+<pre class="code" id="chr-head"><span class="c">&lt;!-- Favicons —  Grupo Chrytsa Asesores --&gt;</span>
+<span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"icon"</span> <span class="a">href</span>=<span class="s">"/favicons/favicon.ico"</span> <span class="a">sizes</span>=<span class="s">"any"</span><span class="k">&gt;</span>
+<span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"icon"</span> <span class="a">type</span>=<span class="s">"image/png"</span> <span class="a">sizes</span>=<span class="s">"16x16"</span> <span class="a">href</span>=<span class="s">"/favicons/favicon-16.png"</span><span class="k">&gt;</span>
+<span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"icon"</span> <span class="a">type</span>=<span class="s">"image/png"</span> <span class="a">sizes</span>=<span class="s">"32x32"</span> <span class="a">href</span>=<span class="s">"/favicons/favicon-32.png"</span><span class="k">&gt;</span>
+<span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"apple-touch-icon"</span> <span class="a">sizes</span>=<span class="s">"180x180"</span> <span class="a">href</span>=<span class="s">"/favicons/apple-touch-icon-180.png"</span><span class="k">&gt;</span>
+<span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"mask-icon"</span> <span class="a">href</span>=<span class="s">"/favicons/safari-pinned-tab.svg"</span> <span class="a">color</span>=<span class="s">"#D4AF37"</span><span class="k">&gt;</span>
+<span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"manifest"</span> <span class="a">href</span>=<span class="s">"/favicons/manifest.json"</span><span class="k">&gt;</span>
+<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"theme-color"</span> <span class="a">content</span>=<span class="s">"#0A0A0A"</span><span class="k">&gt;</span>
+<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"msapplication-TileColor"</span> <span class="a">content</span>=<span class="s">"#0A0A0A"</span><span class="k">&gt;</span>
+<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"msapplication-TileImage"</span> <span class="a">content</span>=<span class="s">"/favicons/mstile-150.png"</span><span class="k">&gt;</span>
+<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"application-name"</span> <span class="a">content</span>=<span class="s">"Grupo Chrytsa"</span><span class="k">&gt;</span>
+<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"apple-mobile-web-app-title"</span> <span class="a">content</span>=<span class="s">"Chrytsa"</span><span class="k">&gt;</span>
+<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"apple-mobile-web-app-capable"</span> <span class="a">content</span>=<span class="s">"yes"</span><span class="k">&gt;</span>
+<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"apple-mobile-web-app-status-bar-style"</span> <span class="a">content</span>=<span class="s">"black-translucent"</span><span class="k">&gt;</span></pre>
+    </div>
+    <div>
+      <div class="code-hdr"><span>// huyghu · public/index.html &lt;head&gt;</span><button onclick="copyCode('huy-head')">Copiar</button></div>
+<pre class="code" id="huy-head"><span class="c">&lt;!-- Favicons —  Huyghu &amp; Asociados --&gt;</span>
+<span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"icon"</span> <span class="a">href</span>=<span class="s">"/favicons/favicon.ico"</span> <span class="a">sizes</span>=<span class="s">"any"</span><span class="k">&gt;</span>
+<span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"icon"</span> <span class="a">type</span>=<span class="s">"image/png"</span> <span class="a">sizes</span>=<span class="s">"16x16"</span> <span class="a">href</span>=<span class="s">"/favicons/favicon-16.png"</span><span class="k">&gt;</span>
+<span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"icon"</span> <span class="a">type</span>=<span class="s">"image/png"</span> <span class="a">sizes</span>=<span class="s">"32x32"</span> <span class="a">href</span>=<span class="s">"/favicons/favicon-32.png"</span><span class="k">&gt;</span>
+<span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"apple-touch-icon"</span> <span class="a">sizes</span>=<span class="s">"180x180"</span> <span class="a">href</span>=<span class="s">"/favicons/apple-touch-icon-180.png"</span><span class="k">&gt;</span>
+<span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"mask-icon"</span> <span class="a">href</span>=<span class="s">"/favicons/safari-pinned-tab.svg"</span> <span class="a">color</span>=<span class="s">"#D4AF37"</span><span class="k">&gt;</span>
+<span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"manifest"</span> <span class="a">href</span>=<span class="s">"/favicons/manifest.json"</span><span class="k">&gt;</span>
+<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"theme-color"</span> <span class="a">content</span>=<span class="s">"#0A0A0A"</span><span class="k">&gt;</span>
+<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"msapplication-TileColor"</span> <span class="a">content</span>=<span class="s">"#0A0A0A"</span><span class="k">&gt;</span>
+<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"msapplication-TileImage"</span> <span class="a">content</span>=<span class="s">"/favicons/mstile-150.png"</span><span class="k">&gt;</span>
+<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"application-name"</span> <span class="a">content</span>=<span class="s">"Huyghu &amp; Asociados"</span><span class="k">&gt;</span>
+<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"apple-mobile-web-app-title"</span> <span class="a">content</span>=<span class="s">"Huyghu"</span><span class="k">&gt;</span>
+<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"apple-mobile-web-app-capable"</span> <span class="a">content</span>=<span class="s">"yes"</span><span class="k">&gt;</span>
+<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"apple-mobile-web-app-status-bar-style"</span> <span class="a">content</span>=<span class="s">"black-translucent"</span><span class="k">&gt;</span></pre>
+    </div>
+  </div>
+
+  <div class="sec-hd">
+    <div class="sec-no">§ 5.0</div>
+    <h2 class="sec-title">manifest.json · PWA</h2>
+    <div class="sec-meta">Web App Manifest · ambas marcas</div>
+  </div>
+
+  <div class="two-cols">
+    <div>
+      <div class="code-hdr"><span>// chrytsa · /favicons/manifest.json</span><button onclick="copyCode('chr-mf')">Copiar</button></div>
+<pre class="code" id="chr-mf"><span class="k">{</span>
+  <span class="a">"name"</span>: <span class="s">"Grupo Chrytsa Asesores"</span>,
+  <span class="a">"short_name"</span>: <span class="s">"Chrytsa"</span>,
+  <span class="a">"description"</span>: <span class="s">"Grupo Chrytsa Asesores — Identidad Corporativa"</span>,
+  <span class="a">"start_url"</span>: <span class="s">"/"</span>,
+  <span class="a">"display"</span>: <span class="s">"standalone"</span>,
+  <span class="a">"background_color"</span>: <span class="s">"#0A0A0A"</span>,
+  <span class="a">"theme_color"</span>: <span class="s">"#0A0A0A"</span>,
+  <span class="a">"icons"</span>: [
+    { <span class="a">"src"</span>: <span class="s">"/favicons/favicon-16.png"</span>,         <span class="a">"sizes"</span>: <span class="s">"16x16"</span>,   <span class="a">"type"</span>: <span class="s">"image/png"</span> },
+    { <span class="a">"src"</span>: <span class="s">"/favicons/favicon-32.png"</span>,         <span class="a">"sizes"</span>: <span class="s">"32x32"</span>,   <span class="a">"type"</span>: <span class="s">"image/png"</span> },
+    { <span class="a">"src"</span>: <span class="s">"/favicons/favicon-48.png"</span>,         <span class="a">"sizes"</span>: <span class="s">"48x48"</span>,   <span class="a">"type"</span>: <span class="s">"image/png"</span> },
+    { <span class="a">"src"</span>: <span class="s">"/favicons/android-chrome-192.png"</span>, <span class="a">"sizes"</span>: <span class="s">"192x192"</span>, <span class="a">"type"</span>: <span class="s">"image/png"</span> },
+    { <span class="a">"src"</span>: <span class="s">"/favicons/android-chrome-512.png"</span>, <span class="a">"sizes"</span>: <span class="s">"512x512"</span>, <span class="a">"type"</span>: <span class="s">"image/png"</span> },
+    { <span class="a">"src"</span>: <span class="s">"/favicons/maskable-icon-512.png"</span>,  <span class="a">"sizes"</span>: <span class="s">"512x512"</span>, <span class="a">"type"</span>: <span class="s">"image/png"</span>, <span class="a">"purpose"</span>: <span class="s">"maskable"</span> }
+  ]
+<span class="k">}</span></pre>
+    </div>
+    <div>
+      <div class="code-hdr"><span>// huyghu · /favicons/manifest.json</span><button onclick="copyCode('huy-mf')">Copiar</button></div>
+<pre class="code" id="huy-mf"><span class="k">{</span>
+  <span class="a">"name"</span>: <span class="s">"Huyghu &amp; Asociados — Contadores Públicos"</span>,
+  <span class="a">"short_name"</span>: <span class="s">"Huyghu"</span>,
+  <span class="a">"description"</span>: <span class="s">"Huyghu &amp; Asociados — Contadores Públicos · Identidad"</span>,
+  <span class="a">"start_url"</span>: <span class="s">"/"</span>,
+  <span class="a">"display"</span>: <span class="s">"standalone"</span>,
+  <span class="a">"background_color"</span>: <span class="s">"#0A0A0A"</span>,
+  <span class="a">"theme_color"</span>: <span class="s">"#0A0A0A"</span>,
+  <span class="a">"icons"</span>: [
+    { <span class="a">"src"</span>: <span class="s">"/favicons/favicon-16.png"</span>,         <span class="a">"sizes"</span>: <span class="s">"16x16"</span>,   <span class="a">"type"</span>: <span class="s">"image/png"</span> },
+    { <span class="a">"src"</span>: <span class="s">"/favicons/favicon-32.png"</span>,         <span class="a">"sizes"</span>: <span class="s">"32x32"</span>,   <span class="a">"type"</span>: <span class="s">"image/png"</span> },
+    { <span class="a">"src"</span>: <span class="s">"/favicons/favicon-48.png"</span>,         <span class="a">"sizes"</span>: <span class="s">"48x48"</span>,   <span class="a">"type"</span>: <span class="s">"image/png"</span> },
+    { <span class="a">"src"</span>: <span class="s">"/favicons/android-chrome-192.png"</span>, <span class="a">"sizes"</span>: <span class="s">"192x192"</span>, <span class="a">"type"</span>: <span class="s">"image/png"</span> },
+    { <span class="a">"src"</span>: <span class="s">"/favicons/android-chrome-512.png"</span>, <span class="a">"sizes"</span>: <span class="s">"512x512"</span>, <span class="a">"type"</span>: <span class="s">"image/png"</span> },
+    { <span class="a">"src"</span>: <span class="s">"/favicons/maskable-icon-512.png"</span>,  <span class="a">"sizes"</span>: <span class="s">"512x512"</span>, <span class="a">"type"</span>: <span class="s">"image/png"</span>, <span class="a">"purpose"</span>: <span class="s">"maskable"</span> }
+  ]
+<span class="k">}</span></pre>
+    </div>
+  </div>
+
+  <footer>
+    <div>Grupo Chrytsa · Identidad Corporativa<br>Bloque 02 / 08 — Favicon Set</div>
+    <div class="c">Confidencial · Uso interno autorizado<br>v1.0 — 2026.05</div>
+    <div class="r">20 archivos · ICO · PNG · SVG · JSON<br>theme-color #0A0A0A · accent #D4AF37</div>
+  </footer>
+
+</div>
+
+<script>
+  function copyCode(id){
+    const el = document.getElementById(id);
+    const txt = el.innerText;
+    navigator.clipboard.writeText(txt).then(()=>{
+      const btn = event.target;
+      const old = btn.textContent;
+      btn.textContent = '✓ Copiado';
+      setTimeout(()=>btn.textContent = old, 1400);
+    });
+  }
+</script>
+</body>
+</html>

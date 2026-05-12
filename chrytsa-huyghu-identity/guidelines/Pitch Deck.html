@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>HUYGHU & Asociados — Pitch Deck v1.0 · Preview</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold-hi:#F4D773;--gold:#D4AF37;--gold-mid:#B8862B;--gold-sh:#8B5E1A;
+    --ink:#0A0A0A;--paper:#FAFAF8;--cream:#FAF7EE;
+    --serif:'Cinzel',Georgia,serif;--body:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--body);background:var(--paper);color:#1a1a1a;min-height:100vh;padding:48px 56px 96px}
+
+  /* HEADER */
+  header.top{display:flex;align-items:flex-end;justify-content:space-between;padding-bottom:32px;border-bottom:1px solid rgba(212,175,55,.4);margin-bottom:56px;gap:48px;flex-wrap:wrap}
+  .br{display:flex;align-items:center;gap:18px}
+  .br svg{width:56px;height:56px}
+  .br h1{font-family:var(--serif);font-weight:600;font-size:22px;letter-spacing:.14em;color:#0A0A0A;line-height:1.2}
+  .br small{display:block;font-family:var(--body);font-weight:500;font-size:10px;letter-spacing:.36em;color:var(--gold-mid);margin-top:4px}
+  .ix{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--gold-sh);text-transform:uppercase;text-align:right}
+  .ix b{color:#0A0A0A;font-weight:500}
+
+  /* TITLE BLOCK */
+  .hero{display:grid;grid-template-columns:1.4fr 1fr;gap:64px;margin-bottom:56px;align-items:end}
+  .hero h2{font-family:var(--serif);font-weight:500;font-size:68px;line-height:1;color:#0A0A0A;letter-spacing:.01em;text-wrap:balance}
+  .hero .lede{font-family:var(--body);font-weight:300;font-size:16px;line-height:1.65;color:#3a3a3a;margin-top:20px;max-width:560px}
+  .hero .meta{display:flex;flex-direction:column;gap:12px;font-family:var(--mono);font-size:12px;color:#5a5a5a;letter-spacing:.08em}
+  .hero .meta .row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed rgba(0,0,0,.12)}
+  .hero .meta .row b{color:#0A0A0A;font-weight:500}
+
+  /* DOWNLOAD BAR */
+  .dl-bar{display:flex;gap:14px;align-items:center;background:#0A0A0A;color:#F4D773;padding:24px 32px;margin-bottom:56px;border-left:3px solid var(--gold);flex-wrap:wrap}
+  .dl-bar .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-sh)}
+  .dl-bar .title{font-family:var(--serif);font-weight:500;font-size:22px;color:var(--gold-hi);letter-spacing:.02em;flex:1;min-width:240px}
+  .dl-bar .specs{font-family:var(--mono);font-size:11px;color:#9c9580;letter-spacing:.12em}
+  .dl-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;background:var(--gold);color:#0A0A0A;text-decoration:none;font-family:var(--body);font-weight:600;font-size:13px;letter-spacing:.18em;text-transform:uppercase;border:none;cursor:pointer;transition:.18s}
+  .dl-btn:hover{background:var(--gold-hi)}
+  .dl-btn.ghost{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+  .dl-btn.ghost:hover{background:var(--gold);color:#0A0A0A}
+  .dl-btn svg{width:14px;height:14px}
+
+  /* SECTION HEADER */
+  .sec-h{display:flex;align-items:baseline;gap:24px;margin:32px 0 28px;padding-bottom:14px;border-bottom:1px solid rgba(0,0,0,.1)}
+  .sec-h .num{font-family:var(--mono);font-size:11px;letter-spacing:.32em;color:var(--gold-mid);text-transform:uppercase}
+  .sec-h h3{font-family:var(--serif);font-weight:500;font-size:24px;color:#0A0A0A;letter-spacing:.04em}
+  .sec-h .help{font-family:var(--body);font-size:12px;color:#777;margin-left:auto}
+
+  /* GRID THUMBNAILS */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .thumb{position:relative;background:#0A0A0A;border:1px solid rgba(212,175,55,.3);aspect-ratio:16/9;overflow:hidden;cursor:pointer;transition:.18s;display:block}
+  .thumb:hover{border-color:var(--gold-hi);transform:translateY(-2px);box-shadow:0 12px 32px -8px rgba(212,175,55,.35)}
+  .thumb iframe{position:absolute;top:0;left:0;width:1920px;height:1080px;transform-origin:top left;border:0;pointer-events:none}
+  .thumb .badge{position:absolute;top:10px;left:10px;background:rgba(10,10,10,.85);color:var(--gold-hi);font-family:var(--mono);font-size:10px;letter-spacing:.2em;padding:5px 9px;z-index:2;border:1px solid rgba(212,175,55,.4)}
+  .thumb .cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(180deg,transparent,rgba(10,10,10,.92));color:#F4D773;font-family:var(--body);font-size:11px;font-weight:500;padding:18px 12px 10px;letter-spacing:.04em;z-index:2;text-align:center}
+  .thumb .play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:48px;height:48px;border-radius:50%;background:rgba(212,175,55,.92);display:flex;align-items:center;justify-content:center;opacity:0;transition:.18s;z-index:3}
+  .thumb:hover .play{opacity:1}
+  .thumb .play svg{width:16px;height:16px;color:#0A0A0A;margin-left:2px}
+
+  /* FOCUS LIGHTBOX */
+  .lb{position:fixed;inset:0;background:rgba(10,10,10,.96);display:none;align-items:center;justify-content:center;z-index:100;padding:24px}
+  .lb.on{display:flex}
+  .lb-stage{width:100%;max-width:min(95vw, calc(95vh*16/9));aspect-ratio:16/9;position:relative;background:#0A0A0A;border:1px solid rgba(212,175,55,.4)}
+  .lb-stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .lb-bar{position:absolute;top:-44px;left:0;right:0;display:flex;justify-content:space-between;align-items:center;color:#F4D773;font-family:var(--mono);font-size:12px;letter-spacing:.18em}
+  .lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;background:rgba(212,175,55,.18);color:#F4D773;border:1px solid rgba(212,175,55,.4);font-family:var(--serif);font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  .lb-nav:hover{background:var(--gold);color:#0A0A0A}
+  .lb-prev{left:-58px}.lb-next{right:-58px}
+  .lb-close{position:absolute;top:-44px;right:0;background:none;border:0;color:var(--gold-hi);cursor:pointer;font-family:var(--mono);font-size:12px;letter-spacing:.18em}
+
+  /* NOTES TABLE */
+  .notes-wrap{margin-top:48px;padding:36px 40px;background:#0A0A0A;color:#E7DDB8;border:1px solid rgba(212,175,55,.4)}
+  .notes-wrap h3{font-family:var(--serif);font-weight:500;font-size:22px;color:var(--gold-hi);letter-spacing:.04em;margin-bottom:18px}
+  .notes-wrap p{font-family:var(--body);font-size:13px;line-height:1.7;color:#bcb29a;max-width:900px;margin-bottom:10px}
+  .notes-wrap kbd{font-family:var(--mono);font-size:11px;background:rgba(212,175,55,.15);color:var(--gold-hi);padding:3px 7px;border:1px solid rgba(212,175,55,.3);letter-spacing:.06em}
+
+  /* DECK INFO */
+  .info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(0,0,0,.08);margin-top:24px;border:1px solid rgba(0,0,0,.08)}
+  .info-grid > div{background:var(--paper);padding:20px 24px}
+  .info-grid .k{font-family:var(--mono);font-size:10px;letter-spacing:.24em;color:var(--gold-mid);text-transform:uppercase;margin-bottom:6px}
+  .info-grid .v{font-family:var(--serif);font-weight:500;font-size:17px;color:#0A0A0A;letter-spacing:.02em}
+
+  /* FOOTER */
+  footer.f{margin-top:80px;padding-top:32px;border-top:1px solid rgba(0,0,0,.1);display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:#999;text-transform:uppercase;flex-wrap:wrap;gap:18px}
+  footer.f b{color:var(--gold-mid);font-weight:500}
+
+  @media (max-width:1100px){
+    .grid{grid-template-columns:repeat(2,1fr)}
+    .hero{grid-template-columns:1fr}
+  }
+  @media (max-width:680px){
+    body{padding:32px 24px 64px}
+    .grid{grid-template-columns:1fr}
+    .hero h2{font-size:42px}
+    .lb-prev{left:8px}.lb-next{right:8px}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="br">
+    <svg viewBox="0 0 100 100" aria-hidden="true">
+      <defs><linearGradient id="gPrev" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8B5E1A"/></linearGradient><clipPath id="cPrev"><circle cx="50" cy="50" r="42"/></clipPath></defs>
+      <circle cx="50" cy="50" r="42" fill="#0A0A0A"/>
+      <g clip-path="url(#cPrev)"><path d="M 50 8 A 42 42 0 0 0 8 50 A 42 42 0 0 0 50 92 Q 30 70 30 50 Q 30 30 50 8 Z" fill="url(#gPrev)"/><g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#gPrev)"/><rect x="8" y="44" width="84" height="6" fill="url(#gPrev)"/><rect x="8" y="60" width="84" height="6" fill="url(#gPrev)"/></g></g>
+    </svg>
+    <div><h1>HUYGHU &amp; ASOCIADOS<small>CONTADORES PÚBLICOS</small></h1></div>
+  </div>
+  <div class="ix">
+    Bloque 05 · Pitch Deck<br>
+    <b>HUYGHU-Pitch-Deck-v1.0</b><br>
+    Grupo Chrytsa · 2026
+  </div>
+</header>
+
+<section class="hero">
+  <div>
+    <h2>Pitch deck<br>HUYGHU &amp; Asociados.</h2>
+    <p class="lede">Presentación corporativa de 15 slides en formato 16:9 widescreen. Diseño negro · oro con tipografía Cinzel para títulos e Inter para cuerpo. Cada slide incluye guion de presentador (60–90 s) en notas. <b>Archivo PowerPoint editable</b>, listo para abrir en PowerPoint, Keynote o Google Slides.</p>
+  </div>
+  <div class="meta">
+    <div class="row"><span>Slides</span><b>15 · widescreen</b></div>
+    <div class="row"><span>Formato</span><b>PPTX editable</b></div>
+    <div class="row"><span>Resolución</span><b>1920 × 1080 px</b></div>
+    <div class="row"><span>Tipografía</span><b>Cinzel · Inter</b></div>
+    <div class="row"><span>Speaker notes</span><b>15 / 15 en español</b></div>
+  </div>
+</section>
+
+<div class="dl-bar">
+  <div class="lbl">▶ Descarga</div>
+  <div class="title">HUYGHU-Pitch-Deck-v1.0.pptx</div>
+  <div class="specs">15 SLIDES · 1.27 MB · NATIVO POWERPOINT</div>
+  <a class="dl-btn" href="../deck/HUYGHU-Pitch-Deck-v1.0.pptx" download>
+    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1v8.5l3-3 1 1L8 11.5 4 7.5l1-1 3 3V1h0zM2 13h12v2H2z"/></svg>
+    Descargar PPTX
+  </a>
+  <a class="dl-btn ghost" href="../deck/huyghu-deck.html" target="_blank" rel="noopener">
+    Abrir HTML deck →
+  </a>
+</div>
+
+<div class="sec-h">
+  <span class="num">§ Vista previa</span>
+  <h3>15 slides — clic para ampliar.</h3>
+  <span class="help">↑↓ navegar · Esc cerrar</span>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<div class="info-grid">
+  <div><div class="k">Slide 01</div><div class="v">Portada</div></div>
+  <div><div class="k">Slides 02–03</div><div class="v">Identidad · Cifras</div></div>
+  <div><div class="k">Slides 04–07</div><div class="v">Servicios</div></div>
+  <div><div class="k">Slide 08</div><div class="v">Planes &amp; precios</div></div>
+  <div><div class="k">Slide 09</div><div class="v">Casos de éxito</div></div>
+  <div><div class="k">Slide 10</div><div class="v">Equipo</div></div>
+  <div><div class="k">Slide 11</div><div class="v">Tecnología</div></div>
+  <div><div class="k">Slides 12–14</div><div class="v">Diferenciadores</div></div>
+</div>
+
+<div class="notes-wrap">
+  <h3>Cómo usar este deck</h3>
+  <p><b style="color:#F4D773">PowerPoint / Keynote / Google Slides</b> — descarga el .pptx con el botón superior y ábrelo en tu aplicación preferida. Es editable: textos, colores, layouts y fuentes son modificables como cualquier presentación nativa.</p>
+  <p><b style="color:#F4D773">Speaker notes</b> — cada slide incluye un guion de 60-90 segundos en español RD para el presentador. Visibles en la "Vista del moderador" de PowerPoint (<kbd>Alt</kbd>+<kbd>F5</kbd>) o "Presentar con notas" en Keynote.</p>
+  <p><b style="color:#F4D773">Versión HTML</b> — alternativamente, "Abrir HTML deck" lanza la misma presentación en navegador con escalado automático, navegación por teclado (<kbd>←</kbd> <kbd>→</kbd>) y posibilidad de imprimir a PDF (<kbd>Cmd/Ctrl</kbd>+<kbd>P</kbd>).</p>
+  <p><b style="color:#F4D773">Placeholders</b> — reemplaza los valores entre corchetes <kbd>[+15]</kbd>, <kbd>[Cliente Ejemplo 01]</kbd>, <kbd>[XX,XXX]</kbd>, <kbd>+1 809-261-7938</kbd>, <kbd>[XXXX]</kbd> con los datos finales antes de presentar.</p>
+</div>
+
+<footer class="f">
+  <span>HUYGHU &amp; ASOCIADOS · CONTADORES PÚBLICOS · MIEMBRO <b>GRUPO CHRYTSA</b></span>
+  <span>BRAND KIT · BLOQUE 5/8 · v1.0 · 2026</span>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb">
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Anterior">‹</button>
+  <div class="lb-stage">
+    <div class="lb-bar">
+      <span id="lbLabel">Slide 01 · Portada</span>
+      <button class="lb-close" id="lbClose" aria-label="Cerrar">✕ CERRAR · ESC</button>
+    </div>
+    <iframe id="lbFrame" title="Slide preview"></iframe>
+  </div>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Siguiente">›</button>
+</div>
+
+<script>
+const SLIDES = [
+  ['01','Portada'],
+  ['02','¿Quiénes somos?'],
+  ['03','Cifras / Trayectoria'],
+  ['04','Servicios contables'],
+  ['05','Declaraciones DGII'],
+  ['06','Auditoría · Due Diligence'],
+  ['07','TSS · INFOTEP · Nóminas'],
+  ['08','Planes (Básico → Corporativo)'],
+  ['09','Casos de éxito'],
+  ['10','Equipo'],
+  ['11','Tecnología'],
+  ['12','Diferenciadores'],
+  ['13','Onboarding 4 pasos'],
+  ['14','Garantías &amp; cumplimiento'],
+  ['15','Contacto · CTA'],
+];
+const DECK_URL = '../deck/huyghu-deck.html';
+
+const grid = document.getElementById('grid');
+SLIDES.forEach((s, i) => {
+  const a = document.createElement('a');
+  a.className = 'thumb';
+  a.href = '#';
+  a.dataset.idx = i;
+  a.innerHTML = `
+    <iframe loading="lazy" src="${DECK_URL}" data-idx="${i}" aria-hidden="true" tabindex="-1"></iframe>
+    <div class="badge">${s[0]} / 15</div>
+    <div class="play"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 2l11 6-11 6z"/></svg></div>
+    <div class="cap">${s[1]}</div>
+  `;
+  grid.appendChild(a);
+});
+
+// Scale iframes to thumbnail
+function scaleThumbs(){
+  document.querySelectorAll('.thumb').forEach(t => {
+    const iframe = t.querySelector('iframe');
+    const w = t.clientWidth;
+    const scale = w / 1920;
+    iframe.style.transform = `scale(${scale})`;
+    iframe.style.width = '1920px';
+    iframe.style.height = '1080px';
+  });
+}
+window.addEventListener('resize', scaleThumbs);
+window.addEventListener('load', () => setTimeout(scaleThumbs, 50));
+
+// On iframe load: navigate to the right slide and disable interaction
+document.querySelectorAll('.thumb iframe').forEach(f => {
+  f.addEventListener('load', () => {
+    const idx = parseInt(f.dataset.idx, 10);
+    try {
+      const ds = f.contentDocument.querySelector('deck-stage');
+      if(ds && typeof ds.goTo === 'function'){
+        ds.goTo(idx);
+      }
+      // hide nav chrome inside iframe for clean thumb
+      const style = f.contentDocument.createElement('style');
+      style.textContent = '[data-deck-nav],[data-deck-counter],[data-deck-thumbs],[data-deck-rail]{display:none!important}body{cursor:default!important}';
+      f.contentDocument.head.appendChild(style);
+    } catch(e){ /* same-origin issue handled silently */ }
+  });
+});
+
+// Lightbox
+const lb = document.getElementById('lb');
+const lbFrame = document.getElementById('lbFrame');
+const lbLabel = document.getElementById('lbLabel');
+let current = 0;
+
+function openLB(i){
+  current = i;
+  lbFrame.src = DECK_URL;
+  lbLabel.innerHTML = `Slide ${SLIDES[i][0]} · ${SLIDES[i][1]}`;
+  lb.classList.add('on');
+  lbFrame.onload = () => {
+    try{
+      const ds = lbFrame.contentDocument.querySelector('deck-stage');
+      if(ds) ds.goTo(i);
+    }catch(e){}
+  };
+}
+function navLB(d){
+  current = (current + d + SLIDES.length) % SLIDES.length;
+  lbLabel.innerHTML = `Slide ${SLIDES[current][0]} · ${SLIDES[current][1]}`;
+  try{
+    const ds = lbFrame.contentDocument.querySelector('deck-stage');
+    if(ds) ds.goTo(current);
+  }catch(e){}
+}
+function closeLB(){ lb.classList.remove('on'); lbFrame.src='about:blank'; }
+
+document.querySelectorAll('.thumb').forEach(t => {
+  t.addEventListener('click', e => { e.preventDefault(); openLB(parseInt(t.dataset.idx,10)); });
+});
+document.getElementById('lbPrev').onclick = () => navLB(-1);
+document.getElementById('lbNext').onclick = () => navLB(1);
+document.getElementById('lbClose').onclick = closeLB;
+lb.addEventListener('click', e => { if(e.target === lb) closeLB(); });
+document.addEventListener('keydown', e => {
+  if(!lb.classList.contains('on')) return;
+  if(e.key === 'Escape') closeLB();
+  if(e.key === 'ArrowLeft') navLB(-1);
+  if(e.key === 'ArrowRight') navLB(1);
+});
+</script>
+</body>
+</html>

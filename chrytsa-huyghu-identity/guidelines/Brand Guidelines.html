@@ -1,0 +1,956 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Manual de Identidad Corporativa · Grupo Chrytsa &amp; HUYGHU · 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold-hi:#F4D773;--gold:#D4AF37;--gold-mid:#B8862B;--gold-sh:#8B5E1A;--gold-line:#C9A227;
+    --ink:#0A0A0A;--ink-pure:#000;--paper:#FFFFFF;--cream:#FAFAF8;
+    --serif:'Cinzel','Trajan Pro','Cormorant Garamond',Georgia,serif;
+    --sans:'Montserrat','Avenir Next','Futura',sans-serif;
+    --body:'Inter',system-ui,-apple-system,sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#E8E5DC;font-family:var(--body);color:#1a1a1a;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{padding:32px 0;display:flex;flex-direction:column;align-items:center;gap:24px}
+
+  /* PAGE — A4 portrait 210×297 mm at 96dpi = 794×1123 px approx, but we use mm for print */
+  .page{
+    width:210mm;height:297mm;background:var(--paper);position:relative;overflow:hidden;
+    page-break-after:always;break-after:page;
+    box-shadow:0 12px 28px -10px rgba(0,0,0,.18);
+    display:flex;flex-direction:column;
+  }
+  .page:last-child{page-break-after:auto}
+
+  .page-hdr{position:absolute;top:10mm;left:14mm;right:14mm;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:8pt;letter-spacing:.18em;color:var(--gold-sh);text-transform:uppercase;z-index:5}
+  .page-hdr .l{display:flex;align-items:center;gap:8px}
+  .page-hdr .l svg{width:14px;height:14px;display:block}
+  .page-hdr b{color:var(--ink);font-weight:500}
+  .page-hdr .rule{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(212,175,55,.6),transparent);margin:0 14px}
+
+  .page-ftr{position:absolute;bottom:10mm;left:14mm;right:14mm;display:flex;justify-content:space-between;font-family:var(--mono);font-size:7.5pt;letter-spacing:.16em;color:#8a8a8a;text-transform:uppercase;z-index:5}
+  .page-ftr .gold-dot{display:inline-block;width:5px;height:5px;background:var(--gold);transform:rotate(45deg);margin:0 6px}
+
+  .page-body{padding:30mm 18mm 22mm;flex:1;display:flex;flex-direction:column;position:relative;z-index:2}
+
+  /* SHARED TYPE */
+  .eyebrow{font-family:var(--sans);font-weight:600;font-size:9pt;letter-spacing:.36em;color:var(--gold-mid);text-transform:uppercase;margin-bottom:10mm}
+  h1.t{font-family:var(--serif);font-weight:500;font-size:36pt;line-height:1.05;color:var(--ink);letter-spacing:.01em;margin-bottom:8mm;text-wrap:balance}
+  h2.s{font-family:var(--serif);font-weight:500;font-size:18pt;color:var(--ink);letter-spacing:.02em;margin-bottom:5mm}
+  p.lede{font-family:var(--body);font-weight:300;font-size:11pt;line-height:1.65;color:#3a3a3a;max-width:160mm;text-wrap:pretty}
+  p.lede + p.lede{margin-top:4mm}
+  .gold-rule{height:1px;background:var(--gold);margin:8mm 0}
+  .gold-line-thin{height:.5pt;background:var(--gold-line)}
+
+  /* PRINT BUTTON */
+  .print-fab{position:fixed;top:24px;right:24px;background:var(--ink);color:var(--gold-hi);border:1px solid var(--gold);padding:14px 22px;font-family:var(--body);font-weight:600;font-size:11pt;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;z-index:1000;box-shadow:0 8px 24px -6px rgba(0,0,0,.4);transition:.18s}
+  .print-fab:hover{background:var(--gold);color:var(--ink)}
+  .print-fab svg{display:inline-block;vertical-align:middle;margin-right:8px;width:14px;height:14px}
+
+  /* P01 — Cover */
+  .cover{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:18mm 14mm}
+  .cover .logos{display:flex;flex-direction:column;gap:18mm;align-items:center;margin-bottom:18mm}
+  .cover .logos .lk{display:flex;flex-direction:column;align-items:center;gap:4mm}
+  .cover .logos .lk svg.sym{width:34mm;height:34mm}
+  .cover .logos .lk .wm{font-family:var(--serif);font-weight:600;font-size:18pt;letter-spacing:.14em;color:var(--ink)}
+  .cover .logos .lk .tg{font-family:var(--sans);font-weight:500;font-size:8pt;letter-spacing:.36em;color:var(--gold-mid);text-transform:uppercase;margin-top:1mm}
+  .cover .arr{font-family:var(--mono);font-size:12pt;color:var(--gold-mid);letter-spacing:.18em}
+  .cover h1.cv{font-family:var(--serif);font-weight:500;font-size:30pt;color:var(--ink);letter-spacing:.06em;line-height:1.15;margin-top:6mm}
+  .cover .cv-sub{font-family:var(--sans);font-weight:500;font-size:9pt;letter-spacing:.4em;color:var(--gold-mid);text-transform:uppercase;margin-top:5mm}
+  .cover .cv-rule{width:80mm;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:10mm auto}
+  .cover .cv-foot{font-family:var(--body);font-size:8pt;letter-spacing:.14em;color:#888;text-transform:uppercase;margin-top:auto}
+
+  /* P02 — Filosofía */
+  .phil{display:grid;grid-template-columns:1fr 1fr;gap:18mm;flex:1}
+  .phil .col{display:flex;flex-direction:column;gap:6mm}
+  .phil h3{font-family:var(--sans);font-weight:600;font-size:9pt;letter-spacing:.32em;color:var(--gold-mid);text-transform:uppercase;border-bottom:.5pt solid var(--gold-line);padding-bottom:2mm}
+  .phil p{font-family:var(--body);font-size:10pt;line-height:1.7;color:#2a2a2a}
+  .phil-quote{margin-top:auto;padding:8mm 0;border-top:.5pt solid var(--gold-line);border-bottom:.5pt solid var(--gold-line);text-align:center}
+  .phil-quote .q{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:500;font-size:22pt;color:var(--gold-sh);line-height:1.3}
+  .phil-quote .att{font-family:var(--sans);font-weight:500;font-size:8pt;letter-spacing:.32em;color:var(--gold-mid);text-transform:uppercase;margin-top:3mm}
+
+  /* P03/P04 — Logo anatomy */
+  .anat{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10mm;position:relative}
+  .anat .logo-area{width:140mm;height:110mm;background:var(--cream);border:.5pt solid rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center;position:relative}
+  .anat .logo-area .grid-overlay{position:absolute;inset:0;background-image:linear-gradient(rgba(212,175,55,.15) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,.15) 1px,transparent 1px);background-size:10mm 10mm}
+  .anat .x-unit{position:absolute;font-family:var(--mono);font-size:8pt;color:var(--gold);letter-spacing:.1em;background:#fff;padding:2px 6px;border:.5pt solid var(--gold)}
+  .anat .anat-info{display:flex;gap:14mm;font-family:var(--body);font-size:9pt;color:#444}
+  .anat .anat-info dt{font-family:var(--mono);font-size:8pt;color:var(--gold-mid);letter-spacing:.18em;text-transform:uppercase;margin-bottom:2mm}
+  .anat .anat-info dd{font-family:var(--serif);font-weight:500;font-size:13pt;color:var(--ink)}
+  .anat-note{margin-top:6mm;font-family:var(--body);font-size:9pt;color:#666;font-style:italic;text-align:center;max-width:160mm}
+
+  /* P05 — Variants grid */
+  .vargrid{display:grid;grid-template-columns:repeat(4,1fr);gap:5mm;flex:1;align-content:start;margin-top:4mm}
+  .vargrid .vt{aspect-ratio:1;display:flex;align-items:center;justify-content:center;padding:4mm;position:relative;border:.5pt solid rgba(0,0,0,.1)}
+  .vargrid .vt svg{max-width:80%;max-height:80%}
+  .vargrid .vt.dark{background:#0A0A0A}
+  .vargrid .vt.light{background:#FAFAF8}
+  .vargrid .vlbl{font-family:var(--mono);font-size:7pt;color:#666;letter-spacing:.12em;text-transform:uppercase;text-align:center;margin-top:1mm}
+  .vargrid .vlbl b{display:block;color:var(--ink);font-weight:500;font-family:var(--body);font-size:7.5pt;letter-spacing:.02em;text-transform:none;margin-top:.5mm}
+  .vargrid .item{display:flex;flex-direction:column;gap:1mm}
+  .var-h{font-family:var(--sans);font-weight:600;font-size:9pt;letter-spacing:.32em;color:var(--gold-mid);text-transform:uppercase;margin:6mm 0 3mm;grid-column:1/-1;border-bottom:.5pt solid var(--gold-line);padding-bottom:1mm}
+
+  /* P06 — Sizes */
+  .sz-grid{display:grid;grid-template-columns:1fr 1fr;gap:14mm;flex:1;align-items:center}
+  .sz-card{padding:8mm;border:.5pt solid rgba(212,175,55,.4);background:linear-gradient(180deg,rgba(212,175,55,.04),transparent)}
+  .sz-card h4{font-family:var(--sans);font-weight:600;font-size:9pt;letter-spacing:.3em;color:var(--gold-mid);text-transform:uppercase;margin-bottom:5mm}
+  .sz-card .row{display:flex;align-items:flex-end;gap:8mm;padding:4mm 0;border-bottom:.5pt dashed rgba(0,0,0,.12)}
+  .sz-card .row:last-child{border:0}
+  .sz-card .row .min{font-family:var(--mono);font-size:9pt;color:var(--ink);letter-spacing:.08em;min-width:24mm}
+  .sz-card .row .desc{font-family:var(--body);font-size:9pt;color:#444}
+  .sz-card .row .sample{margin-left:auto}
+
+  /* P07 — Misuses */
+  .mis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:4mm;flex:1;align-content:start}
+  .mis{position:relative;aspect-ratio:1.1;border:.5pt solid #e0e0e0;background:#FAFAF8;padding:4mm;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3mm}
+  .mis::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0,transparent 12px,rgba(220,38,38,.04) 12px,rgba(220,38,38,.04) 13px);pointer-events:none}
+  .mis::after{content:"✕";position:absolute;top:3mm;right:3mm;width:8mm;height:8mm;border-radius:50%;background:#dc2626;color:#fff;font-family:var(--body);font-weight:700;font-size:11pt;display:flex;align-items:center;justify-content:center}
+  .mis .lbl{font-family:var(--sans);font-weight:600;font-size:7.5pt;letter-spacing:.16em;text-align:center;color:#dc2626;text-transform:uppercase;margin-top:auto}
+
+  /* P08/P09 — Palette */
+  .palette{display:grid;grid-template-columns:repeat(4,1fr);gap:6mm;flex:1;align-content:start}
+  .swatch{display:flex;flex-direction:column;border:.5pt solid rgba(0,0,0,.08)}
+  .swatch .chip{height:50mm;display:flex;align-items:flex-end;padding:4mm;color:inherit}
+  .swatch .chip .hx{font-family:var(--mono);font-size:9pt;letter-spacing:.1em;font-weight:500}
+  .swatch .meta{padding:4mm}
+  .swatch .nm{font-family:var(--serif);font-weight:500;font-size:11pt;color:var(--ink);letter-spacing:.02em;margin-bottom:2mm}
+  .swatch .tok{font-family:var(--mono);font-size:7.5pt;color:var(--gold-mid);letter-spacing:.12em;text-transform:uppercase;margin-bottom:3mm}
+  .swatch dl{display:grid;grid-template-columns:auto 1fr;gap:1.5mm 4mm;font-family:var(--mono);font-size:7.5pt;color:#555}
+  .swatch dt{color:#999;letter-spacing:.08em;text-transform:uppercase}
+  .swatch dd{color:var(--ink)}
+  .swatch .use{font-family:var(--body);font-size:8pt;color:#666;line-height:1.5;margin-top:3mm;padding-top:3mm;border-top:.5pt solid rgba(0,0,0,.08);font-style:italic}
+
+  .gradient-card{margin-top:8mm;padding:8mm;background:linear-gradient(135deg,#F4D773 0%,#D4AF37 35%,#B8862B 70%,#8B5E1A 100%);position:relative}
+  .gradient-card h4{font-family:var(--serif);font-weight:500;font-size:14pt;color:#0A0A0A;letter-spacing:.02em}
+  .gradient-card .css{font-family:var(--mono);font-size:8.5pt;color:#0A0A0A;background:rgba(255,255,255,.5);padding:3mm 5mm;margin-top:4mm;display:inline-block;letter-spacing:.04em}
+
+  /* P10-P12 — Typography */
+  .type-card{padding:8mm 0;border-bottom:.5pt solid var(--gold-line)}
+  .type-card:last-child{border:0}
+  .type-card .meta{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5mm}
+  .type-card .meta .name{font-family:var(--sans);font-weight:600;font-size:10pt;letter-spacing:.28em;color:var(--gold-mid);text-transform:uppercase}
+  .type-card .meta .role{font-family:var(--mono);font-size:8pt;color:#999;letter-spacing:.14em;text-transform:uppercase}
+  .type-spec{font-family:var(--mono);font-size:8pt;color:#666;letter-spacing:.06em;margin-top:4mm;line-height:1.7}
+  .type-spec b{color:var(--gold-mid);font-weight:500}
+
+  /* P13 — Iconography */
+  .icons-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:5mm;margin-top:4mm}
+  .icon-cell{aspect-ratio:1;border:.5pt solid rgba(212,175,55,.3);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3mm;gap:2mm;background:linear-gradient(180deg,rgba(212,175,55,.03),transparent)}
+  .icon-cell svg{width:16mm;height:16mm;color:var(--gold-sh)}
+  .icon-cell .nm{font-family:var(--body);font-size:7pt;color:#555;text-align:center;letter-spacing:.02em;line-height:1.3}
+  .icons-note{margin-top:8mm;padding:5mm 8mm;background:var(--cream);border-left:2px solid var(--gold);font-family:var(--body);font-size:9pt;color:#444;line-height:1.6}
+  .icons-note b{color:var(--ink)}
+
+  /* P14 — Photography */
+  .photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:8mm;flex:1}
+  .photo-card{display:flex;flex-direction:column;gap:3mm}
+  .photo-ph{aspect-ratio:4/3;background:repeating-linear-gradient(135deg,#e8e3d6,#e8e3d6 8px,#dcd5c2 8px,#dcd5c2 16px);border:.5pt solid #c9bfa4;position:relative;display:flex;align-items:center;justify-content:center}
+  .photo-ph .ph-mid{font-family:var(--mono);font-size:8pt;color:var(--gold-sh);letter-spacing:.18em;text-transform:uppercase;text-align:center;background:#fff;padding:3mm 5mm;border:.5pt solid var(--gold-mid)}
+  .photo-card .cap{font-family:var(--body);font-size:8.5pt;color:#444;line-height:1.5}
+  .photo-card .cap b{font-family:var(--serif);font-weight:500;font-size:10pt;color:var(--ink);letter-spacing:.02em;display:block;margin-bottom:1mm}
+
+  /* P15 — Print apps */
+  .app-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;flex:1;align-content:start}
+  .app-card{display:flex;flex-direction:column;gap:2mm}
+  .app-mock{aspect-ratio:.85;background:var(--cream);border:.5pt solid rgba(0,0,0,.08);position:relative;overflow:hidden;display:flex;flex-direction:column;padding:3mm;font-family:var(--body);font-size:6pt;color:#555}
+  .app-mock.dark{background:#0A0A0A;color:#F4D773}
+  .app-name{font-family:var(--serif);font-weight:500;font-size:9pt;color:var(--ink);letter-spacing:.02em}
+  .app-spec{font-family:var(--mono);font-size:7pt;color:#777;letter-spacing:.08em;text-transform:uppercase}
+
+  /* P17 — Email signatures preview */
+  .sig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:4mm;flex:1;align-content:start}
+  .sig-card{display:flex;flex-direction:column;gap:2mm}
+  .sig-prev{padding:5mm 6mm;background:#fff;border:.5pt solid rgba(0,0,0,.12);font-family:var(--body);font-size:7pt;color:#333;line-height:1.5;min-height:48mm;display:flex;flex-direction:column;gap:1.5mm}
+  .sig-prev.dark{background:#0A0A0A;color:#fff}
+  .sig-prev .sn{font-family:var(--body);font-weight:600;font-size:8pt;color:inherit}
+  .sig-prev .role{font-family:var(--body);font-size:7pt;color:var(--gold-mid)}
+  .sig-prev .rule-g{height:.5pt;background:var(--gold);margin:1mm 0;width:60%}
+  .sig-prev .ln{font-family:var(--mono);font-size:6.5pt;color:#666}
+  .sig-prev.dark .ln{color:#bcb29a}
+  .sig-prev .banner{margin-top:auto;background:#0A0A0A;color:var(--gold-hi);padding:2mm 3mm;font-family:var(--mono);font-size:6.5pt;letter-spacing:.08em}
+  .sig-cap{font-family:var(--mono);font-size:7pt;color:var(--gold-mid);letter-spacing:.14em;text-transform:uppercase}
+  .sig-cap b{color:var(--ink);font-weight:500}
+
+  /* P21 — Voice */
+  .voice-grid{display:grid;grid-template-columns:1fr 1fr;gap:6mm;flex:1;align-content:start}
+  .voice-col h4{font-family:var(--sans);font-weight:600;font-size:9pt;letter-spacing:.3em;text-transform:uppercase;padding-bottom:2mm;border-bottom:.5pt solid;margin-bottom:4mm}
+  .voice-col.ok h4{color:#1f7a4e;border-color:#1f7a4e}
+  .voice-col.no h4{color:#a02226;border-color:#a02226}
+  .voice-col ul{list-style:none;display:flex;flex-direction:column;gap:3mm}
+  .voice-col li{font-family:var(--body);font-size:9pt;color:#333;line-height:1.55;padding-left:6mm;position:relative}
+  .voice-col.ok li::before{content:"✓";position:absolute;left:0;color:#1f7a4e;font-weight:700}
+  .voice-col.no li::before{content:"✕";position:absolute;left:0;color:#a02226;font-weight:700}
+
+  .voice-ex{margin-top:6mm;padding:5mm 6mm;background:var(--cream);border-left:2px solid var(--gold)}
+  .voice-ex h4{font-family:var(--sans);font-weight:600;font-size:8pt;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-mid);margin-bottom:3mm}
+  .voice-ex .pair{display:grid;grid-template-columns:auto 1fr;gap:2mm 4mm;font-family:var(--body);font-size:9pt;color:#333;line-height:1.55;padding:2mm 0;border-bottom:.5pt dashed rgba(0,0,0,.08)}
+  .voice-ex .pair:last-child{border:0}
+  .voice-ex .pair .tag{font-family:var(--mono);font-size:7pt;color:#a02226;letter-spacing:.14em;text-transform:uppercase}
+  .voice-ex .pair .tag.ok{color:#1f7a4e}
+  .voice-ex .pair .ex{color:#444}
+  .voice-ex .pair .ex.ok{color:var(--ink);font-weight:500}
+
+  /* P22 — Contact */
+  .contact-card{margin:auto;padding:18mm 14mm;border:.5pt solid var(--gold);background:linear-gradient(180deg,rgba(212,175,55,.04),transparent);text-align:center;width:140mm}
+  .contact-card .role{font-family:var(--sans);font-weight:600;font-size:9pt;letter-spacing:.36em;color:var(--gold-mid);text-transform:uppercase;margin-bottom:4mm}
+  .contact-card .nm{font-family:var(--serif);font-weight:500;font-size:24pt;color:var(--ink);letter-spacing:.02em;margin-bottom:2mm}
+  .contact-card .ti{font-family:var(--body);font-size:10pt;color:#555;letter-spacing:.04em;margin-bottom:8mm}
+  .contact-card .rows{text-align:left;display:flex;flex-direction:column;gap:3mm;padding:6mm 0;border-top:.5pt solid var(--gold-line);border-bottom:.5pt solid var(--gold-line)}
+  .contact-card .rows .r{display:flex;font-family:var(--body);font-size:10pt;color:var(--ink)}
+  .contact-card .rows .r .k{font-family:var(--mono);font-size:8pt;color:var(--gold-mid);letter-spacing:.2em;text-transform:uppercase;min-width:30mm;padding-top:2pt}
+  .contact-card .pol{margin-top:8mm;font-family:var(--body);font-size:9pt;line-height:1.65;color:#444;font-style:italic}
+  .contact-card .pol b{color:var(--ink);font-style:normal}
+
+  /* Helpers */
+  .stack-h{display:flex;flex-direction:column;gap:5mm;flex:1}
+  .row-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:6mm;font-family:var(--mono);font-size:8pt;color:#666}
+  .row-meta div{padding:3mm 4mm;background:var(--cream);border-left:2px solid var(--gold)}
+  .row-meta b{color:var(--ink);font-weight:500;font-family:var(--body);font-size:9pt;display:block;margin-bottom:1mm}
+
+  /* PRINT */
+  @page{size:A4;margin:0}
+  @media print{
+    body{background:#fff;padding:0;gap:0}
+    .page{box-shadow:none;margin:0}
+    .print-fab,.toc-fab{display:none!important}
+  }
+</style>
+</head>
+<body>
+
+<button class="print-fab" onclick="window.print()" aria-label="Imprimir o guardar como PDF">
+  <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3 3h10v3H3zM2 6h12c.6 0 1 .4 1 1v5c0 .6-.4 1-1 1h-1v-3H3v3H2c-.6 0-1-.4-1-1V7c0-.6.4-1 1-1zm2 6h8v2H4z"/></svg>
+  ▶ Imprimir / Guardar PDF
+</button>
+
+<!-- ═════════════════════════════════════════════════════════════
+     SVG SYMBOLS (reused)
+     ═════════════════════════════════════════════════════════════ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="ggold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"/><stop offset=".35" stop-color="#D4AF37"/><stop offset=".7" stop-color="#B8862B"/><stop offset="1" stop-color="#8B5E1A"/></linearGradient>
+    <linearGradient id="ggold2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8B5E1A"/></linearGradient>
+    <clipPath id="cp-hu"><circle cx="50" cy="50" r="42"/></clipPath>
+    <!-- HUYGHU sphere -->
+    <symbol id="sym-huyghu" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="42" fill="#0A0A0A"/>
+      <g clip-path="url(#cp-hu)">
+        <path d="M 50 8 A 42 42 0 0 0 8 50 A 42 42 0 0 0 50 92 Q 30 70 30 50 Q 30 30 50 8 Z" fill="url(#ggold)"/>
+        <g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#ggold)"/><rect x="8" y="44" width="84" height="6" fill="url(#ggold)"/><rect x="8" y="60" width="84" height="6" fill="url(#ggold)"/></g>
+      </g>
+    </symbol>
+    <symbol id="sym-huyghu-light" viewBox="0 0 100 100">
+      <g clip-path="url(#cp-hu)">
+        <circle cx="50" cy="50" r="42" fill="#0A0A0A"/>
+        <path d="M 50 8 A 42 42 0 0 0 8 50 A 42 42 0 0 0 50 92 Q 30 70 30 50 Q 30 30 50 8 Z" fill="url(#ggold)"/>
+        <g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#ggold)"/><rect x="8" y="44" width="84" height="6" fill="url(#ggold)"/><rect x="8" y="60" width="84" height="6" fill="url(#ggold)"/></g>
+      </g>
+    </symbol>
+    <symbol id="sym-huyghu-mono-k" viewBox="0 0 100 100"><g clip-path="url(#cp-hu)"><circle cx="50" cy="50" r="42" fill="#0A0A0A"/></g></symbol>
+    <symbol id="sym-huyghu-mono-g" viewBox="0 0 100 100"><g clip-path="url(#cp-hu)"><circle cx="50" cy="50" r="42" fill="#D4AF37"/></g></symbol>
+
+    <!-- CHRYTSA G + arch crown -->
+    <symbol id="sym-chrytsa" viewBox="0 0 120 100">
+      <!-- arch / corona -->
+      <path d="M 22 32 Q 60 6 98 32" fill="none" stroke="url(#ggold)" stroke-width="6" stroke-linecap="round"/>
+      <path d="M 28 36 Q 60 14 92 36" fill="none" stroke="url(#ggold2)" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+      <!-- swoosh under arch -->
+      <path d="M 18 50 Q 60 38 102 50" fill="none" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round"/>
+      <!-- letter G -->
+      <text x="60" y="92" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-weight="700" font-size="76" fill="#0A0A0A">G</text>
+    </symbol>
+    <symbol id="sym-chrytsa-dark" viewBox="0 0 120 100">
+      <path d="M 22 32 Q 60 6 98 32" fill="none" stroke="url(#ggold)" stroke-width="6" stroke-linecap="round"/>
+      <path d="M 28 36 Q 60 14 92 36" fill="none" stroke="url(#ggold2)" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+      <path d="M 18 50 Q 60 38 102 50" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+      <text x="60" y="92" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-weight="700" font-size="76" fill="#FFFFFF">G</text>
+    </symbol>
+    <symbol id="sym-chrytsa-mono-k" viewBox="0 0 120 100">
+      <path d="M 22 32 Q 60 6 98 32" fill="none" stroke="#0A0A0A" stroke-width="6" stroke-linecap="round"/>
+      <path d="M 18 50 Q 60 38 102 50" fill="none" stroke="#0A0A0A" stroke-width="5" stroke-linecap="round"/>
+      <text x="60" y="92" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-weight="700" font-size="76" fill="#0A0A0A">G</text>
+    </symbol>
+    <symbol id="sym-chrytsa-mono-g" viewBox="0 0 120 100">
+      <path d="M 22 32 Q 60 6 98 32" fill="none" stroke="#D4AF37" stroke-width="6" stroke-linecap="round"/>
+      <path d="M 18 50 Q 60 38 102 50" fill="none" stroke="#D4AF37" stroke-width="5" stroke-linecap="round"/>
+      <text x="60" y="92" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-weight="700" font-size="76" fill="#D4AF37">G</text>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 01 — COVER
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <div class="cover">
+    <div class="logos">
+      <div class="lk">
+        <svg class="sym" viewBox="0 0 120 100"><use href="#sym-chrytsa"/></svg>
+        <div class="wm">GRUPO CHRYTSA</div>
+        <div class="tg">A S E S O R E S</div>
+      </div>
+      <div class="arr">↓ MATRIZ &nbsp; · &nbsp; FILIAL ↓</div>
+      <div class="lk">
+        <svg class="sym" viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg>
+        <div class="wm">HUYGHU &amp; ASOCIADOS</div>
+        <div class="tg">C O N T A D O R E S &nbsp; P Ú B L I C O S</div>
+      </div>
+    </div>
+    <div class="cv-rule"></div>
+    <h1 class="cv">MANUAL DE IDENTIDAD<br>CORPORATIVA · 2026</h1>
+    <div class="cv-sub">Grupo Chrytsa · HUYGHU &amp; Asociados · v1.0</div>
+    <div class="cv-foot">Documento confidencial · Uso interno y proveedores autorizados</div>
+  </div>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 02 — FILOSOFÍA
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg> <b>GRUPO CHRYTSA</b> · IDENTIDAD</div><div class="rule"></div><div>02 / 22</div></header>
+  <div class="page-body">
+    <div class="eyebrow">§ 02 · Quiénes somos</div>
+    <h1 class="t">Filosofía de marca.</h1>
+    <div class="gold-rule"></div>
+    <div class="phil">
+      <div class="col">
+        <div>
+          <h3>Misión</h3>
+          <p>Proteger el cumplimiento fiscal y la salud contable de empresas dominicanas mediante un servicio profesional, transparente y trazable. Convertir la obligación regulatoria en tranquilidad operativa.</p>
+        </div>
+        <div>
+          <h3>Visión</h3>
+          <p>Ser el holding de asesoría empresarial de referencia en República Dominicana, sinónimo de rigor técnico, confidencialidad absoluta y servicio premium para empresas que valoran su reputación.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div>
+          <h3>Valores</h3>
+          <p><b>Rigor.</b> Cada cifra firmada es defendible ante DGII, banca y socios.</p>
+          <p style="margin-top:3mm"><b>Confidencialidad.</b> Ley 172-13 no es un eslogan, es operación diaria.</p>
+          <p style="margin-top:3mm"><b>Respuesta.</b> SLA menor a 24 horas en cualquier consulta operativa.</p>
+          <p style="margin-top:3mm"><b>Anti-sorpresas.</b> Precio fijo, plazos claros, sin facturación reactiva.</p>
+        </div>
+      </div>
+    </div>
+    <div class="phil-quote">
+      <div class="q">"Su cumplimiento, nuestra prioridad."</div>
+      <div class="att">— ESLOGAN OFICIAL HUYGHU &amp; ASOCIADOS</div>
+    </div>
+  </div>
+  <footer class="page-ftr"><span>HUYGHU &amp; ASOCIADOS<span class="gold-dot"></span>CONTADORES PÚBLICOS</span><span>BRAND GUIDELINES v1.0 · 2026</span></footer>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 03 — LOGO CHRYTSA
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 120 100"><use href="#sym-chrytsa"/></svg> <b>GRUPO CHRYTSA</b> · LOGO MATRIZ</div><div class="rule"></div><div>03 / 22</div></header>
+  <div class="page-body">
+    <div class="eyebrow">§ 03 · Logo Grupo Chrytsa</div>
+    <h1 class="t">Logo · zona de respeto.</h1>
+    <p class="lede" style="max-width:140mm">El espacio libre alrededor del logo equivale al <b>alto de la letra "G"</b> en todos sus lados. Ningún elemento gráfico, texto o margen puede invadirlo.</p>
+    <div class="anat">
+      <div class="logo-area">
+        <div class="grid-overlay"></div>
+        <svg viewBox="0 0 120 100" style="width:90mm;height:auto"><use href="#sym-chrytsa"/></svg>
+        <div class="x-unit" style="top:8mm;left:8mm">↕ x</div>
+        <div class="x-unit" style="bottom:8mm;right:8mm">x ↔</div>
+      </div>
+      <dl class="anat-info">
+        <div><dt>Unidad de medida</dt><dd>x = alto letra "G"</dd></div>
+        <div><dt>Margen libre</dt><dd>1·x en los 4 lados</dd></div>
+        <div><dt>Proporción</dt><dd>6 : 5 (W : H)</dd></div>
+      </dl>
+    </div>
+  </div>
+  <footer class="page-ftr"><span>GRUPO CHRYTSA<span class="gold-dot"></span>MATRIZ HOLDING</span><span>BRAND GUIDELINES v1.0 · 2026</span></footer>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 04 — LOGO HUYGHU
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg> <b>HUYGHU &amp; ASOCIADOS</b> · LOGO FILIAL</div><div class="rule"></div><div>04 / 22</div></header>
+  <div class="page-body">
+    <div class="eyebrow">§ 04 · Logo HUYGHU &amp; Asociados</div>
+    <h1 class="t">Logo · zona de respeto.</h1>
+    <p class="lede" style="max-width:140mm">El espacio libre alrededor del logo equivale al <b>radio del símbolo esférico</b>. Aplicar la misma regla en horizontal y vertical.</p>
+    <div class="anat">
+      <div class="logo-area">
+        <div class="grid-overlay"></div>
+        <svg viewBox="0 0 100 100" style="width:80mm;height:80mm"><use href="#sym-huyghu"/></svg>
+        <div class="x-unit" style="top:8mm;left:8mm">↕ r</div>
+        <div class="x-unit" style="bottom:8mm;right:8mm">r ↔</div>
+      </div>
+      <dl class="anat-info">
+        <div><dt>Unidad de medida</dt><dd>r = radio esfera</dd></div>
+        <div><dt>Margen libre</dt><dd>1·r en los 4 lados</dd></div>
+        <div><dt>Proporción</dt><dd>1 : 1 (cuadrada)</dd></div>
+      </dl>
+      <p class="anat-note">Subordinada visualmente al Grupo Chrytsa pero con identidad operativa autónoma. En documentos co-marca, Chrytsa siempre se posiciona arriba o a la izquierda.</p>
+    </div>
+  </div>
+  <footer class="page-ftr"><span>HUYGHU &amp; ASOCIADOS<span class="gold-dot"></span>CONTADORES PÚBLICOS</span><span>BRAND GUIDELINES v1.0 · 2026</span></footer>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 05 — SISTEMA DE VARIANTES
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg> <b>GRUPO CHRYTSA + HUYGHU</b> · VARIANTES</div><div class="rule"></div><div>05 / 22</div></header>
+  <div class="page-body">
+    <div class="eyebrow">§ 05 · Sistema de variantes</div>
+    <h1 class="t">12 archivos oficiales.</h1>
+    <p class="lede" style="max-width:140mm">Cada marca dispone de 6 variantes en SVG: <b>light · dark · mono negro · mono oro · icon only · wordmark only</b>.</p>
+    <div class="vargrid" style="margin-top:6mm">
+      <div class="var-h">Grupo Chrytsa</div>
+      <div class="item"><div class="vt light"><svg viewBox="0 0 120 100"><use href="#sym-chrytsa"/></svg></div><div class="vlbl">chrytsa-light.svg<b>Fondo claro</b></div></div>
+      <div class="item"><div class="vt dark"><svg viewBox="0 0 120 100"><use href="#sym-chrytsa-dark"/></svg></div><div class="vlbl">chrytsa-dark.svg<b>Fondo oscuro</b></div></div>
+      <div class="item"><div class="vt light"><svg viewBox="0 0 120 100"><use href="#sym-chrytsa-mono-k"/></svg></div><div class="vlbl">chrytsa-mono-k.svg<b>BW · fax</b></div></div>
+      <div class="item"><div class="vt dark"><svg viewBox="0 0 120 100"><use href="#sym-chrytsa-mono-g"/></svg></div><div class="vlbl">chrytsa-mono-g.svg<b>Foil oro</b></div></div>
+      <div class="item"><div class="vt light"><svg viewBox="0 0 120 100" style="width:40%"><use href="#sym-chrytsa"/></svg></div><div class="vlbl">chrytsa-icon.svg<b>Avatar 1:1</b></div></div>
+      <div class="item"><div class="vt light"><div style="font-family:var(--serif);font-weight:600;font-size:14pt;letter-spacing:.1em;color:#0A0A0A">GRUPO CHRYTSA</div></div><div class="vlbl">chrytsa-wordmark.svg<b>Solo texto</b></div></div>
+
+      <div class="var-h">HUYGHU &amp; Asociados</div>
+      <div class="item"><div class="vt light"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg></div><div class="vlbl">huyghu-light.svg<b>Fondo claro</b></div></div>
+      <div class="item"><div class="vt dark"><svg viewBox="0 0 100 100"><use href="#sym-huyghu-light"/></svg></div><div class="vlbl">huyghu-dark.svg<b>Fondo oscuro</b></div></div>
+      <div class="item"><div class="vt light"><svg viewBox="0 0 100 100"><use href="#sym-huyghu-mono-k"/></svg></div><div class="vlbl">huyghu-mono-k.svg<b>BW · fax</b></div></div>
+      <div class="item"><div class="vt dark"><svg viewBox="0 0 100 100"><use href="#sym-huyghu-mono-g"/></svg></div><div class="vlbl">huyghu-mono-g.svg<b>Foil oro</b></div></div>
+      <div class="item"><div class="vt light"><svg viewBox="0 0 100 100" style="width:55%"><use href="#sym-huyghu"/></svg></div><div class="vlbl">huyghu-icon.svg<b>Avatar 1:1</b></div></div>
+      <div class="item"><div class="vt light"><div style="font-family:var(--serif);font-weight:600;font-size:11pt;letter-spacing:.06em;color:#0A0A0A;text-align:center">HUYGHU<br><span style="font-size:7pt;letter-spacing:.32em;color:#D4AF37">&amp; ASOCIADOS</span></div></div><div class="vlbl">huyghu-wordmark.svg<b>Solo texto</b></div></div>
+    </div>
+  </div>
+  <footer class="page-ftr"><span>SISTEMA DE MARCA<span class="gold-dot"></span>12 ARCHIVOS SVG OFICIALES</span><span>BRAND GUIDELINES v1.0 · 2026</span></footer>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 06 — TAMAÑOS MÍNIMOS
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg> <b>SISTEMA DE MARCA</b> · ESCALAS</div><div class="rule"></div><div>06 / 22</div></header>
+  <div class="page-body">
+    <div class="eyebrow">§ 06 · Tamaños mínimos</div>
+    <h1 class="t">Escala &amp; legibilidad.</h1>
+    <p class="lede" style="max-width:140mm">Por debajo de los siguientes umbrales, el símbolo pierde definición o las letras del wordmark se vuelven ilegibles. Respetar siempre.</p>
+    <div class="sz-grid" style="margin-top:8mm">
+      <div class="sz-card">
+        <h4>▸ Impreso</h4>
+        <div class="row"><span class="min">15 mm</span><span class="desc">Logo completo (símbolo + wordmark)</span><svg class="sample" viewBox="0 0 100 100" style="width:15mm;height:15mm"><use href="#sym-huyghu"/></svg></div>
+        <div class="row"><span class="min">8 mm</span><span class="desc">Solo icon / símbolo</span><svg class="sample" viewBox="0 0 100 100" style="width:8mm;height:8mm"><use href="#sym-huyghu"/></svg></div>
+        <div class="row"><span class="min">30 mm</span><span class="desc">Wordmark sin símbolo</span><span class="sample" style="font-family:var(--serif);font-weight:600;font-size:8pt;letter-spacing:.06em">HUYGHU &amp; ASOCIADOS</span></div>
+      </div>
+      <div class="sz-card">
+        <h4>▸ Digital</h4>
+        <div class="row"><span class="min">120 px</span><span class="desc">Logo completo (header web, email)</span><svg class="sample" viewBox="0 0 100 100" style="width:18mm;height:18mm"><use href="#sym-huyghu"/></svg></div>
+        <div class="row"><span class="min">48 px</span><span class="desc">Solo icon (favicon, avatar)</span><svg class="sample" viewBox="0 0 100 100" style="width:12mm;height:12mm"><use href="#sym-huyghu"/></svg></div>
+        <div class="row"><span class="min">16 px</span><span class="desc">Favicon mínimo (mono)</span><svg class="sample" viewBox="0 0 100 100" style="width:5mm;height:5mm"><use href="#sym-huyghu-mono-k"/></svg></div>
+      </div>
+    </div>
+    <div class="row-meta">
+      <div><b>Banca / firmas</b>Solo logo color completo, mínimo 25 mm</div>
+      <div><b>Wearables</b>Solo icon mono oro, mínimo 6 mm</div>
+      <div><b>RRSS avatar</b>Icon 1:1, mínimo 400×400 px</div>
+    </div>
+  </div>
+  <footer class="page-ftr"><span>SISTEMA DE MARCA<span class="gold-dot"></span>TAMAÑOS MÍNIMOS</span><span>BRAND GUIDELINES v1.0 · 2026</span></footer>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 07 — USOS INCORRECTOS
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg> <b>SISTEMA DE MARCA</b> · USOS PROHIBIDOS</div><div class="rule"></div><div>07 / 22</div></header>
+  <div class="page-body">
+    <div class="eyebrow">§ 07 · Lo que NUNCA debe hacerse</div>
+    <h1 class="t">Usos incorrectos.</h1>
+    <p class="lede" style="max-width:140mm">Las siguientes manipulaciones rompen la integridad de marca y están <b>prohibidas en cualquier aplicación interna o externa</b>.</p>
+    <div class="mis-grid">
+      <div class="mis"><svg viewBox="0 0 100 100" style="width:30mm;height:18mm;transform:scaleX(1.6)"><use href="#sym-huyghu"/></svg><div class="lbl">01 · No distorsionar proporciones</div></div>
+      <div class="mis"><svg viewBox="0 0 100 100" style="width:24mm;height:24mm;filter:hue-rotate(180deg) saturate(2)"><use href="#sym-huyghu"/></svg><div class="lbl">02 · No alterar colores</div></div>
+      <div class="mis"><svg viewBox="0 0 100 100" style="width:24mm;height:24mm;transform:rotate(20deg)"><use href="#sym-huyghu"/></svg><div class="lbl">03 · No rotar</div></div>
+      <div class="mis"><svg viewBox="0 0 100 100" style="width:24mm;height:24mm;filter:drop-shadow(2mm 2mm 1mm rgba(0,0,0,.6))"><use href="#sym-huyghu"/></svg><div class="lbl">04 · No añadir sombras o efectos</div></div>
+      <div class="mis" style="background:linear-gradient(135deg,#e30613,#1e6f33)"><svg viewBox="0 0 100 100" style="width:24mm;height:24mm"><use href="#sym-huyghu"/></svg><div class="lbl" style="color:#fff;background:rgba(0,0,0,.6);padding:2mm 4mm">05 · No sobre fondos saturados</div></div>
+      <div class="mis" style="overflow:hidden"><svg viewBox="0 0 100 100" style="width:36mm;height:36mm;margin-left:-12mm"><use href="#sym-huyghu"/></svg><div class="lbl">06 · No recortar el ícono</div></div>
+    </div>
+  </div>
+  <footer class="page-ftr"><span>SISTEMA DE MARCA<span class="gold-dot"></span>RESTRICCIONES DE USO</span><span>BRAND GUIDELINES v1.0 · 2026</span></footer>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 08 — PALETA PRIMARIA
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg> <b>COLOR</b> · PALETA PRIMARIA</div><div class="rule"></div><div>08 / 22</div></header>
+  <div class="page-body">
+    <div class="eyebrow">§ 08 · Color · Paleta primaria</div>
+    <h1 class="t">Oro · negro · blanco.</h1>
+    <p class="lede" style="max-width:140mm">Tres colores soportan toda la identidad. Cualquier otra tonalidad debe consultarse con Brand Manager antes de uso.</p>
+    <div class="palette" style="margin-top:8mm">
+      <div class="swatch"><div class="chip" style="background:#D4AF37;color:#0A0A0A"><span class="hx">#D4AF37</span></div><div class="meta"><div class="nm">Oro Primary</div><div class="tok">gold/primary</div><dl><dt>RGB</dt><dd>212·175·55</dd><dt>CMYK</dt><dd>0·17·75·14</dd><dt>Pantone</dt><dd>871 C Metallic</dd></dl><div class="use">Color base del wordmark sobre fondo oscuro. Acentos premium.</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#0A0A0A;color:#F4D773"><span class="hx">#0A0A0A</span></div><div class="meta"><div class="nm">Ink Black</div><div class="tok">ink/black</div><dl><dt>RGB</dt><dd>10·10·10</dd><dt>CMYK</dt><dd>0·0·0·96</dd><dt>Pantone</dt><dd>Black 6 C</dd></dl><div class="use">Fondo dark canónico. Wordmark sobre fondo claro.</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#F4D773;color:#0A0A0A"><span class="hx">#F4D773</span></div><div class="meta"><div class="nm">Oro Highlight</div><div class="tok">gold/highlight</div><dl><dt>RGB</dt><dd>244·215·115</dd><dt>CMYK</dt><dd>0·12·53·4</dd><dt>Pantone</dt><dd>7404 C</dd></dl><div class="use">Brillo superior del gradiente. Hover digital.</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#FFFFFF;color:#0A0A0A;border:.5pt solid #eee"><span class="hx">#FFFFFF</span></div><div class="meta"><div class="nm">Paper White</div><div class="tok">paper/white</div><dl><dt>RGB</dt><dd>255·255·255</dd><dt>CMYK</dt><dd>0·0·0·0</dd><dt>Pantone</dt><dd>White</dd></dl><div class="use">Fondo light canónico. Espacios negativos.</div></div></div>
+    </div>
+  </div>
+  <footer class="page-ftr"><span>COLOR<span class="gold-dot"></span>PALETA PRIMARIA</span><span>BRAND GUIDELINES v1.0 · 2026</span></footer>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 09 — PALETA SECUNDARIA + GRADIENTE
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg> <b>COLOR</b> · PALETA SECUNDARIA</div><div class="rule"></div><div>09 / 22</div></header>
+  <div class="page-body">
+    <div class="eyebrow">§ 09 · Color · Paleta secundaria</div>
+    <h1 class="t">Tonos de soporte.</h1>
+    <p class="lede" style="max-width:140mm">Variaciones del oro que dan profundidad al sistema (sombras, líneas divisorias, cremas cálidas).</p>
+    <div class="palette" style="margin-top:8mm">
+      <div class="swatch"><div class="chip" style="background:#B8862B;color:#fff"><span class="hx">#B8862B</span></div><div class="meta"><div class="nm">Oro Mid</div><div class="tok">gold/mid</div><dl><dt>RGB</dt><dd>184·134·43</dd><dt>CMYK</dt><dd>0·27·77·28</dd></dl><div class="use">Mid-tone gradiente. Hover sobre oro primary.</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#8B5E1A;color:#F4D773"><span class="hx">#8B5E1A</span></div><div class="meta"><div class="nm">Oro Shadow</div><div class="tok">gold/shadow</div><dl><dt>RGB</dt><dd>139·94·26</dd><dt>CMYK</dt><dd>0·32·81·45</dd></dl><div class="use">Sombras profundas. Texto meta/eyebrow.</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#C9A227;color:#0A0A0A"><span class="hx">#C9A227</span></div><div class="meta"><div class="nm">Oro Line</div><div class="tok">gold/line</div><dl><dt>RGB</dt><dd>201·162·39</dd><dt>CMYK</dt><dd>0·19·81·21</dd></dl><div class="use">Líneas divisorias 0.5–1pt en documentos.</div></div></div>
+      <div class="swatch"><div class="chip" style="background:#FAFAF8;color:#0A0A0A;border:.5pt solid #eee"><span class="hx">#FAFAF8</span></div><div class="meta"><div class="nm">Paper Cream</div><div class="tok">paper/cream</div><dl><dt>RGB</dt><dd>250·250·248</dd><dt>CMYK</dt><dd>0·0·1·2</dd></dl><div class="use">Light alternativo cálido. Fondos sutiles.</div></div></div>
+    </div>
+    <div class="gradient-card">
+      <h4>Gradiente oro canónico</h4>
+      <div style="font-family:var(--body);font-size:9pt;color:rgba(10,10,10,.85);margin-top:2mm">Aplicado en superficies del símbolo, banners de portada y elementos premium.</div>
+      <div class="css">linear-gradient(135deg, #F4D773 0%, #D4AF37 35%, #B8862B 70%, #8B5E1A 100%)</div>
+    </div>
+  </div>
+  <footer class="page-ftr"><span>COLOR<span class="gold-dot"></span>SECUNDARIA + GRADIENTE</span><span>BRAND GUIDELINES v1.0 · 2026</span></footer>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 10 — TIPOGRAFÍA WORDMARK · CINZEL
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg> <b>TIPOGRAFÍA</b> · WORDMARK</div><div class="rule"></div><div>10 / 22</div></header>
+  <div class="page-body">
+    <div class="eyebrow">§ 10 · Tipografía · Wordmark</div>
+    <h1 class="t">Cinzel.</h1>
+    <p class="lede" style="max-width:140mm">Serif romana clásica con proporciones inspiradas en inscripciones en piedra. Usada exclusivamente en <b>wordmarks, títulos editoriales y citas premium</b>.</p>
+    <div class="type-card">
+      <div class="meta"><span class="name">Cinzel Regular · 400</span><span class="role">Wordmark base</span></div>
+      <div style="font-family:'Cinzel',serif;font-weight:400;font-size:72pt;color:var(--ink);line-height:1;letter-spacing:.04em">Aa Bb Cc</div>
+      <div style="font-family:'Cinzel',serif;font-weight:400;font-size:24pt;color:var(--gold-sh);line-height:1.2;letter-spacing:.06em;margin-top:5mm">ABCDEFGHIJKLM &nbsp; NOPQRSTUVWXYZ &nbsp; 0123456789 !?&amp;.</div>
+    </div>
+    <div class="type-card">
+      <div class="meta"><span class="name">Cinzel Bold · 700</span><span class="role">Énfasis · ejemplo wordmark</span></div>
+      <div style="font-family:'Cinzel',serif;font-weight:700;font-size:42pt;color:var(--ink);line-height:1;letter-spacing:.06em">HUYGHU &amp; ASOCIADOS</div>
+      <div style="font-family:'Cinzel',serif;font-weight:600;font-size:32pt;color:var(--gold);line-height:1;letter-spacing:.08em;margin-top:4mm">GRUPO CHRYTSA</div>
+    </div>
+    <div class="type-spec">
+      <b>Fallback stack:</b> 'Trajan Pro', 'Cinzel', 'Cormorant Garamond', Georgia, serif &nbsp;|&nbsp;
+      <b>Google Fonts:</b> fonts.google.com/specimen/Cinzel &nbsp;|&nbsp;
+      <b>Licencia:</b> SIL Open Font License 1.1
+    </div>
+  </div>
+  <footer class="page-ftr"><span>TIPOGRAFÍA<span class="gold-dot"></span>CINZEL · WORDMARK</span><span>BRAND GUIDELINES v1.0 · 2026</span></footer>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 11 — TIPOGRAFÍA TAGLINE · MONTSERRAT
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg> <b>TIPOGRAFÍA</b> · TAGLINE</div><div class="rule"></div><div>11 / 22</div></header>
+  <div class="page-body">
+    <div class="eyebrow">§ 11 · Tipografía · Tagline</div>
+    <h1 class="t">Montserrat.</h1>
+    <p class="lede" style="max-width:140mm">Sans-serif geométrico moderno. Usado en <b>taglines bajo el wordmark, etiquetas, eyebrows editoriales y datos meta</b> — siempre en mayúsculas con tracking amplio.</p>
+    <div class="type-card">
+      <div class="meta"><span class="name">Montserrat Medium · 500</span><span class="role">Tagline canónico · tracking 0.32em</span></div>
+      <div style="font-family:'Montserrat',sans-serif;font-weight:500;font-size:36pt;color:var(--ink);letter-spacing:.32em;text-transform:uppercase">Contadores Públicos</div>
+      <div style="font-family:'Montserrat',sans-serif;font-weight:500;font-size:24pt;color:var(--gold-mid);letter-spacing:.36em;text-transform:uppercase;margin-top:6mm">Asesores</div>
+      <div style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:14pt;color:var(--gold-sh);letter-spacing:.4em;text-transform:uppercase;margin-top:6mm">§ Servicios fiscales DGII</div>
+    </div>
+    <div class="type-card">
+      <div class="meta"><span class="name">Montserrat Regular · 400</span><span class="role">Etiquetas auxiliares</span></div>
+      <div style="font-family:'Montserrat',sans-serif;font-weight:400;font-size:36pt;color:var(--ink);line-height:1;letter-spacing:.02em">AaBbCc 0123</div>
+    </div>
+    <div class="type-spec">
+      <b>Fallback stack:</b> 'Montserrat', 'Avenir Next', 'Futura', sans-serif &nbsp;|&nbsp;
+      <b>Google Fonts:</b> fonts.google.com/specimen/Montserrat &nbsp;|&nbsp;
+      <b>Pesos en uso:</b> 400 · 500 · 600
+    </div>
+  </div>
+  <footer class="page-ftr"><span>TIPOGRAFÍA<span class="gold-dot"></span>MONTSERRAT · TAGLINE</span><span>BRAND GUIDELINES v1.0 · 2026</span></footer>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 12 — TIPOGRAFÍA BODY · INTER
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg> <b>TIPOGRAFÍA</b> · BODY · UI</div><div class="rule"></div><div>12 / 22</div></header>
+  <div class="page-body">
+    <div class="eyebrow">§ 12 · Tipografía · Cuerpo de texto e interfaz</div>
+    <h1 class="t">Inter.</h1>
+    <p class="lede" style="max-width:140mm">Sans-serif neutro optimizado para pantallas. Toda la <b>copy editorial, UI digital y documentos contables</b> usan Inter en 3 pesos.</p>
+    <div class="type-card">
+      <div class="meta"><span class="name">Inter Regular · 400 · 16pt</span><span class="role">Cuerpo editorial</span></div>
+      <p style="font-family:'Inter',sans-serif;font-weight:400;font-size:11pt;line-height:1.65;color:#2a2a2a;max-width:170mm">Las declaraciones mensuales IT-1 (ITBIS) y los formatos 606/607 se someten vía portal DGII antes del día 20 de cada mes, con confirmación electrónica adjunta al cliente. Para personas jurídicas, el formulario IR-2 anual vence el 30 de abril del año posterior al cierre fiscal.</p>
+    </div>
+    <div class="type-card">
+      <div class="meta"><span class="name">Inter Medium / Bold · 500 / 700</span><span class="role">Énfasis · navegación · números</span></div>
+      <div style="display:flex;gap:14mm;font-family:'Inter',sans-serif;color:var(--ink);align-items:baseline">
+        <span style="font-weight:500;font-size:16pt">Estados Financieros</span>
+        <span style="font-weight:700;font-size:20pt;color:var(--gold-sh)">RD$ 1,247,580.00</span>
+        <span style="font-weight:400;font-size:11pt;color:#999">— al 31/12/2025</span>
+      </div>
+    </div>
+    <div class="type-card">
+      <div class="meta"><span class="name">Inter Light · 300 · 24pt</span><span class="role">Lede / introducción</span></div>
+      <div style="font-family:'Inter',sans-serif;font-weight:300;font-size:14pt;line-height:1.5;color:#444;max-width:170mm">Su empresa, en cumplimiento. Sin sorpresas, sin idas y vueltas con la DGII, con un solo punto de contacto.</div>
+    </div>
+    <div class="type-spec">
+      <b>Fallback stack:</b> 'Inter', system-ui, -apple-system, Segoe UI, sans-serif &nbsp;|&nbsp;
+      <b>Google Fonts:</b> fonts.google.com/specimen/Inter &nbsp;|&nbsp;
+      <b>Pesos en uso:</b> 300 · 400 · 500 · 600 · 700
+    </div>
+  </div>
+  <footer class="page-ftr"><span>TIPOGRAFÍA<span class="gold-dot"></span>INTER · BODY UI</span><span>BRAND GUIDELINES v1.0 · 2026</span></footer>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 13 — ICONOGRAFÍA
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg> <b>SISTEMA</b> · ICONOGRAFÍA</div><div class="rule"></div><div>13 / 22</div></header>
+  <div class="page-body">
+    <div class="eyebrow">§ 13 · Iconografía</div>
+    <h1 class="t">Sistema de íconos.</h1>
+    <p class="lede" style="max-width:140mm">Estilo <b>line · 1.5pt stroke · 24×24 grid · esquinas suavemente redondeadas</b>. Color base oro shadow <span style="font-family:var(--mono);background:#FAFAF8;padding:1px 6px;border:.5pt solid var(--gold-line)">#8B5E1A</span>.</p>
+    <div class="icons-grid">
+      <div class="icon-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18"/><path d="M7 17V11M12 17V8M17 17v-3"/></svg><div class="nm">Reporte</div></div>
+      <div class="icon-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6M9 9h2"/></svg><div class="nm">Documento</div></div>
+      <div class="icon-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 7h8M8 11h2M12 11h2M16 11h0M8 15h2M12 15h2M16 15h0M8 19h2M12 19h2M16 19h0"/></svg><div class="nm">Calculadora</div></div>
+      <div class="icon-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/></svg><div class="nm">Banca</div></div>
+      <div class="icon-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg><div class="nm">Crecimiento</div></div>
+      <div class="icon-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M12 14v8M5 5l3 3M16 16l3 3M2 12h6M14 12h8M5 19l3-3M16 8l3-3"/></svg><div class="nm">Auditoría</div></div>
+      <div class="icon-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M17 11l2 2 4-4"/></svg><div class="nm">Equipo</div></div>
+      <div class="icon-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0v4M12 14v3"/></svg><div class="nm">Confidencial</div></div>
+      <div class="icon-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/></svg><div class="nm">Cumplimiento</div></div>
+      <div class="icon-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg><div class="nm">Vencimiento</div></div>
+      <div class="icon-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 10h6.5a1.5 1.5 0 0 1 0 3H9M9 13h6.5a1.5 1.5 0 0 1 0 3H9"/></svg><div class="nm">Fiscal</div></div>
+      <div class="icon-cell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3z"/><path d="M7 22H5a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h2"/></svg><div class="nm">Asesoría</div></div>
+    </div>
+    <div class="icons-note">
+      <b>Reglas:</b> Stroke uniforme 1.5pt · esquinas redondeadas 1px · color por defecto <code style="font-family:var(--mono);background:#fff;padding:1px 4px;border:.5pt solid var(--gold-line)">#8B5E1A</code> · sobre fondos oscuros usar <code style="font-family:var(--mono);background:#fff;padding:1px 4px;border:.5pt solid var(--gold-line)">#F4D773</code>. <b>Nunca rellenar</b> el ícono con color sólido.
+    </div>
+  </div>
+  <footer class="page-ftr"><span>SISTEMA<span class="gold-dot"></span>ICONOGRAFÍA</span><span>BRAND GUIDELINES v1.0 · 2026</span></footer>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 14 — FOTOGRAFÍA
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg> <b>SISTEMA</b> · FOTOGRAFÍA</div><div class="rule"></div><div>14 / 22</div></header>
+  <div class="page-body">
+    <div class="eyebrow">§ 14 · Fotografía &amp; estilo visual</div>
+    <h1 class="t">Estética visual.</h1>
+    <p class="lede" style="max-width:140mm">Tono fotográfico <b>cálido pero profesional</b>. Evitar stock genérico. Preferir fotos propias de oficina y equipo, retocadas con paleta cálida.</p>
+    <div class="photo-grid" style="margin-top:8mm">
+      <div class="photo-card"><div class="photo-ph"><div class="ph-mid">[ FOTO 01 · EQUIPO ]</div></div><div class="cap"><b>Equipo profesional en oficina</b>Formal, sin sonrisas exageradas. Composición frontal o ¾, fondo neutro Torre Acrópolis. Vestimenta corporativa.</div></div>
+      <div class="photo-card"><div class="photo-ph"><div class="ph-mid">[ FOTO 02 · MESA ]</div></div><div class="cap"><b>Reuniones de trabajo</b>Perspectiva contemplativa, luz cálida natural lateral. Documentos físicos sobre mesa de madera oscura.</div></div>
+      <div class="photo-card"><div class="photo-ph"><div class="ph-mid">[ FOTO 03 · DOCUMENTOS ]</div></div><div class="cap"><b>Documentos &amp; papeleo</b>Estética minimal, profundidad de campo. Estados financieros impresos, pluma de tinta, sello.</div></div>
+      <div class="photo-card"><div class="photo-ph"><div class="ph-mid">[ FOTO 04 · CIUDAD ]</div></div><div class="cap"><b>Edificios corporativos SD</b>Torre Acrópolis, Piantini, Naco. Composiciones arquitectónicas frontales con cielo dramático tardío.</div></div>
+    </div>
+    <div class="icons-note">
+      <b>Reglas de retoque:</b> Saturación −10% · sombras cálidas (+5 yellow en shadows) · contraste medio · grano sutil opcional. <b>Nunca filtros HDR ni viñeteado agresivo.</b>
+    </div>
+  </div>
+  <footer class="page-ftr"><span>SISTEMA<span class="gold-dot"></span>FOTOGRAFÍA</span><span>BRAND GUIDELINES v1.0 · 2026</span></footer>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 15 — APLICACIONES IMPRESAS
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg> <b>APLICACIONES</b> · IMPRESAS</div><div class="rule"></div><div>15 / 22</div></header>
+  <div class="page-body">
+    <div class="eyebrow">§ 15 · Aplicaciones impresas</div>
+    <h1 class="t">Papelería corporativa.</h1>
+    <div class="app-grid" style="margin-top:6mm">
+      <div class="app-card">
+        <div class="app-mock dark"><svg viewBox="0 0 100 100" style="width:18mm;height:18mm;margin:auto"><use href="#sym-huyghu-light"/></svg><div style="margin-top:auto"><div style="font-family:var(--serif);font-size:6.5pt;color:#F4D773;letter-spacing:.06em">[Nombre Socio]</div><div style="font-family:var(--mono);font-size:4.5pt;color:#8B5E1A;letter-spacing:.18em">SOCIO DIRECTOR</div></div></div>
+        <div class="app-name">Tarjeta personal</div><div class="app-spec">85×55 mm · Touche Cover 350g · UV selectivo oro</div>
+      </div>
+      <div class="app-card">
+        <div class="app-mock"><svg viewBox="0 0 100 100" style="width:8mm;height:8mm"><use href="#sym-huyghu"/></svg><div style="font-family:var(--serif);font-size:5pt;color:var(--ink);margin-top:1mm">HUYGHU &amp; ASOCIADOS</div><div style="height:.3pt;background:var(--gold);margin:2mm 0"></div><div style="font-family:var(--body);font-size:4pt;color:#888;line-height:1.4">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div></div>
+        <div class="app-name">Carta membretada</div><div class="app-spec">A4 · Bond 90g · Tinta 4/0 + oro 871C</div>
+      </div>
+      <div class="app-card">
+        <div class="app-mock dark" style="aspect-ratio:1.5"><svg viewBox="0 0 100 100" style="width:14mm;height:14mm;margin:auto"><use href="#sym-huyghu-light"/></svg><div style="font-family:var(--mono);font-size:4pt;color:#8B5E1A;letter-spacing:.16em;text-align:center;margin-top:2mm">CONFIDENCIAL · LEY 172-13</div></div>
+        <div class="app-name">Sobre americano</div><div class="app-spec">DL · 220×110mm · Negro sólido + foil oro</div>
+      </div>
+      <div class="app-card">
+        <div class="app-mock dark" style="aspect-ratio:1.1"><svg viewBox="0 0 100 100" style="width:22mm;height:22mm;margin:auto"><use href="#sym-huyghu-light"/></svg><div style="font-family:var(--serif);font-size:6pt;color:#F4D773;text-align:center;margin-top:2mm">HUYGHU<br>&amp; ASOCIADOS</div></div>
+        <div class="app-name">Folder corporativo</div><div class="app-spec">A4+ · Cartulina 300g · Foil oro embossing</div>
+      </div>
+      <div class="app-card">
+        <div class="app-mock" style="aspect-ratio:1"><div style="margin:auto;width:32mm;height:32mm;border-radius:50%;border:1pt solid var(--gold);display:flex;align-items:center;justify-content:center;flex-direction:column;padding:2mm"><svg viewBox="0 0 100 100" style="width:11mm;height:11mm"><use href="#sym-huyghu"/></svg><div style="font-family:var(--serif);font-size:3.5pt;color:var(--ink);text-align:center;margin-top:1mm">HUYGHU CPA</div></div></div>
+        <div class="app-name">Sello cuño</div><div class="app-spec">Ø 40 mm · Goma + tinta gold ink</div>
+      </div>
+      <div class="app-card">
+        <div class="app-mock"><div style="font-family:var(--serif);font-size:6pt;color:var(--ink);text-align:center">INFORME DE AUDITORÍA</div><div style="height:.3pt;background:var(--gold);margin:1mm 0"></div><svg viewBox="0 0 100 100" style="width:14mm;height:14mm;margin:auto"><use href="#sym-huyghu"/></svg><div style="font-family:var(--body);font-size:4pt;color:#666;text-align:center;margin-top:auto">[Cliente] · Ejercicio 2025</div></div>
+        <div class="app-name">Portada informe auditoría</div><div class="app-spec">A4 · Couché mate 250g · Encuadernado lomo</div>
+      </div>
+    </div>
+  </div>
+  <footer class="page-ftr"><span>APLICACIONES<span class="gold-dot"></span>IMPRESAS</span><span>BRAND GUIDELINES v1.0 · 2026</span></footer>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 16 — APLICACIONES DIGITALES
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg> <b>APLICACIONES</b> · DIGITALES</div><div class="rule"></div><div>16 / 22</div></header>
+  <div class="page-body">
+    <div class="eyebrow">§ 16 · Aplicaciones digitales</div>
+    <h1 class="t">Touchpoints digitales.</h1>
+    <div class="app-grid" style="margin-top:6mm">
+      <div class="app-card">
+        <div class="app-mock dark" style="padding:0"><div style="background:var(--ink);padding:3mm 4mm;display:flex;align-items:center;gap:2mm"><svg viewBox="0 0 100 100" style="width:6mm;height:6mm"><use href="#sym-huyghu-light"/></svg><div style="font-family:var(--serif);font-size:5pt;color:#F4D773;letter-spacing:.08em">HUYGHU</div></div><div style="padding:4mm;flex:1;display:flex;flex-direction:column;justify-content:center"><div style="font-family:var(--serif);font-size:9pt;color:#F4D773;line-height:1.1">Su cumplimiento, nuestra prioridad.</div><div style="height:.3pt;background:var(--gold);margin:2mm 0;width:40%"></div><div style="font-family:var(--body);font-size:4pt;color:#bcb29a">Firma de contadores públicos · Grupo Chrytsa</div></div></div>
+        <div class="app-name">Web · Home</div><div class="app-spec">1920×1080 viewport · responsive</div>
+      </div>
+      <div class="app-card">
+        <div class="app-mock" style="padding:3mm"><div style="background:#fff;padding:3mm;border:.5pt solid #eee;flex:1;display:flex;flex-direction:column;gap:1mm"><div style="font-family:var(--body);font-weight:600;font-size:5pt;color:var(--ink)">[Nombre Apellido]</div><div style="font-family:var(--body);font-size:4pt;color:var(--gold-sh)">Socio Director · HUYGHU</div><div style="height:.3pt;background:var(--gold);margin:1mm 0;width:30%"></div><div style="font-family:var(--mono);font-size:3.5pt;color:#666">info@huyghusrl.com · +1 809-261-7938</div></div></div>
+        <div class="app-name">Firma email</div><div class="app-spec">600px max · table-based · 12 variantes</div>
+      </div>
+      <div class="app-card">
+        <div class="app-mock dark"><svg viewBox="0 0 100 100" style="width:14mm;height:14mm;margin:auto"><use href="#sym-huyghu-light"/></svg><div style="font-family:var(--serif);font-size:7pt;color:#F4D773;text-align:center;margin-top:2mm">HUYGHU &amp; ASOCIADOS</div><div style="font-family:var(--mono);font-size:3pt;color:#8B5E1A;letter-spacing:.2em;text-align:center;margin-top:1mm">CONTADORES PÚBLICOS</div></div>
+        <div class="app-name">LinkedIn header</div><div class="app-spec">1584×396 px · Company page</div>
+      </div>
+      <div class="app-card">
+        <div class="app-mock"><div style="background:#fff;display:flex;align-items:center;gap:1mm;padding:1mm 2mm;border-bottom:.3pt solid #ccc"><div style="width:3mm;height:3mm;background:#0A0A0A;border-radius:50%;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 100 100" style="width:2mm;height:2mm"><use href="#sym-huyghu-light"/></svg></div><div style="font-family:var(--body);font-size:3pt;color:#333">huyghusrl.com</div></div><div style="flex:1;padding:2mm;font-family:var(--mono);font-size:3pt;color:#999;letter-spacing:.06em">FAVICON 16/32/48 + apple-touch · 10 archivos</div></div>
+        <div class="app-name">Favicon · browser tab</div><div class="app-spec">16/32/48/180/192/512 px · ICO + PNG</div>
+      </div>
+      <div class="app-card">
+        <div class="app-mock"><div style="background:var(--ink);padding:3mm 4mm;color:#F4D773"><svg viewBox="0 0 100 100" style="width:6mm;height:6mm"><use href="#sym-huyghu-light"/></svg></div><div style="padding:3mm;flex:1;display:flex;flex-direction:column;justify-content:center"><div style="font-family:var(--serif);font-size:7pt;color:var(--ink);line-height:1">INFORME<br>FINANCIERO</div><div style="height:.3pt;background:var(--gold);margin:2mm 0;width:50%"></div><div style="font-family:var(--mono);font-size:3pt;color:#999;letter-spacing:.14em">[CLIENTE] · ENE 2026</div></div></div>
+        <div class="app-name">PDF mensual portada</div><div class="app-spec">A4 · vertical · 300 DPI export</div>
+      </div>
+      <div class="app-card">
+        <div class="app-mock dark" style="aspect-ratio:1"><svg viewBox="0 0 100 100" style="width:22mm;height:22mm;margin:auto"><use href="#sym-huyghu-light"/></svg></div>
+        <div class="app-name">WhatsApp Business profile</div><div class="app-spec">640×640 px · cuadrada · centrada</div>
+      </div>
+    </div>
+  </div>
+  <footer class="page-ftr"><span>APLICACIONES<span class="gold-dot"></span>DIGITALES</span><span>BRAND GUIDELINES v1.0 · 2026</span></footer>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 17 — EMAIL SIGNATURES
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg> <b>APLICACIONES</b> · EMAIL SIGNATURES</div><div class="rule"></div><div>17 / 22</div></header>
+  <div class="page-body">
+    <div class="eyebrow">§ 17 · Firmas de correo</div>
+    <h1 class="t">12 firmas oficiales.</h1>
+    <p class="lede" style="max-width:140mm">3 estilos × 2 themes × 2 marcas. Tabla HTML inline, compatible Outlook 2016+, Gmail web, Apple Mail, iOS Mail. Disclaimer Ley 172-13 incluido en variantes <b>complete</b> y <b>promotional</b>.</p>
+    <div class="sig-grid">
+      <div class="sig-card">
+        <div class="sig-prev">
+          <div class="sn">[Nombre Apellido]</div>
+          <div class="role">Socio Director · HUYGHU &amp; Asociados</div>
+          <div class="rule-g"></div>
+          <div class="ln">info@huyghusrl.com · +1 809-261-7938</div>
+        </div>
+        <div class="sig-cap"><b>Minimal</b> · Light · 3 líneas</div>
+      </div>
+      <div class="sig-card">
+        <div class="sig-prev dark">
+          <div class="sn" style="color:#F4D773">[Nombre Apellido]</div>
+          <div class="role">Socio Director · HUYGHU &amp; Asociados</div>
+          <div class="rule-g"></div>
+          <div class="ln">info@huyghusrl.com · +1 809-261-7938</div>
+          <div class="ln">Torre Acrópolis P14 · Santo Domingo, RD</div>
+          <div class="ln">www.huyghusrl.com · in/[handle]</div>
+          <div class="ln" style="font-size:5.5pt;margin-top:1mm">RNC: 131-047939 · ICPARD ⏵ miembros activos</div>
+        </div>
+        <div class="sig-cap"><b>Complete</b> · Dark · 8 líneas + disclaimer</div>
+      </div>
+      <div class="sig-card">
+        <div class="sig-prev">
+          <div class="sn">[Nombre Apellido]</div>
+          <div class="role">Socio Director · HUYGHU &amp; Asociados</div>
+          <div class="rule-g"></div>
+          <div class="ln">info@huyghusrl.com · +1 809-261-7938</div>
+          <div class="ln">Torre Acrópolis P14 · Santo Domingo, RD</div>
+          <div class="banner">▶ OUTSOURCING CONTABLE · DESDE RD$ [XX,XXX]/MES</div>
+        </div>
+        <div class="sig-cap"><b>Promotional</b> · Light · + banner CTA</div>
+      </div>
+    </div>
+    <div class="icons-note" style="margin-top:8mm"><b>Archivos:</b> ver <code style="font-family:var(--mono);background:#fff;padding:1px 6px;border:.5pt solid var(--gold-line)">/signatures/chrytsa/*.html</code> y <code style="font-family:var(--mono);background:#fff;padding:1px 6px;border:.5pt solid var(--gold-line)">/signatures/huyghu/*.html</code> en el bundle. Cada archivo trae botón "Copiar HTML" listo para pegar en Gmail / Outlook.</div>
+  </div>
+  <footer class="page-ftr"><span>APLICACIONES<span class="gold-dot"></span>EMAIL SIGNATURES</span><span>BRAND GUIDELINES v1.0 · 2026</span></footer>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 18 — PLANTILLA WORD
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg> <b>APLICACIONES</b> · PLANTILLA WORD</div><div class="rule"></div><div>18 / 22</div></header>
+  <div class="page-body">
+    <div class="eyebrow">§ 18 · Plantilla Word</div>
+    <h1 class="t">Plantilla .docx</h1>
+    <p class="lede" style="max-width:140mm">Plantilla A4 corporativa con estilos preconfigurados: <b>Título 1/2/3</b>, párrafo cuerpo, citas, tablas DGII (606/607), encabezado, pie de página y numeración.</p>
+    <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:10mm;margin-top:8mm;flex:1;align-items:stretch">
+      <div style="background:#fff;border:.5pt solid #ddd;padding:8mm;display:flex;flex-direction:column">
+        <div style="display:flex;align-items:center;gap:3mm;padding-bottom:4mm;border-bottom:1pt solid var(--gold)"><svg viewBox="0 0 100 100" style="width:9mm;height:9mm"><use href="#sym-huyghu"/></svg><div><div style="font-family:var(--serif);font-size:9pt;color:var(--ink)">HUYGHU &amp; ASOCIADOS</div><div style="font-family:var(--mono);font-size:5pt;color:var(--gold-mid);letter-spacing:.2em">CONTADORES PÚBLICOS</div></div></div>
+        <div style="font-family:var(--serif);font-size:14pt;color:var(--ink);margin-top:6mm;letter-spacing:.02em">Título del documento</div>
+        <div style="font-family:var(--body);font-size:7pt;color:#444;line-height:1.6;margin-top:3mm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</div>
+        <div style="font-family:var(--sans);font-weight:600;font-size:8pt;color:var(--gold-mid);letter-spacing:.16em;text-transform:uppercase;margin-top:5mm">§ Subsección</div>
+        <div style="font-family:var(--body);font-size:7pt;color:#444;line-height:1.6;margin-top:2mm">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+        <div style="margin-top:auto;display:flex;justify-content:space-between;font-family:var(--mono);font-size:5pt;color:#999;letter-spacing:.14em;border-top:.5pt solid var(--gold-line);padding-top:2mm"><span>HUYGHU.COM</span><span>PÁG. 1 / 1</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:4mm">
+        <h2 class="s">Estilos incluidos</h2>
+        <ul style="list-style:none;font-family:var(--body);font-size:9.5pt;color:#333;line-height:1.7">
+          <li>▸ <b>Título 1</b> · Cinzel 24pt oro</li>
+          <li>▸ <b>Título 2</b> · Cinzel 16pt ink</li>
+          <li>▸ <b>Título 3</b> · Montserrat SC 11pt gold-mid</li>
+          <li>▸ <b>Cuerpo</b> · Inter 11pt</li>
+          <li>▸ <b>Cita</b> · Cormorant italic 14pt</li>
+          <li>▸ <b>Lista numérica</b> · Inter 11pt + viñeta oro</li>
+          <li>▸ <b>Tabla 606/607</b> · header oro + filas alternas</li>
+          <li>▸ <b>Tabla estados financieros</b> · numéricos a la derecha</li>
+          <li>▸ <b>Pie de página</b> · numeración Mono 8pt</li>
+        </ul>
+        <div style="margin-top:auto;padding:5mm 6mm;background:var(--ink);color:var(--gold-hi);font-family:var(--mono);font-size:8pt;letter-spacing:.16em;text-transform:uppercase;text-align:center;border-left:2px solid var(--gold)">▸ HUYGHU-Plantilla.docx<br><span style="color:#bcb29a;font-size:6.5pt;letter-spacing:.1em">/templates/word/</span></div>
+      </div>
+    </div>
+  </div>
+  <footer class="page-ftr"><span>APLICACIONES<span class="gold-dot"></span>PLANTILLA WORD</span><span>BRAND GUIDELINES v1.0 · 2026</span></footer>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 19 — PLANTILLA POWERPOINT
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg> <b>APLICACIONES</b> · PLANTILLA POWERPOINT</div><div class="rule"></div><div>19 / 22</div></header>
+  <div class="page-body">
+    <div class="eyebrow">§ 19 · Plantilla PowerPoint</div>
+    <h1 class="t">Pitch Deck v1.0</h1>
+    <p class="lede" style="max-width:140mm">Deck corporativo de <b>15 slides 1920×1080</b> nativo PowerPoint con speaker notes en español RD. 4 layouts master reutilizables.</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:5mm;margin-top:8mm">
+      <div style="background:var(--ink);aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3mm;gap:1mm"><svg viewBox="0 0 100 100" style="width:8mm;height:8mm"><use href="#sym-huyghu-light"/></svg><div style="font-family:var(--serif);font-size:6pt;color:#F4D773;letter-spacing:.06em;text-align:center;line-height:1.1">HUYGHU<br>&amp; ASOCIADOS</div><div style="font-family:var(--mono);font-size:3pt;color:#8B5E1A;letter-spacing:.2em;margin-top:1mm">CONTADORES PÚBLICOS</div></div>
+      <div style="background:var(--ink);aspect-ratio:16/9;padding:3mm;color:#F4D773;display:flex;flex-direction:column"><div style="font-family:var(--mono);font-size:3pt;color:#8B5E1A;letter-spacing:.18em">§ 04 · SERVICIOS</div><div style="font-family:var(--serif);font-size:7pt;color:#F4D773;margin-top:1mm">Servicios contables.</div><div style="height:.3pt;background:var(--gold);margin:1mm 0;width:30%"></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1mm;flex:1"><div style="border:.3pt solid rgba(212,175,55,.3);padding:1mm;font-family:var(--body);font-size:3pt;color:#bcb29a">▢</div><div style="border:.3pt solid rgba(212,175,55,.3);padding:1mm;font-family:var(--body);font-size:3pt;color:#bcb29a">▢</div><div style="border:.3pt solid rgba(212,175,55,.3);padding:1mm;font-family:var(--body);font-size:3pt;color:#bcb29a">▢</div></div></div>
+      <div style="background:var(--ink);aspect-ratio:16/9;padding:3mm;color:#F4D773;display:flex;flex-direction:column;justify-content:center"><div style="font-family:var(--mono);font-size:3pt;color:#8B5E1A;letter-spacing:.18em">SECCIÓN 02</div><div style="font-family:var(--serif);font-size:11pt;color:#F4D773;margin-top:2mm;line-height:1">Cifras &amp;<br>trayectoria.</div><div style="height:.3pt;background:var(--gold);margin-top:2mm;width:40%"></div></div>
+      <div style="background:var(--ink);aspect-ratio:16/9;padding:3mm;color:#F4D773;display:flex;flex-direction:column;justify-content:center;align-items:center"><div style="font-family:var(--serif);font-size:11pt;color:#F4D773">¿Hablamos?</div><div style="font-family:var(--mono);font-size:3pt;color:#8B5E1A;letter-spacing:.18em;margin-top:1mm">CONTACTO · CTA</div><div style="width:8mm;height:8mm;background:#FAFAF8;margin-top:1mm"></div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:5mm;margin-top:2mm;font-family:var(--mono);font-size:7pt;color:#666;letter-spacing:.12em;text-align:center;text-transform:uppercase">
+      <div>01 · Portada</div><div>02 · Contenido</div><div>03 · Sección</div><div>04 · Cierre</div>
+    </div>
+    <div style="margin-top:auto;padding:5mm 6mm;background:var(--ink);color:var(--gold-hi);font-family:var(--mono);font-size:8pt;letter-spacing:.16em;text-transform:uppercase;text-align:center;border-left:2px solid var(--gold);margin-top:8mm">▸ HUYGHU-Pitch-Deck-v1.0.pptx · 15 SLIDES · 1.27 MB<br><span style="color:#bcb29a;font-size:6.5pt;letter-spacing:.1em">/deck/</span></div>
+  </div>
+  <footer class="page-ftr"><span>APLICACIONES<span class="gold-dot"></span>PLANTILLA POWERPOINT</span><span>BRAND GUIDELINES v1.0 · 2026</span></footer>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 20 — RRSS
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg> <b>APLICACIONES</b> · REDES SOCIALES</div><div class="rule"></div><div>20 / 22</div></header>
+  <div class="page-body">
+    <div class="eyebrow">§ 20 · RRSS · LinkedIn / Instagram</div>
+    <h1 class="t">Templates sociales.</h1>
+    <p class="lede" style="max-width:140mm">6 templates editables para campañas mensuales: <b>quote post · recordatorio fiscal · servicio destacado · equipo · caso éxito · felicitación</b>.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:5mm;margin-top:8mm">
+      <div><div style="background:var(--ink);aspect-ratio:1;padding:5mm;display:flex;flex-direction:column;justify-content:center;color:#F4D773;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:9pt;line-height:1.3;border-left:1pt solid var(--gold)">"El cumplimiento no es un costo: es la garantía de que mañana sigues operando."<div style="font-family:var(--mono);font-style:normal;font-size:4pt;color:#8B5E1A;letter-spacing:.18em;margin-top:3mm">— HUYGHU CPA · 2026</div></div><div class="app-spec" style="margin-top:1mm">01 · Quote post</div></div>
+      <div><div style="background:var(--ink);aspect-ratio:1;padding:4mm;display:flex;flex-direction:column;color:#F4D773"><div style="font-family:var(--mono);font-size:4pt;color:#8B5E1A;letter-spacing:.2em">▶ RECORDATORIO DGII</div><div style="font-family:var(--serif);font-size:14pt;margin-top:auto;line-height:1">20<br><span style="font-size:5pt;color:#bcb29a">DÍAS PARA</span></div><div style="font-family:var(--serif);font-size:8pt;color:#F4D773;margin-top:1mm">VENCIMIENTO IT-1</div></div><div class="app-spec" style="margin-top:1mm">02 · Recordatorio fiscal</div></div>
+      <div><div style="background:var(--ink);aspect-ratio:1;padding:4mm;display:flex;flex-direction:column;color:#F4D773"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:8mm;height:8mm;color:#D4AF37"><rect x="3" y="3" width="18" height="18"/><path d="M7 17V11M12 17V8M17 17v-3"/></svg><div style="font-family:var(--serif);font-size:8pt;margin-top:3mm;line-height:1.1">Outsourcing<br>Contable.</div><div style="font-family:var(--mono);font-size:4pt;color:#bcb29a;letter-spacing:.14em;margin-top:auto">DESDE RD$ [XX,XXX]/MES</div></div><div class="app-spec" style="margin-top:1mm">03 · Servicio destacado</div></div>
+      <div><div style="background:var(--ink);aspect-ratio:1;display:flex;flex-direction:column;color:#F4D773;overflow:hidden"><div style="flex:1;background:repeating-linear-gradient(135deg,#3a2f1a,#3a2f1a 4px,#2a2412 4px,#2a2412 8px)"></div><div style="padding:3mm"><div style="font-family:var(--serif);font-size:7pt">[Nombre Apellido]</div><div style="font-family:var(--mono);font-size:4pt;color:#8B5E1A;letter-spacing:.18em">SOCIO DIRECTOR</div></div></div><div class="app-spec" style="margin-top:1mm">04 · Equipo · contratación</div></div>
+      <div><div style="background:var(--ink);aspect-ratio:1;padding:4mm;display:flex;flex-direction:column;color:#F4D773"><div style="font-family:var(--mono);font-size:4pt;color:#8B5E1A;letter-spacing:.2em">CASO DE ÉXITO · 2025</div><div style="font-family:var(--serif);font-size:22pt;color:#F4D773;margin-top:auto;line-height:1">−18%</div><div style="font-family:var(--body);font-size:5pt;color:#bcb29a;margin-top:1mm">Carga fiscal efectiva en 12 meses</div></div><div class="app-spec" style="margin-top:1mm">05 · Caso de éxito</div></div>
+      <div><div style="background:var(--ink);aspect-ratio:1;padding:4mm;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#F4D773;text-align:center"><div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:9pt;color:#F4D773;line-height:1.2">¡Feliz inicio de año fiscal!</div><div style="height:.3pt;background:var(--gold);margin:3mm 0;width:40%"></div><div style="font-family:var(--mono);font-size:3pt;color:#8B5E1A;letter-spacing:.2em">DÍA DEL CONTADOR · RD</div></div><div class="app-spec" style="margin-top:1mm">06 · Felicitación</div></div>
+    </div>
+    <div class="row-meta">
+      <div><b>Instagram square</b>1080 × 1080 px · feed orgánico</div>
+      <div><b>LinkedIn post</b>1200 × 627 px · campañas B2B</div>
+      <div><b>IG story</b>1080 × 1920 px · vertical 9:16</div>
+    </div>
+  </div>
+  <footer class="page-ftr"><span>APLICACIONES<span class="gold-dot"></span>REDES SOCIALES</span><span>BRAND GUIDELINES v1.0 · 2026</span></footer>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 21 — TONO DE VOZ
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg> <b>VERBAL</b> · TONO DE VOZ</div><div class="rule"></div><div>21 / 22</div></header>
+  <div class="page-body">
+    <div class="eyebrow">§ 21 · Verbal · Tono de voz</div>
+    <h1 class="t">Cómo hablamos.</h1>
+    <p class="lede" style="max-width:140mm">Hablamos como una <b>firma seria que no abruma</b>. Claridad &gt; jerga técnica. Tranquilidad &gt; urgencia. Datos concretos &gt; promesas vagas.</p>
+    <div class="voice-grid" style="margin-top:6mm">
+      <div class="voice-col ok">
+        <h4>✓ Hacemos</h4>
+        <ul>
+          <li>Hablar de cumplimiento como <b>tranquilidad</b>, no como obligación.</li>
+          <li><b>Tutear</b> en web/RRSS · <b>ustedear</b> con clientes corporativos formales.</li>
+          <li>Casos concretos con <b>números</b> verificables.</li>
+          <li>Anti-fricción: respuesta clara en menos de 24h.</li>
+          <li>Explicar siglas técnicas (DGII, ITBIS, ICPARD) la primera vez.</li>
+          <li>Citar fuentes regulatorias cuando aplique (Norma 06-18, Ley 11-92).</li>
+        </ul>
+      </div>
+      <div class="voice-col no">
+        <h4>✕ No hacemos</h4>
+        <ul>
+          <li>No usar lenguaje técnico DGII <b>sin explicar</b>.</li>
+          <li>No prometer "ahorros mágicos de impuestos".</li>
+          <li>No usar <b>buzzwords</b> vacíos: sinergia, holístico, transformación.</li>
+          <li>No mensajes pasivo-agresivos ("ya le habíamos avisado…").</li>
+          <li>No emojis en correos corporativos · OK en WhatsApp Business.</li>
+          <li>No urgencia artificial ("¡Última oportunidad!").</li>
+        </ul>
+      </div>
+    </div>
+    <div class="voice-ex">
+      <h4>▸ Ejemplos · reescritura</h4>
+      <div class="pair"><span class="tag">✕ No</span><span class="ex">"Optimizamos sinérgicamente tu carga tributaria mediante soluciones disruptivas."</span></div>
+      <div class="pair"><span class="tag ok">✓ Sí</span><span class="ex ok">"Revisamos tus declaraciones de los últimos 3 ejercicios y te decimos qué se puede ajustar dentro de la norma. Sin promesas mágicas."</span></div>
+      <div class="pair"><span class="tag">✕ No</span><span class="ex">"¡URGENTE! Vence el ITBIS en 48h, ¿ya enviaste el IT-1?"</span></div>
+      <div class="pair"><span class="tag ok">✓ Sí</span><span class="ex ok">"Recordatorio: el formulario IT-1 (ITBIS de octubre) se somete antes del 20 de noviembre. Te confirmamos cuando esté enviado."</span></div>
+      <div class="pair"><span class="tag">✕ No</span><span class="ex">"Somos líderes en consultoría contable de excelencia."</span></div>
+      <div class="pair"><span class="tag ok">✓ Sí</span><span class="ex ok">"15 años acompañando a 300+ empresas dominicanas con cumplimiento DGII al 100%."</span></div>
+    </div>
+  </div>
+  <footer class="page-ftr"><span>VERBAL<span class="gold-dot"></span>TONO DE VOZ</span><span>BRAND GUIDELINES v1.0 · 2026</span></footer>
+</article>
+
+<!-- ═════════════════════════════════════════════════════════════
+     PAGE 22 — CONTACTO BRAND MANAGER
+     ═════════════════════════════════════════════════════════════ -->
+<article class="page">
+  <header class="page-hdr"><div class="l"><svg viewBox="0 0 100 100"><use href="#sym-huyghu"/></svg> <b>GOBERNANZA</b> · BRAND MANAGER</div><div class="rule"></div><div>22 / 22</div></header>
+  <div class="page-body" style="justify-content:center">
+    <div class="eyebrow" style="text-align:center;margin-bottom:14mm">§ 22 · Gobernanza de marca</div>
+    <div class="contact-card">
+      <div class="role">Brand Manager</div>
+      <div class="nm">[Nombre del Socio Director]</div>
+      <div class="ti">Responsable de identidad corporativa · Grupo Chrytsa</div>
+      <div class="rows">
+        <div class="r"><span class="k">Email</span><span>marca@grupochrytsa.com</span></div>
+        <div class="r"><span class="k">Teléfono</span><span>+1 809-261-7938</span></div>
+        <div class="r"><span class="k">Web</span><span>www.huyghusrl.com</span></div>
+        <div class="r"><span class="k">Dirección</span><span>Torre Acrópolis · Piso 14 · Av. Winston Churchill 93 · Santo Domingo, RD</span></div>
+      </div>
+      <div class="pol"><b>Política de uso:</b> Cualquier uso del logo, paleta o materiales corporativos por parte de terceros (proveedores, partners, prensa) debe ser aprobado por escrito por Brand Manager antes de su publicación. Para consultas, infracciones de marca o solicitudes de assets en otros formatos, escriba a <b>marca@grupochrytsa.com</b>.</div>
+    </div>
+    <div style="margin-top:auto;text-align:center;font-family:var(--mono);font-size:8pt;color:#888;letter-spacing:.18em;text-transform:uppercase;padding-top:14mm">
+      HUYGHU &amp; Asociados<span class="gold-dot" style="background:var(--gold);display:inline-block;width:4px;height:4px;transform:rotate(45deg);margin:0 8px"></span>Miembro Grupo Chrytsa<span class="gold-dot" style="background:var(--gold);display:inline-block;width:4px;height:4px;transform:rotate(45deg);margin:0 8px"></span>v1.0 · 2026 · 22 páginas
+    </div>
+  </div>
+  <footer class="page-ftr"><span>GOBERNANZA<span class="gold-dot"></span>CONTACTO BRAND MANAGER</span><span>BRAND GUIDELINES v1.0 · 2026 · FIN</span></footer>
+</article>
+
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>HUYGHU & Asociados — Pitch Deck v1.0</title>
+<meta name="viewport" content="width=1920, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="deck-stage.js"></script>
+<script type="application/json" id="speaker-notes">
+[
+"Buenos días. Soy [Nombre del Socio Director] de HUYGHU & Asociados, firma de contadores públicos miembro del Grupo Chrytsa. En los próximos 15 minutos voy a mostrarles cómo trabajamos y por qué más de 300 empresas en República Dominicana confían en nosotros su cumplimiento fiscal y contable. Nuestro lema es claro: su cumplimiento es nuestra prioridad.",
+"HUYGHU & Asociados no es una firma improvisada. Somos parte del Grupo Chrytsa, un holding de asesoría empresarial que reúne cuatro firmas especializadas — contable, legal, y dos áreas adicionales. Llevamos más de quince años acompañando a clientes con cumplimiento fiscal integral, auditoría externa, y consultoría contable. Operamos desde Torre Acrópolis, Piso 14, en plena Avenida Winston Churchill.",
+"Las cifras hablan por sí solas. Más de 15 años de trayectoria, más de 300 clientes activos, más de 25 profesionales certificados, y 100% de cumplimiento DGII en el último ejercicio fiscal. Cero notificaciones por mora, cero rectificativas forzadas. Esto no se logra con suerte, se logra con proceso.",
+"Nuestros servicios contables core cubren todo el ciclo. Contabilidad General mensual, Estados Financieros bajo NIIF, Conciliaciones Bancarias, Outsourcing Contable completo, Reestructuración Financiera para empresas en crecimiento o turnaround, y Consultoría Laboral integral. Cada uno con un responsable senior asignado.",
+"En el plano fiscal nos especializamos en las cinco declaraciones DGII más críticas: ITBIS formulario IT-1 mensual, ISR de personas físicas IR-1, IR-3 e IR-17, ISR de personas jurídicas IR-2 anual, formato 606 de compras, y formato 607 de ventas. Todo se somete vía portal DGII con confirmación electrónica en menos de 24 horas. Sin papel, sin filas, sin sorpresas.",
+"Auditoría y Due Diligence es nuestra unidad de mayor crecimiento. Realizamos auditorías externas independientes con informes alineados a NIIF para PYMES y NIIF Plenas. El Due Diligence lo aplicamos en fusiones, adquisiciones y procesos de financiamiento bancario. Cliente entrega información, nosotros entregamos un informe firmado por CPA colegiado.",
+"La gestión de nómina suele ser dolor de cabeza por la cantidad de plataformas a las que hay que reportar. Nosotros lo consolidamos en un solo proceso: cálculo de nómina mensual, presentación de TSS, presentación de INFOTEP, retenciones IR-3 a empleados, y emisión de constancias salariales. El cliente recibe un solo PDF mensual con todo aprobado.",
+"Tenemos cuatro planes que cubren prácticamente cualquier necesidad: Básico para empresas iniciando operaciones, Estándar para PYMES en crecimiento, Premium para empresas medianas, y Corporativo para grupos empresariales con múltiples RNCs. Los precios se ajustan al volumen transaccional real — nada de sorpresas a mitad de año.",
+"Permítanme compartir tres casos representativos. El primero, una empresa de servicios profesionales que redujo su carga fiscal efectiva un 18% en el primer año. El segundo, un grupo comercial que pasó de cinco rectificativas anuales a cero. El tercero, una empresa familiar que cerró su primera auditoría externa limpia tras una restructuración contable nuestra.",
+"Nuestro equipo está estructurado para escalar. Un Socio Director con responsabilidad técnica final, un Gerente de Cuenta por portafolio, dos Contadores Senior por cuenta corporativa, un Analista Fiscal especializado en DGII, y Asistentes Contables para data entry. Todos certificados ICPARD y miembros del CCPSD.",
+"Trabajamos con la mejor tecnología disponible para el mercado dominicano. QuickBooks Online para contabilidad multi-moneda, GestoriaRD para automatizar declaraciones, integración directa con el portal DGII, Firma Electrónica certificada para documentos legales, y WhatsApp Business para comunicación cliente. Procesos 100% digitales.",
+"¿Qué nos diferencia de otras firmas contables? Cuatro cosas concretas: tiempo de respuesta menor a 24 horas en consultas operativas, confidencialidad bajo Ley 172-13 con acuerdos firmados, facturación sin sorpresas con precio fijo mensual, y reportes ejecutivos mensuales para el cliente principal, no solo para la DGII.",
+"Nuestro proceso de onboarding está diseñado para que el cliente esté operando bajo nuestro servicio en menos de 30 días. Paso 1: diagnóstico inicial gratuito de una hora. Paso 2: propuesta personalizada en tres días hábiles. Paso 3: onboarding documental de una semana donde recogemos toda la información histórica. Paso 4: primera entrega mensual completa al cierre del primer mes.",
+"Las garantías que ofrecemos son reales y verificables. Certificación ICPARD vigente de todos nuestros CPAs, seguro de responsabilidad civil profesional internacional, auditoría interna trimestral de nuestros propios procesos, y continuidad operativa garantizada con backup de 30 días y servidores redundantes.",
+"Para cerrar — y este es el momento más importante. Si lo que han escuchado tiene sentido para su empresa, agendemos un diagnóstico inicial sin compromiso. Escaneen el código QR en pantalla, escríbanme directamente a info@huyghusrl.com, o llamen al teléfono que aparece abajo. La primera reunión es gratuita y siempre vale la pena. Gracias por su tiempo."
+]
+</script>
+<style>
+deck-stage{
+  --gold-hi:#F4D773;--gold:#D4AF37;--gold-mid:#B8862B;--gold-sh:#8B5E1A;
+  --ink:#0A0A0A;--paper:#fff;--cream:#FAFAF8;
+  --serif:'Cinzel','Trajan Pro',Georgia,serif;
+  --sans:'Montserrat','Avenir Next','Futura',sans-serif;
+  --body:'Inter',system-ui,sans-serif;
+}
+deck-stage > section{
+  background:#0A0A0A;color:#F2EDDE;font-family:var(--body);
+  position:relative;overflow:hidden;padding:0;
+}
+deck-stage > section::before{
+  /* subtle vignette */
+  content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(212,175,55,.06),transparent 60%);pointer-events:none;
+}
+
+/* HEADER + FOOTER */
+.hdr{position:absolute;top:48px;left:64px;right:64px;display:flex;justify-content:space-between;align-items:center;z-index:5;font-family:var(--body)}
+.hdr-l{display:flex;align-items:center;gap:14px}
+.hdr-l svg{width:36px;height:36px;display:block}
+.hdr-l .nm{font-family:var(--serif);font-weight:600;font-size:14px;letter-spacing:.16em;color:#F4D773}
+.hdr-l .nm small{display:block;font-family:var(--sans);font-weight:500;font-size:8.5px;letter-spacing:.32em;color:#8B5E1A;margin-top:2px}
+.hdr-r{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px;letter-spacing:.18em;color:#8B5E1A;text-transform:uppercase}
+.hdr-r b{color:#F4D773;font-weight:500}
+.ftr{position:absolute;bottom:36px;left:64px;right:64px;display:flex;justify-content:space-between;align-items:center;z-index:5;font-family:var(--body);font-size:11px;color:#6b6759;letter-spacing:.08em}
+.ftr .rule{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(212,175,55,.3),transparent);margin:0 18px}
+
+/* RULES + ACCENTS */
+.gold-line{height:1px;background:#D4AF37}
+.gold-dot{width:7px;height:7px;background:#D4AF37;display:inline-block;transform:rotate(45deg)}
+
+/* CONTENT BLOCKS */
+.body-pad{padding:148px 96px 116px;height:100%;box-sizing:border-box;display:flex;flex-direction:column}
+.eyebrow{font-family:var(--sans);font-weight:600;font-size:14px;letter-spacing:.4em;color:#8B5E1A;text-transform:uppercase;margin-bottom:24px}
+h1.title{font-family:var(--serif);font-weight:500;font-size:84px;line-height:1.05;letter-spacing:.02em;color:#F4D773;margin:0 0 22px;text-wrap:balance}
+h1.title.lg{font-size:108px;line-height:1.02}
+.lede{font-family:var(--body);font-weight:300;font-size:26px;line-height:1.55;color:#E7DDB8;max-width:1100px;text-wrap:pretty}
+.lede b{color:#F4D773;font-weight:500}
+
+/* SLIDE 01 — COVER */
+.cover{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;height:100%;padding:0 80px}
+.cover .symbol{width:220px;height:220px;margin-bottom:48px}
+.cover h1{font-family:var(--serif);font-weight:600;font-size:120px;letter-spacing:.06em;color:#F4D773;line-height:1;margin:0}
+.cover .ampr{color:#D4AF37}
+.cover .tag{font-family:var(--sans);font-weight:500;font-size:22px;letter-spacing:.62em;color:#F2EDDE;margin-top:28px;text-transform:uppercase}
+.cover .rule{width:300px;height:1px;background:linear-gradient(90deg,transparent,#D4AF37,transparent);margin:48px auto}
+.cover .slogan{font-family:var(--serif);font-style:italic;font-weight:500;font-size:34px;color:#D4AF37;letter-spacing:.04em}
+.cover .micro{font-family:var(--body);font-size:13px;color:#6b6759;letter-spacing:.32em;margin-top:64px;text-transform:uppercase}
+
+/* SLIDE 02 grid */
+.two-col{display:grid;grid-template-columns:1.4fr 1fr;gap:80px;flex:1;align-items:center}
+.two-col aside{display:flex;flex-direction:column;align-items:center;gap:32px;padding-top:24px}
+.symbol-frame{width:280px;height:280px;border:1px solid rgba(212,175,55,.25);display:flex;align-items:center;justify-content:center;position:relative}
+.symbol-frame::before,.symbol-frame::after{content:"";position:absolute;background:#D4AF37}
+.symbol-frame::before{top:-1px;left:-1px;width:20px;height:1px;box-shadow:300px 282px 0 0 #D4AF37,0 282px 0 0 #D4AF37,300px 0 0 0 #D4AF37}
+.org-chain{display:flex;align-items:center;gap:8px;font-family:var(--sans);font-size:11px;letter-spacing:.22em;color:#8B5E1A;text-transform:uppercase}
+.org-chain .node{padding:8px 14px;border:1px solid rgba(212,175,55,.3);color:#F4D773}
+.org-chain .node.you{background:#D4AF37;color:#0A0A0A;border-color:#D4AF37}
+.org-chain .ar{color:#8B5E1A}
+
+/* SLIDE 03 — metric tiles */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:64px}
+.tile{padding:48px 36px;border:1px solid rgba(212,175,55,.25);background:rgba(212,175,55,.03);position:relative;min-height:360px;display:flex;flex-direction:column;justify-content:space-between}
+.tile .n{font-family:var(--serif);font-weight:600;font-size:110px;line-height:1;color:#F4D773;letter-spacing:.01em}
+.tile .n sub{font-family:var(--serif);font-size:46px;color:#8B5E1A;vertical-align:super;line-height:1;margin-right:8px}
+.tile .lbl{font-family:var(--sans);font-weight:500;font-size:13px;letter-spacing:.28em;color:#E7DDB8;text-transform:uppercase;line-height:1.6;text-wrap:balance;margin-top:auto}
+.tile .ix{font-family:'JetBrains Mono',monospace;font-size:11px;color:#8B5E1A;letter-spacing:.18em}
+
+/* SLIDE 04 — service list */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
+.svc{padding:36px 30px;border:1px solid rgba(212,175,55,.22);background:rgba(244,215,115,.025);min-height:220px;display:flex;flex-direction:column;gap:14px}
+.svc .ic{width:44px;height:44px;border:1px solid #D4AF37;display:flex;align-items:center;justify-content:center;color:#F4D773;font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:.04em}
+.svc h3{font-family:var(--serif);font-weight:500;font-size:24px;color:#F4D773;margin:0;letter-spacing:.02em;line-height:1.15}
+.svc p{font-family:var(--body);font-size:15px;color:#bcb29a;line-height:1.55;margin:0}
+
+/* SLIDE 05 — DGII table */
+.tax-table{width:100%;border-collapse:collapse;margin-top:40px;font-family:var(--body)}
+.tax-table th{font-family:var(--sans);font-weight:600;font-size:12px;letter-spacing:.24em;color:#8B5E1A;text-transform:uppercase;text-align:left;padding:18px 22px;border-bottom:1px solid #D4AF37}
+.tax-table td{padding:24px 22px;border-bottom:1px solid rgba(212,175,55,.14);font-size:18px;color:#E7DDB8;vertical-align:middle}
+.tax-table td:first-child{font-family:var(--serif);font-weight:500;font-size:22px;color:#F4D773;letter-spacing:.02em;width:38%}
+.tax-table td .code{font-family:'JetBrains Mono',monospace;font-size:13px;color:#8B5E1A;letter-spacing:.12em;display:block;margin-top:4px}
+.tax-table td.r{text-align:right;font-family:'JetBrains Mono',monospace;font-size:14px;color:#9c9580;letter-spacing:.1em}
+.note{display:flex;align-items:center;gap:18px;margin-top:32px;padding:18px 24px;border-left:2px solid #D4AF37;background:rgba(212,175,55,.05);font-family:var(--body);font-size:15px;color:#E7DDB8;line-height:1.5}
+.note b{color:#F4D773;font-weight:500}
+
+/* SLIDE 07 — icon row */
+.icon-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin:48px 0 32px}
+.ic-card{padding:36px 28px;border:1px solid rgba(212,175,55,.22);text-align:center}
+.ic-card .glyph{width:64px;height:64px;border:1.5px solid #D4AF37;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#F4D773;font-family:var(--serif);font-weight:600;font-size:22px;margin:0 auto 18px}
+.ic-card h4{font-family:var(--serif);font-weight:500;font-size:20px;color:#F4D773;margin:0 0 6px;letter-spacing:.04em}
+.ic-card p{font-family:var(--body);font-size:13px;color:#9c9580;margin:0;line-height:1.5}
+
+/* SLIDE 08 — pricing */
+.pricing{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
+.plan{padding:36px 28px;border:1px solid rgba(212,175,55,.22);background:rgba(255,255,255,.015);display:flex;flex-direction:column}
+.plan.featured{border-color:#D4AF37;background:linear-gradient(180deg,rgba(212,175,55,.08),rgba(212,175,55,.015));position:relative}
+.plan.featured::before{content:"RECOMENDADO";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#D4AF37;color:#0A0A0A;font-family:var(--sans);font-weight:600;font-size:9px;letter-spacing:.24em;padding:5px 12px}
+.plan .lvl{font-family:var(--sans);font-weight:600;font-size:12px;letter-spacing:.32em;color:#8B5E1A;text-transform:uppercase}
+.plan .pname{font-family:var(--serif);font-weight:600;font-size:30px;color:#F4D773;margin:8px 0 12px;letter-spacing:.02em}
+.plan .price{font-family:var(--serif);font-weight:500;font-size:24px;color:#E7DDB8;margin-bottom:6px}
+.plan .price small{display:block;font-family:var(--body);font-size:11px;color:#6b6759;letter-spacing:.18em;text-transform:uppercase;margin-top:4px}
+.plan .gold-line{margin:18px 0 16px;background:linear-gradient(90deg,#D4AF37,transparent)}
+.plan ul{margin:0;padding:0;list-style:none}
+.plan li{font-family:var(--body);font-size:13px;color:#bcb29a;line-height:1.6;padding:4px 0 4px 18px;position:relative}
+.plan li::before{content:"";position:absolute;left:0;top:11px;width:6px;height:6px;background:#D4AF37;transform:rotate(45deg)}
+.plan-foot{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#6b6759;letter-spacing:.14em;margin-top:24px;text-transform:uppercase}
+
+/* SLIDE 09 — case studies */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
+.case{padding:36px 30px;border:1px solid rgba(212,175,55,.22);display:flex;flex-direction:column;gap:16px;min-height:340px}
+.case .logo-ph{height:80px;background:repeating-linear-gradient(135deg,rgba(212,175,55,.12),rgba(212,175,55,.12) 6px,transparent 6px,transparent 12px);border:1px dashed rgba(212,175,55,.3);display:flex;align-items:center;justify-content:center;color:#8B5E1A;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.case .cname{font-family:var(--serif);font-weight:500;font-size:22px;color:#F4D773}
+.case .csector{font-family:var(--sans);font-size:11px;color:#8B5E1A;letter-spacing:.22em;text-transform:uppercase}
+.case .metric{font-family:var(--serif);font-weight:600;font-size:38px;color:#F4D773;line-height:1.05;margin-top:auto}
+.case .mdesc{font-family:var(--body);font-size:13px;color:#bcb29a;line-height:1.5;margin-top:6px}
+
+/* SLIDE 10 — org chart */
+.org{margin-top:48px;display:flex;flex-direction:column;align-items:center;gap:36px}
+.org .lvl-1,.org .lvl-2,.org .lvl-3{display:flex;gap:18px;align-items:center;justify-content:center}
+.org .node{padding:18px 28px;border:1px solid #D4AF37;background:rgba(212,175,55,.04);text-align:center;min-width:220px}
+.org .node.you{background:#D4AF37;color:#0A0A0A;border-color:#F4D773}
+.org .node .role{font-family:var(--serif);font-weight:500;font-size:18px;color:#F4D773;letter-spacing:.04em}
+.org .node.you .role{color:#0A0A0A}
+.org .node .sub{font-family:var(--sans);font-size:10px;letter-spacing:.18em;color:#8B5E1A;text-transform:uppercase;margin-top:4px}
+.org .node.you .sub{color:#3b2812}
+.org .branch{width:1px;height:32px;background:#8B5E1A}
+.org .bar{height:1px;background:#8B5E1A;width:80%}
+
+/* SLIDE 11 — tech stack */
+.stack-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:48px}
+.stk{padding:30px 22px;border:1px solid rgba(212,175,55,.22);text-align:center;display:flex;flex-direction:column;gap:12px;min-height:200px;justify-content:center}
+.stk .lg{font-family:var(--serif);font-weight:600;font-size:20px;color:#F4D773;letter-spacing:.02em}
+.stk .ds{font-family:var(--body);font-size:11px;color:#9c9580;line-height:1.5}
+.stk .tag{font-family:'JetBrains Mono',monospace;font-size:10px;color:#8B5E1A;letter-spacing:.18em;margin-top:auto}
+
+/* SLIDE 12 — differentiators */
+.diff{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:32px}
+.diff-tile{padding:48px 40px;border:1px solid #D4AF37;background:linear-gradient(135deg,rgba(212,175,55,.08),rgba(212,175,55,.015));display:flex;align-items:center;gap:28px}
+.diff-tile .n{font-family:var(--serif);font-weight:600;font-size:72px;color:#F4D773;line-height:1;letter-spacing:.02em;min-width:120px}
+.diff-tile h3{font-family:var(--serif);font-weight:500;font-size:26px;color:#F4D773;margin:0 0 6px;letter-spacing:.02em}
+.diff-tile p{font-family:var(--body);font-size:14px;color:#bcb29a;margin:0;line-height:1.55}
+
+/* SLIDE 13 — steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;position:relative}
+.steps::before{content:"";position:absolute;top:38px;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,#D4AF37,#D4AF37,transparent);z-index:0}
+.step{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding-top:0}
+.step .num{width:76px;height:76px;border-radius:50%;background:#0A0A0A;border:1.5px solid #D4AF37;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-weight:600;font-size:32px;color:#F4D773}
+.step .lbl{font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.28em;color:#8B5E1A;text-transform:uppercase}
+.step h4{font-family:var(--serif);font-weight:500;font-size:22px;color:#F4D773;margin:0;letter-spacing:.02em;line-height:1.2}
+.step p{font-family:var(--body);font-size:13px;color:#9c9580;margin:0;line-height:1.5;max-width:260px}
+
+/* SLIDE 14 — bullets large */
+.guarantees{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}
+.g-card{padding:32px 36px;border-left:2px solid #D4AF37;background:rgba(212,175,55,.04)}
+.g-card .glabel{font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.28em;color:#8B5E1A;text-transform:uppercase}
+.g-card h4{font-family:var(--serif);font-weight:500;font-size:24px;color:#F4D773;margin:6px 0 8px;letter-spacing:.02em}
+.g-card p{font-family:var(--body);font-size:14px;color:#bcb29a;margin:0;line-height:1.55}
+
+/* SLIDE 15 — CTA */
+.cta{display:grid;grid-template-columns:1.4fr 1fr;gap:64px;flex:1;align-items:center}
+.cta .l h1{font-size:138px;color:#F4D773;line-height:.95;margin:0 0 24px}
+.cta .l .sub{font-family:var(--serif);font-style:italic;font-size:30px;color:#D4AF37;margin-bottom:48px}
+.cta-rows{display:flex;flex-direction:column;gap:18px}
+.cta-row{display:flex;align-items:center;gap:18px;font-family:var(--body);font-size:20px;color:#F2EDDE}
+.cta-row .k{font-family:'JetBrains Mono',monospace;font-size:11px;color:#8B5E1A;letter-spacing:.24em;text-transform:uppercase;min-width:120px}
+.cta-row .v{color:#F4D773}
+.cta .r{display:flex;flex-direction:column;align-items:center;gap:24px;padding:48px;border:1px solid rgba(212,175,55,.3)}
+.qr-box{width:340px;height:340px;background:#F2EDDE;display:flex;align-items:center;justify-content:center;padding:18px}
+.qr-box svg{width:100%;height:100%}
+.cta .r .cap{font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:.32em;color:#D4AF37;text-transform:uppercase;text-align:center}
+.cta .r .cap small{display:block;font-family:var(--body);font-size:11px;color:#6b6759;letter-spacing:.08em;margin-top:6px;text-transform:none}
+
+/* SECTION-COVER variant for cleaner cover slide */
+section.section-cover .hdr,section.section-cover .ftr{opacity:0}
+</style>
+</head>
+<body>
+
+<deck-stage>
+
+  <!-- 01 — PORTADA -->
+  <section data-screen-label="01 Portada" class="section-cover">
+    <div class="cover">
+      <svg class="symbol" viewBox="0 0 100 100">
+        <defs><linearGradient id="gP1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"/><stop offset=".35" stop-color="#D4AF37"/><stop offset=".7" stop-color="#B8862B"/><stop offset="1" stop-color="#8B5E1A"/></linearGradient><clipPath id="cP1"><circle cx="50" cy="50" r="42"/></clipPath></defs>
+        <circle cx="50" cy="50" r="42" fill="#0A0A0A" stroke="#D4AF37" stroke-width=".4"/>
+        <g clip-path="url(#cP1)"><path d="M 50 8 A 42 42 0 0 0 8 50 A 42 42 0 0 0 50 92 Q 30 70 30 50 Q 30 30 50 8 Z" fill="url(#gP1)"/><g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#gP1)"/><rect x="8" y="44" width="84" height="6" fill="url(#gP1)"/><rect x="8" y="60" width="84" height="6" fill="url(#gP1)"/></g></g>
+      </svg>
+      <h1>HUYGHU <span class="ampr">&amp;</span> ASOCIADOS</h1>
+      <div class="tag">C O N T A D O R E S &nbsp; P Ú B L I C O S</div>
+      <div class="rule"></div>
+      <div class="slogan">"Su cumplimiento, nuestra prioridad."</div>
+      <div class="micro">Miembro del Grupo Chrytsa · República Dominicana · 2026</div>
+    </div>
+  </section>
+
+  <!-- 02 — ¿Quiénes somos? -->
+  <section data-screen-label="02 Quienes somos">
+    <header class="hdr"><div class="hdr-l"><svg viewBox="0 0 100 100"><defs><linearGradient id="gH2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8B5E1A"/></linearGradient><clipPath id="cH2"><circle cx="50" cy="50" r="42"/></clipPath></defs><circle cx="50" cy="50" r="42" fill="#0A0A0A"/><g clip-path="url(#cH2)"><path d="M 50 8 A 42 42 0 0 0 8 50 A 42 42 0 0 0 50 92 Q 30 70 30 50 Q 30 30 50 8 Z" fill="url(#gH2)"/><g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#gH2)"/><rect x="8" y="44" width="84" height="6" fill="url(#gH2)"/><rect x="8" y="60" width="84" height="6" fill="url(#gH2)"/></g></g></svg><div class="nm">HUYGHU &amp; ASOCIADOS<small>CONTADORES PÚBLICOS</small></div></div><div class="hdr-r"><b>02</b> / 15</div></header>
+    <div class="body-pad">
+      <div class="eyebrow">§ 02 · Identidad</div>
+      <div class="two-col">
+        <div>
+          <h1 class="title">¿Quiénes somos?</h1>
+          <p class="lede">Firma de <b>contadores públicos</b> miembro del <b>Grupo Chrytsa</b>, holding de asesoría empresarial en República Dominicana. Más de <b>15 años</b> de experiencia respaldando a clientes con cumplimiento fiscal integral, auditoría externa y consultoría contable bajo NIIF.</p>
+          <div style="margin-top:48px;display:flex;gap:48px;font-family:var(--body)">
+            <div><div style="font-family:var(--serif);font-size:40px;color:#F4D773;line-height:1">[15+]</div><div style="font-family:var(--sans);font-size:11px;letter-spacing:.22em;color:#8B5E1A;text-transform:uppercase;margin-top:4px">Años operando</div></div>
+            <div><div style="font-family:var(--serif);font-size:40px;color:#F4D773;line-height:1">ICPARD</div><div style="font-family:var(--sans);font-size:11px;letter-spacing:.22em;color:#8B5E1A;text-transform:uppercase;margin-top:4px">Colegiados</div></div>
+            <div><div style="font-family:var(--serif);font-size:40px;color:#F4D773;line-height:1">NIIF</div><div style="font-family:var(--sans);font-size:11px;letter-spacing:.22em;color:#8B5E1A;text-transform:uppercase;margin-top:4px">PYMES + Plenas</div></div>
+          </div>
+        </div>
+        <aside>
+          <div class="symbol-frame"><svg width="200" height="200" viewBox="0 0 100 100"><defs><linearGradient id="gH2b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8B5E1A"/></linearGradient><clipPath id="cH2b"><circle cx="50" cy="50" r="42"/></clipPath></defs><circle cx="50" cy="50" r="42" fill="#0A0A0A"/><g clip-path="url(#cH2b)"><path d="M 50 8 A 42 42 0 0 0 8 50 A 42 42 0 0 0 50 92 Q 30 70 30 50 Q 30 30 50 8 Z" fill="url(#gH2b)"/><g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#gH2b)"/><rect x="8" y="44" width="84" height="6" fill="url(#gH2b)"/><rect x="8" y="60" width="84" height="6" fill="url(#gH2b)"/></g></g></svg></div>
+          <div class="org-chain"><span class="node">GRUPO CHRYTSA</span><span class="ar">→</span><span class="node you">HUYGHU</span></div>
+          <div style="font-family:var(--body);font-size:12px;color:#6b6759;text-align:center;letter-spacing:.04em;line-height:1.6">Una de las 4 firmas<br>del holding Chrytsa</div>
+        </aside>
+      </div>
+    </div>
+    <footer class="ftr"><span>HUYGHU &amp; ASOCIADOS · CONTADORES PÚBLICOS</span><div class="rule"></div><span>www.huyghusrl.com · 2026</span></footer>
+  </section>
+
+  <!-- 03 — Cifras -->
+  <section data-screen-label="03 Cifras">
+    <header class="hdr"><div class="hdr-l"><svg viewBox="0 0 100 100"><defs><linearGradient id="gH3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8B5E1A"/></linearGradient><clipPath id="cH3"><circle cx="50" cy="50" r="42"/></clipPath></defs><circle cx="50" cy="50" r="42" fill="#0A0A0A"/><g clip-path="url(#cH3)"><path d="M 50 8 A 42 42 0 0 0 8 50 A 42 42 0 0 0 50 92 Q 30 70 30 50 Q 30 30 50 8 Z" fill="url(#gH3)"/><g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#gH3)"/><rect x="8" y="44" width="84" height="6" fill="url(#gH3)"/><rect x="8" y="60" width="84" height="6" fill="url(#gH3)"/></g></g></svg><div class="nm">HUYGHU &amp; ASOCIADOS<small>CONTADORES PÚBLICOS</small></div></div><div class="hdr-r"><b>03</b> / 15</div></header>
+    <div class="body-pad">
+      <div class="eyebrow">§ 03 · Trayectoria</div>
+      <h1 class="title">Cifras que respaldan<br>una década y media.</h1>
+      <div class="tiles">
+        <div class="tile"><div class="ix">01 · TRAYECTORIA</div><div><div class="n"><sub>+</sub>15</div><div class="lbl">Años de experiencia<br>continua</div></div></div>
+        <div class="tile"><div class="ix">02 · PORTAFOLIO</div><div><div class="n"><sub>+</sub>300</div><div class="lbl">Clientes activos<br>en cartera</div></div></div>
+        <div class="tile"><div class="ix">03 · EQUIPO</div><div><div class="n"><sub>+</sub>25</div><div class="lbl">Profesionales<br>certificados</div></div></div>
+        <div class="tile"><div class="ix">04 · CUMPLIMIENTO</div><div><div class="n">100<span style="font-size:50px;color:#8B5E1A;">%</span></div><div class="lbl">Cumplimiento DGII<br>último ejercicio</div></div></div>
+      </div>
+    </div>
+    <footer class="ftr"><span>HUYGHU &amp; ASOCIADOS · CONTADORES PÚBLICOS</span><div class="rule"></div><span>www.huyghusrl.com · 2026</span></footer>
+  </section>
+
+  <!-- 04 — Servicios contables -->
+  <section data-screen-label="04 Servicios contables">
+    <header class="hdr"><div class="hdr-l"><svg viewBox="0 0 100 100"><defs><linearGradient id="gH4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8B5E1A"/></linearGradient><clipPath id="cH4"><circle cx="50" cy="50" r="42"/></clipPath></defs><circle cx="50" cy="50" r="42" fill="#0A0A0A"/><g clip-path="url(#cH4)"><path d="M 50 8 A 42 42 0 0 0 8 50 A 42 42 0 0 0 50 92 Q 30 70 30 50 Q 30 30 50 8 Z" fill="url(#gH4)"/><g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#gH4)"/><rect x="8" y="44" width="84" height="6" fill="url(#gH4)"/><rect x="8" y="60" width="84" height="6" fill="url(#gH4)"/></g></g></svg><div class="nm">HUYGHU &amp; ASOCIADOS<small>CONTADORES PÚBLICOS</small></div></div><div class="hdr-r"><b>04</b> / 15</div></header>
+    <div class="body-pad">
+      <div class="eyebrow">§ 04 · Servicios core</div>
+      <h1 class="title">Servicios contables.</h1>
+      <p class="lede">El ciclo completo, con un <b>contador senior asignado</b> a cada cuenta.</p>
+      <div class="svc-grid">
+        <div class="svc"><div class="ic">01</div><h3>Contabilidad General</h3><p>Registros mensuales bajo NIIF · Plan de cuentas multi-moneda · Cierres trimestrales.</p></div>
+        <div class="svc"><div class="ic">02</div><h3>Estados Financieros</h3><p>Balance General · Estado de Resultados · Flujo de Efectivo · Notas a los EE.FF.</p></div>
+        <div class="svc"><div class="ic">03</div><h3>Conciliaciones Bancarias</h3><p>Conciliación mensual multi-cuenta · Reportes de partidas pendientes · Validación con banco.</p></div>
+        <div class="svc"><div class="ic">04</div><h3>Outsourcing Contable</h3><p>Departamento contable externalizado · Sin overhead fijo · Equipo escalable según volumen.</p></div>
+        <div class="svc"><div class="ic">05</div><h3>Reestructuración Financiera</h3><p>Diagnóstico contable · Plan de turnaround · Acompañamiento ejecutivo trimestral.</p></div>
+        <div class="svc"><div class="ic">06</div><h3>Consultoría Laboral</h3><p>Estructuración salarial · Beneficios CTS · Compliance Ministerio Trabajo.</p></div>
+      </div>
+    </div>
+    <footer class="ftr"><span>HUYGHU &amp; ASOCIADOS · CONTADORES PÚBLICOS</span><div class="rule"></div><span>www.huyghusrl.com · 2026</span></footer>
+  </section>
+
+  <!-- 05 — Fiscales DGII -->
+  <section data-screen-label="05 Servicios fiscales DGII">
+    <header class="hdr"><div class="hdr-l"><svg viewBox="0 0 100 100"><defs><linearGradient id="gH5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8B5E1A"/></linearGradient><clipPath id="cH5"><circle cx="50" cy="50" r="42"/></clipPath></defs><circle cx="50" cy="50" r="42" fill="#0A0A0A"/><g clip-path="url(#cH5)"><path d="M 50 8 A 42 42 0 0 0 8 50 A 42 42 0 0 0 50 92 Q 30 70 30 50 Q 30 30 50 8 Z" fill="url(#gH5)"/><g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#gH5)"/><rect x="8" y="44" width="84" height="6" fill="url(#gH5)"/><rect x="8" y="60" width="84" height="6" fill="url(#gH5)"/></g></g></svg><div class="nm">HUYGHU &amp; ASOCIADOS<small>CONTADORES PÚBLICOS</small></div></div><div class="hdr-r"><b>05</b> / 15</div></header>
+    <div class="body-pad">
+      <div class="eyebrow">§ 05 · Cumplimiento DGII</div>
+      <h1 class="title">Declaraciones fiscales.</h1>
+      <table class="tax-table">
+        <thead><tr><th>Declaración</th><th>Periodicidad</th><th>Plazo DGII</th><th class="r">Vencimiento típico</th></tr></thead>
+        <tbody>
+          <tr><td>ITBIS<span class="code">FORM. IT-1</span></td><td>Mensual</td><td>20 días post-cierre</td><td class="r">día 20 del mes siguiente</td></tr>
+          <tr><td>ISR Personas Físicas<span class="code">IR-1 · IR-3 · IR-17</span></td><td>Mensual + anual</td><td>Variable según formato</td><td class="r">día 10 · 31 marzo</td></tr>
+          <tr><td>ISR Personas Jurídicas<span class="code">FORM. IR-2</span></td><td>Anual</td><td>120 días post-cierre</td><td class="r">30 abril</td></tr>
+          <tr><td>Compras<span class="code">FORMATO 606</span></td><td>Mensual</td><td>15 días post-cierre</td><td class="r">día 15 del mes siguiente</td></tr>
+          <tr><td>Ventas<span class="code">FORMATO 607</span></td><td>Mensual</td><td>15 días post-cierre</td><td class="r">día 15 del mes siguiente</td></tr>
+        </tbody>
+      </table>
+      <div class="note"><b>▶</b><div>Sometimiento <b>automatizado vía portal DGII</b> · Confirmación electrónica en menos de 24h · Histórico digital descargable desde portal cliente HUYGHU.</div></div>
+    </div>
+    <footer class="ftr"><span>HUYGHU &amp; ASOCIADOS · CONTADORES PÚBLICOS</span><div class="rule"></div><span>www.huyghusrl.com · 2026</span></footer>
+  </section>
+
+  <!-- 06 — Auditoría -->
+  <section data-screen-label="06 Auditoria Due Diligence">
+    <header class="hdr"><div class="hdr-l"><svg viewBox="0 0 100 100"><defs><linearGradient id="gH6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8B5E1A"/></linearGradient><clipPath id="cH6"><circle cx="50" cy="50" r="42"/></clipPath></defs><circle cx="50" cy="50" r="42" fill="#0A0A0A"/><g clip-path="url(#cH6)"><path d="M 50 8 A 42 42 0 0 0 8 50 A 42 42 0 0 0 50 92 Q 30 70 30 50 Q 30 30 50 8 Z" fill="url(#gH6)"/><g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#gH6)"/><rect x="8" y="44" width="84" height="6" fill="url(#gH6)"/><rect x="8" y="60" width="84" height="6" fill="url(#gH6)"/></g></g></svg><div class="nm">HUYGHU &amp; ASOCIADOS<small>CONTADORES PÚBLICOS</small></div></div><div class="hdr-r"><b>06</b> / 15</div></header>
+    <div class="body-pad">
+      <div class="eyebrow">§ 06 · Verificación independiente</div>
+      <h1 class="title">Auditoría<br>&amp; Due Diligence.</h1>
+      <p class="lede"><b>Auditorías externas independientes</b> · Revisión de estados financieros con dictamen CPA · <b>Due Diligence</b> para fusiones, adquisiciones y financiamientos · Informes alineados a NIIF para PYMES y NIIF Plenas.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:64px">
+        <div style="padding:36px 32px;border:1px solid rgba(212,175,55,.25);background:rgba(212,175,55,.03)"><div style="font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.28em;color:#8B5E1A;text-transform:uppercase">Alcance</div><h3 style="font-family:var(--serif);font-weight:500;font-size:28px;color:#F4D773;margin:8px 0;letter-spacing:.02em">Auditoría externa</h3><p style="font-family:var(--body);font-size:14px;color:#bcb29a;margin:0;line-height:1.55">Revisión integral con prueba sustantiva. Dictamen firmado por CPA colegiado ICPARD.</p></div>
+        <div style="padding:36px 32px;border:1px solid rgba(212,175,55,.25);background:rgba(212,175,55,.03)"><div style="font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.28em;color:#8B5E1A;text-transform:uppercase">M&amp;A</div><h3 style="font-family:var(--serif);font-weight:500;font-size:28px;color:#F4D773;margin:8px 0;letter-spacing:.02em">Due Diligence financiero</h3><p style="font-family:var(--body);font-size:14px;color:#bcb29a;margin:0;line-height:1.55">Revisión contable y fiscal previa a operación. Identificación de pasivos ocultos.</p></div>
+        <div style="padding:36px 32px;border:1px solid rgba(212,175,55,.25);background:rgba(212,175,55,.03)"><div style="font-family:var(--sans);font-weight:600;font-size:11px;letter-spacing:.28em;color:#8B5E1A;text-transform:uppercase">Banca</div><h3 style="font-family:var(--serif);font-weight:500;font-size:28px;color:#F4D773;margin:8px 0;letter-spacing:.02em">Auditoría para crédito</h3><p style="font-family:var(--body);font-size:14px;color:#bcb29a;margin:0;line-height:1.55">EE.FF. auditados para presentación bancaria. Aceptados por la banca múltiple RD.</p></div>
+      </div>
+    </div>
+    <footer class="ftr"><span>HUYGHU &amp; ASOCIADOS · CONTADORES PÚBLICOS</span><div class="rule"></div><span>www.huyghusrl.com · 2026</span></footer>
+  </section>
+
+  <!-- 07 — TSS / INFOTEP -->
+  <section data-screen-label="07 TSS INFOTEP Nominas">
+    <header class="hdr"><div class="hdr-l"><svg viewBox="0 0 100 100"><defs><linearGradient id="gH7" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8B5E1A"/></linearGradient><clipPath id="cH7"><circle cx="50" cy="50" r="42"/></clipPath></defs><circle cx="50" cy="50" r="42" fill="#0A0A0A"/><g clip-path="url(#cH7)"><path d="M 50 8 A 42 42 0 0 0 8 50 A 42 42 0 0 0 50 92 Q 30 70 30 50 Q 30 30 50 8 Z" fill="url(#gH7)"/><g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#gH7)"/><rect x="8" y="44" width="84" height="6" fill="url(#gH7)"/><rect x="8" y="60" width="84" height="6" fill="url(#gH7)"/></g></g></svg><div class="nm">HUYGHU &amp; ASOCIADOS<small>CONTADORES PÚBLICOS</small></div></div><div class="hdr-r"><b>07</b> / 15</div></header>
+    <div class="body-pad">
+      <div class="eyebrow">§ 07 · Nómina &amp; seguridad social</div>
+      <h1 class="title">TSS · INFOTEP · Nóminas.</h1>
+      <p class="lede"><b>Gestión integral de nómina</b> consolidada en un solo proceso mensual.</p>
+      <div class="icon-row">
+        <div class="ic-card"><div class="glyph">N</div><h4>Nómina mensual</h4><p>Cálculo multi-empleado · multi-moneda · multi-deducción</p></div>
+        <div class="ic-card"><div class="glyph">T</div><h4>TSS · DGT-3</h4><p>Presentación mensual · pagos AFP · ARS · Riesgos Lab.</p></div>
+        <div class="ic-card"><div class="glyph">I</div><h4>INFOTEP</h4><p>Aporte 1% sobre salarios · presentación mensual</p></div>
+        <div class="ic-card"><div class="glyph">R</div><h4>IR-3 retenciones</h4><p>Asalariados · constancias · certificaciones DGII</p></div>
+      </div>
+      <div class="note"><b>▶</b><div>El cliente recibe <b>un solo PDF mensual</b> con todas las planillas aprobadas, presentadas y conciliadas. Sin idas y vueltas con cinco plataformas distintas.</div></div>
+    </div>
+    <footer class="ftr"><span>HUYGHU &amp; ASOCIADOS · CONTADORES PÚBLICOS</span><div class="rule"></div><span>www.huyghusrl.com · 2026</span></footer>
+  </section>
+
+  <!-- 08 — Planes -->
+  <section data-screen-label="08 Planes">
+    <header class="hdr"><div class="hdr-l"><svg viewBox="0 0 100 100"><defs><linearGradient id="gH8" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8B5E1A"/></linearGradient><clipPath id="cH8"><circle cx="50" cy="50" r="42"/></clipPath></defs><circle cx="50" cy="50" r="42" fill="#0A0A0A"/><g clip-path="url(#cH8)"><path d="M 50 8 A 42 42 0 0 0 8 50 A 42 42 0 0 0 50 92 Q 30 70 30 50 Q 30 30 50 8 Z" fill="url(#gH8)"/><g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#gH8)"/><rect x="8" y="44" width="84" height="6" fill="url(#gH8)"/><rect x="8" y="60" width="84" height="6" fill="url(#gH8)"/></g></g></svg><div class="nm">HUYGHU &amp; ASOCIADOS<small>CONTADORES PÚBLICOS</small></div></div><div class="hdr-r"><b>08</b> / 15</div></header>
+    <div class="body-pad">
+      <div class="eyebrow">§ 08 · Iguala mensual</div>
+      <h1 class="title">Planes a la medida.</h1>
+      <div class="pricing">
+        <div class="plan"><div class="lvl">01 · BÁSICO</div><div class="pname">Básico</div><div class="price">RD$ [XX,XXX]<small>/ mes</small></div><div class="gold-line"></div><ul><li>Contabilidad mensual hasta 50 transac.</li><li>EE.FF. trimestrales</li><li>ITBIS · 606 · 607</li><li>IR-2 anual</li><li>Soporte email</li></ul><div class="plan-foot">Inicio operaciones · 1 RNC</div></div>
+        <div class="plan featured"><div class="lvl">02 · ESTÁNDAR</div><div class="pname">Estándar</div><div class="price">RD$ [XX,XXX]<small>/ mes</small></div><div class="gold-line"></div><ul><li>Contabilidad hasta 200 transac.</li><li>EE.FF. mensuales</li><li>Todas las decl. DGII</li><li>Nómina hasta 15 empleados</li><li>TSS · INFOTEP · IR-3</li><li>Soporte WhatsApp 8h</li></ul><div class="plan-foot">PYME en crecimiento · 1 RNC</div></div>
+        <div class="plan"><div class="lvl">03 · PREMIUM</div><div class="pname">Premium</div><div class="price">RD$ [XX,XXX]<small>/ mes</small></div><div class="gold-line"></div><ul><li>Contabilidad hasta 500 transac.</li><li>Conciliaciones bancarias</li><li>Reportes ejecutivos mensuales</li><li>Nómina hasta 50 empleados</li><li>Auditoría interna trimestral</li><li>Soporte dedicado &lt; 24h</li></ul><div class="plan-foot">Empresa mediana · 1-2 RNC</div></div>
+        <div class="plan"><div class="lvl">04 · CORPORATIVO</div><div class="pname">Corporativo</div><div class="price">RD$ [XXX,XXX]<small>/ mes</small></div><div class="gold-line"></div><ul><li>Múltiples RNC · holding</li><li>Consolidación financiera</li><li>Due Diligence anual</li><li>Auditoría externa incluida</li><li>Reuniones ejecutivas mensuales</li><li>Línea directa con Socio Director</li></ul><div class="plan-foot">Grupo empresarial · 3+ RNC</div></div>
+      </div>
+      <div style="font-family:var(--body);font-size:13px;color:#6b6759;margin-top:32px;text-align:center;letter-spacing:.02em">Precios sujetos a alcance, volumen transaccional y cantidad de empleados · Cotización formal en 3 días hábiles</div>
+    </div>
+    <footer class="ftr"><span>HUYGHU &amp; ASOCIADOS · CONTADORES PÚBLICOS</span><div class="rule"></div><span>www.huyghusrl.com · 2026</span></footer>
+  </section>
+
+  <!-- 09 — Casos de éxito -->
+  <section data-screen-label="09 Casos de exito">
+    <header class="hdr"><div class="hdr-l"><svg viewBox="0 0 100 100"><defs><linearGradient id="gH9" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8B5E1A"/></linearGradient><clipPath id="cH9"><circle cx="50" cy="50" r="42"/></clipPath></defs><circle cx="50" cy="50" r="42" fill="#0A0A0A"/><g clip-path="url(#cH9)"><path d="M 50 8 A 42 42 0 0 0 8 50 A 42 42 0 0 0 50 92 Q 30 70 30 50 Q 30 30 50 8 Z" fill="url(#gH9)"/><g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#gH9)"/><rect x="8" y="44" width="84" height="6" fill="url(#gH9)"/><rect x="8" y="60" width="84" height="6" fill="url(#gH9)"/></g></g></svg><div class="nm">HUYGHU &amp; ASOCIADOS<small>CONTADORES PÚBLICOS</small></div></div><div class="hdr-r"><b>09</b> / 15</div></header>
+    <div class="body-pad">
+      <div class="eyebrow">§ 09 · Resultados verificables</div>
+      <h1 class="title">Casos de éxito.</h1>
+      <div class="cases">
+        <div class="case"><div class="logo-ph">[ LOGO CLIENTE 01 ]</div><div class="csector">Servicios profesionales</div><div class="cname">[Cliente Ejemplo 01]</div><div class="metric">[ −18% ]</div><div class="mdesc">Reducción en carga fiscal efectiva durante el primer año bajo iguala HUYGHU.</div></div>
+        <div class="case"><div class="logo-ph">[ LOGO CLIENTE 02 ]</div><div class="csector">Grupo comercial · retail</div><div class="cname">[Cliente Ejemplo 02]</div><div class="metric">[ 5 → 0 ]</div><div class="mdesc">Rectificativas anuales: pasó de 5 declaraciones rectificadas a 0 en el ejercicio.</div></div>
+        <div class="case"><div class="logo-ph">[ LOGO CLIENTE 03 ]</div><div class="csector">Empresa familiar · manufactura</div><div class="cname">[Cliente Ejemplo 03]</div><div class="metric">[ A+ ]</div><div class="mdesc">Primera auditoría externa limpia tras restructuración contable de 6 meses.</div></div>
+      </div>
+    </div>
+    <footer class="ftr"><span>HUYGHU &amp; ASOCIADOS · CONTADORES PÚBLICOS</span><div class="rule"></div><span>www.huyghusrl.com · 2026</span></footer>
+  </section>
+
+  <!-- 10 — Equipo -->
+  <section data-screen-label="10 Equipo">
+    <header class="hdr"><div class="hdr-l"><svg viewBox="0 0 100 100"><defs><linearGradient id="gH10" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8B5E1A"/></linearGradient><clipPath id="cH10"><circle cx="50" cy="50" r="42"/></clipPath></defs><circle cx="50" cy="50" r="42" fill="#0A0A0A"/><g clip-path="url(#cH10)"><path d="M 50 8 A 42 42 0 0 0 8 50 A 42 42 0 0 0 50 92 Q 30 70 30 50 Q 30 30 50 8 Z" fill="url(#gH10)"/><g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#gH10)"/><rect x="8" y="44" width="84" height="6" fill="url(#gH10)"/><rect x="8" y="60" width="84" height="6" fill="url(#gH10)"/></g></g></svg><div class="nm">HUYGHU &amp; ASOCIADOS<small>CONTADORES PÚBLICOS</small></div></div><div class="hdr-r"><b>10</b> / 15</div></header>
+    <div class="body-pad">
+      <div class="eyebrow">§ 10 · Estructura por cuenta</div>
+      <h1 class="title">Equipo.</h1>
+      <div class="org">
+        <div class="lvl-1"><div class="node you"><div class="role">Socio Director</div><div class="sub">CPA · ICPARD</div></div></div>
+        <div class="branch"></div>
+        <div class="lvl-2"><div class="node"><div class="role">Gerente de Cuenta</div><div class="sub">Responsable portafolio</div></div></div>
+        <div class="branch"></div>
+        <div class="lvl-3">
+          <div class="node"><div class="role">Contador Senior 1</div><div class="sub">Cuentas corporativas</div></div>
+          <div class="node"><div class="role">Contador Senior 2</div><div class="sub">Cuentas corporativas</div></div>
+          <div class="node"><div class="role">Analista Fiscal</div><div class="sub">Especialista DGII</div></div>
+          <div class="node"><div class="role">Asistente Contable</div><div class="sub">Data entry · soporte</div></div>
+        </div>
+      </div>
+      <div style="font-family:var(--body);font-size:14px;color:#9c9580;text-align:center;letter-spacing:.04em;margin-top:48px">14 contadores · 315 clientes activos · ICPARD ⏵ miembros activos · Miembros del Colegio de Contadores Públicos Autorizados (CCPSD)</div>
+    </div>
+    <footer class="ftr"><span>HUYGHU &amp; ASOCIADOS · CONTADORES PÚBLICOS</span><div class="rule"></div><span>www.huyghusrl.com · 2026</span></footer>
+  </section>
+
+  <!-- 11 — Tecnología -->
+  <section data-screen-label="11 Tecnologia">
+    <header class="hdr"><div class="hdr-l"><svg viewBox="0 0 100 100"><defs><linearGradient id="gH11" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8B5E1A"/></linearGradient><clipPath id="cH11"><circle cx="50" cy="50" r="42"/></clipPath></defs><circle cx="50" cy="50" r="42" fill="#0A0A0A"/><g clip-path="url(#cH11)"><path d="M 50 8 A 42 42 0 0 0 8 50 A 42 42 0 0 0 50 92 Q 30 70 30 50 Q 30 30 50 8 Z" fill="url(#gH11)"/><g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#gH11)"/><rect x="8" y="44" width="84" height="6" fill="url(#gH11)"/><rect x="8" y="60" width="84" height="6" fill="url(#gH11)"/></g></g></svg><div class="nm">HUYGHU &amp; ASOCIADOS<small>CONTADORES PÚBLICOS</small></div></div><div class="hdr-r"><b>11</b> / 15</div></header>
+    <div class="body-pad">
+      <div class="eyebrow">§ 11 · Stack tecnológico</div>
+      <h1 class="title">Tecnología.</h1>
+      <p class="lede">Procesos <b>100% digitales</b> · Cliente con acceso a portal de seguimiento <b>24/7</b>.</p>
+      <div class="stack-grid">
+        <div class="stk"><div class="lg">QuickBooks</div><div class="ds">Contabilidad multi-moneda en la nube</div><div class="tag">ERP · CONTAB</div></div>
+        <div class="stk"><div class="lg">GestoriaRD</div><div class="ds">SaaS · automatización declaraciones</div><div class="tag">FISCAL · SaaS</div></div>
+        <div class="stk"><div class="lg">Portal DGII</div><div class="ds">Sometimiento directo · sin intermediarios</div><div class="tag">DGII · ONLINE</div></div>
+        <div class="stk"><div class="lg">Firma Electrónica</div><div class="ds">Certificada RD · documentos legales</div><div class="tag">LEGAL · CRYPTO</div></div>
+        <div class="stk"><div class="lg">WhatsApp Business</div><div class="ds">Canal cliente preferente · &lt; 24h</div><div class="tag">CLIENTE · MSG</div></div>
+      </div>
+    </div>
+    <footer class="ftr"><span>HUYGHU &amp; ASOCIADOS · CONTADORES PÚBLICOS</span><div class="rule"></div><span>www.huyghusrl.com · 2026</span></footer>
+  </section>
+
+  <!-- 12 — Diferenciadores -->
+  <section data-screen-label="12 Diferenciadores">
+    <header class="hdr"><div class="hdr-l"><svg viewBox="0 0 100 100"><defs><linearGradient id="gH12" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8B5E1A"/></linearGradient><clipPath id="cH12"><circle cx="50" cy="50" r="42"/></clipPath></defs><circle cx="50" cy="50" r="42" fill="#0A0A0A"/><g clip-path="url(#cH12)"><path d="M 50 8 A 42 42 0 0 0 8 50 A 42 42 0 0 0 50 92 Q 30 70 30 50 Q 30 30 50 8 Z" fill="url(#gH12)"/><g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#gH12)"/><rect x="8" y="44" width="84" height="6" fill="url(#gH12)"/><rect x="8" y="60" width="84" height="6" fill="url(#gH12)"/></g></g></svg><div class="nm">HUYGHU &amp; ASOCIADOS<small>CONTADORES PÚBLICOS</small></div></div><div class="hdr-r"><b>12</b> / 15</div></header>
+    <div class="body-pad">
+      <div class="eyebrow">§ 12 · Por qué HUYGHU</div>
+      <h1 class="title">Diferenciadores.</h1>
+      <div class="diff">
+        <div class="diff-tile"><div class="n">01</div><div><h3>Respuesta &lt; 24 h</h3><p>Tiempo de respuesta SLA en consultas operativas. Sin esperas de tres días para una factura de ITBIS.</p></div></div>
+        <div class="diff-tile"><div class="n">02</div><div><h3>Confidencialidad Ley 172-13</h3><p>Acuerdo de confidencialidad firmado en cada cuenta. Datos personales protegidos bajo la legislación RD vigente.</p></div></div>
+        <div class="diff-tile"><div class="n">03</div><div><h3>Sin sorpresas facturación</h3><p>Precio fijo mensual acordado por contrato. Cualquier extraordinario se cotiza por escrito antes de ejecutar.</p></div></div>
+        <div class="diff-tile"><div class="n">04</div><div><h3>Reportes ejecutivos mensuales</h3><p>El cliente recibe un dashboard mensual de KPIs financieros, no solo paquetes para la DGII.</p></div></div>
+      </div>
+    </div>
+    <footer class="ftr"><span>HUYGHU &amp; ASOCIADOS · CONTADORES PÚBLICOS</span><div class="rule"></div><span>www.huyghusrl.com · 2026</span></footer>
+  </section>
+
+  <!-- 13 — Onboarding -->
+  <section data-screen-label="13 Onboarding">
+    <header class="hdr"><div class="hdr-l"><svg viewBox="0 0 100 100"><defs><linearGradient id="gH13" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8B5E1A"/></linearGradient><clipPath id="cH13"><circle cx="50" cy="50" r="42"/></clipPath></defs><circle cx="50" cy="50" r="42" fill="#0A0A0A"/><g clip-path="url(#cH13)"><path d="M 50 8 A 42 42 0 0 0 8 50 A 42 42 0 0 0 50 92 Q 30 70 30 50 Q 30 30 50 8 Z" fill="url(#gH13)"/><g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#gH13)"/><rect x="8" y="44" width="84" height="6" fill="url(#gH13)"/><rect x="8" y="60" width="84" height="6" fill="url(#gH13)"/></g></g></svg><div class="nm">HUYGHU &amp; ASOCIADOS<small>CONTADORES PÚBLICOS</small></div></div><div class="hdr-r"><b>13</b> / 15</div></header>
+    <div class="body-pad">
+      <div class="eyebrow">§ 13 · De cero a operando</div>
+      <h1 class="title">Onboarding · 4 pasos.</h1>
+      <p class="lede">De firma de contrato a primera entrega mensual <b>en menos de 30 días</b>.</p>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><div class="lbl">Día 1</div><h4>Diagnóstico inicial</h4><p>Reunión 60 minutos sin costo. Identificamos brechas y prioridades.</p></div>
+        <div class="step"><div class="num">2</div><div class="lbl">Días 2 – 5</div><h4>Propuesta personalizada</h4><p>Cotización formal en 3 días hábiles con alcance, precio y SLAs.</p></div>
+        <div class="step"><div class="num">3</div><div class="lbl">Semana 1</div><h4>Onboarding documental</h4><p>Recogida histórica · accesos · firma de contrato y NDA.</p></div>
+        <div class="step"><div class="num">4</div><div class="lbl">Mes 1</div><h4>Primera entrega</h4><p>Primer paquete mensual completo · presentación al cliente.</p></div>
+      </div>
+    </div>
+    <footer class="ftr"><span>HUYGHU &amp; ASOCIADOS · CONTADORES PÚBLICOS</span><div class="rule"></div><span>www.huyghusrl.com · 2026</span></footer>
+  </section>
+
+  <!-- 14 — Garantías -->
+  <section data-screen-label="14 Garantias">
+    <header class="hdr"><div class="hdr-l"><svg viewBox="0 0 100 100"><defs><linearGradient id="gH14" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8B5E1A"/></linearGradient><clipPath id="cH14"><circle cx="50" cy="50" r="42"/></clipPath></defs><circle cx="50" cy="50" r="42" fill="#0A0A0A"/><g clip-path="url(#cH14)"><path d="M 50 8 A 42 42 0 0 0 8 50 A 42 42 0 0 0 50 92 Q 30 70 30 50 Q 30 30 50 8 Z" fill="url(#gH14)"/><g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#gH14)"/><rect x="8" y="44" width="84" height="6" fill="url(#gH14)"/><rect x="8" y="60" width="84" height="6" fill="url(#gH14)"/></g></g></svg><div class="nm">HUYGHU &amp; ASOCIADOS<small>CONTADORES PÚBLICOS</small></div></div><div class="hdr-r"><b>14</b> / 15</div></header>
+    <div class="body-pad">
+      <div class="eyebrow">§ 14 · Compromiso verificable</div>
+      <h1 class="title">Garantías &amp; cumplimiento.</h1>
+      <div class="guarantees">
+        <div class="g-card"><div class="glabel">Certificación</div><h4>ICPARD vigente</h4><p>Todos los CPAs del equipo están colegiados y al día con el Instituto de Contadores Públicos Autorizados de la República Dominicana.</p></div>
+        <div class="g-card"><div class="glabel">Seguro</div><h4>Responsabilidad civil profesional</h4><p>Cobertura de seguro de RC profesional internacional · proteje al cliente ante errores u omisiones.</p></div>
+        <div class="g-card"><div class="glabel">Control interno</div><h4>Auditoría interna trimestral</h4><p>Nuestros procesos son auditados internamente cada trimestre · evidencia documentada disponible.</p></div>
+        <div class="g-card"><div class="glabel">Continuidad</div><h4>Backup 30 días · servidores RD/US</h4><p>Replicación diaria de datos contables · plan de continuidad operativa para clientes corporativos.</p></div>
+      </div>
+    </div>
+    <footer class="ftr"><span>HUYGHU &amp; ASOCIADOS · CONTADORES PÚBLICOS</span><div class="rule"></div><span>www.huyghusrl.com · 2026</span></footer>
+  </section>
+
+  <!-- 15 — CTA Contacto -->
+  <section data-screen-label="15 Contacto">
+    <header class="hdr"><div class="hdr-l"><svg viewBox="0 0 100 100"><defs><linearGradient id="gH15" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8B5E1A"/></linearGradient><clipPath id="cH15"><circle cx="50" cy="50" r="42"/></clipPath></defs><circle cx="50" cy="50" r="42" fill="#0A0A0A"/><g clip-path="url(#cH15)"><path d="M 50 8 A 42 42 0 0 0 8 50 A 42 42 0 0 0 50 92 Q 30 70 30 50 Q 30 30 50 8 Z" fill="url(#gH15)"/><g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#gH15)"/><rect x="8" y="44" width="84" height="6" fill="url(#gH15)"/><rect x="8" y="60" width="84" height="6" fill="url(#gH15)"/></g></g></svg><div class="nm">HUYGHU &amp; ASOCIADOS<small>CONTADORES PÚBLICOS</small></div></div><div class="hdr-r"><b>15</b> / 15</div></header>
+    <div class="body-pad">
+      <div class="eyebrow">§ 15 · Próximo paso</div>
+      <div class="cta">
+        <div class="l">
+          <h1 class="title lg">¿Hablamos?</h1>
+          <div class="sub">"Agenda tu diagnóstico inicial sin compromiso."</div>
+          <div class="cta-rows">
+            <div class="cta-row"><span class="k">EMAIL</span><span class="v">info@huyghusrl.com</span></div>
+            <div class="cta-row"><span class="k">TELÉFONO</span><span class="v">+1 809-261-7938</span></div>
+            <div class="cta-row"><span class="k">WEB</span><span class="v">www.huyghusrl.com</span></div>
+            <div class="cta-row"><span class="k">DIRECCIÓN</span><span class="v" style="color:#E7DDB8">Torre Acrópolis · P 14 · Av. Winston Churchill 93 · Santo Domingo, RD</span></div>
+          </div>
+        </div>
+        <div class="r">
+          <div class="qr-box" id="ctaQR"></div>
+          <div class="cap">ESCANEA · AGENDA<small>Calendly: huyghusrl.com/agenda</small></div>
+        </div>
+      </div>
+    </div>
+    <footer class="ftr"><span style="font-family:var(--serif);font-size:13px;letter-spacing:.3em;color:#D4AF37;font-weight:600">HUYGHU &amp; ASOCIADOS · MIEMBRO GRUPO CHRYTSA</span><div class="rule"></div><span>www.huyghusrl.com · 2026</span></footer>
+  </section>
+
+</deck-stage>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+<script>
+window.addEventListener('load', () => {
+  if(typeof qrcode === 'undefined') return;
+  const qr = qrcode(0, 'M');
+  qr.addData('https://www.huyghusrl.com/agenda');
+  qr.make();
+  const n = qr.getModuleCount();
+  let path = '';
+  for(let r=0;r<n;r++) for(let c=0;c<n;c++) if(qr.isDark(r,c)) path += `M${c} ${r}h1v1h-1z`;
+  const box = document.getElementById('ctaQR');
+  if(box) box.innerHTML = `<svg viewBox="0 0 ${n} ${n}" preserveAspectRatio="xMidYMid meet"><path d="${path}" fill="#0A0A0A"/></svg>`;
+});
+</script>
+</body>
+</html>

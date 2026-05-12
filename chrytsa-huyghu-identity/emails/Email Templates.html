@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Email Templates · HUYGHU &amp; Asociados</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold-hi:#F4D773;--gold:#D4AF37;--gold-mid:#B8862B;--gold-sh:#8B5E1A;--gold-line:#C9A227;
+    --ink:#0A0A0A;--paper:#FAFAF8;--bg:#1a1612;--card:#221c14;--line:#2f2820;
+    --serif:'Cinzel','Trajan Pro',Georgia,serif;
+    --body:'Inter',system-ui,-apple-system,sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:#e8dfc6;font-family:var(--body);min-height:100vh;-webkit-font-smoothing:antialiased}
+  body{background:radial-gradient(ellipse 120% 60% at 50% -10%,rgba(212,175,55,.08),transparent 50%),var(--bg);padding:48px 32px 80px}
+
+  .shell{max-width:1400px;margin:0 auto}
+  header.tt{text-align:center;margin-bottom:64px;padding-bottom:48px;border-bottom:1px solid var(--line);position:relative}
+  header.tt::after{content:"";position:absolute;left:50%;bottom:-1px;width:120px;height:1px;background:var(--gold);transform:translateX(-50%)}
+  .eyebrow{font-family:var(--body);font-weight:600;font-size:11px;letter-spacing:.36em;color:var(--gold-mid);text-transform:uppercase;margin-bottom:18px}
+  h1.tt-h{font-family:var(--serif);font-weight:500;font-size:48px;color:var(--gold-hi);letter-spacing:.02em;line-height:1.1;text-wrap:balance}
+  .tt-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;color:#bcb29a;margin-top:14px;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.5}
+  .tt-meta{display:flex;justify-content:center;gap:24px;margin-top:22px;font-family:var(--mono);font-size:11px;color:var(--gold-sh);letter-spacing:.18em;text-transform:uppercase;flex-wrap:wrap}
+  .tt-meta b{color:var(--gold-hi);font-weight:500}
+
+  /* GRID */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:32px}
+  @media(max-width:900px){.grid{grid-template-columns:1fr}}
+
+  .card{background:var(--card);border:1px solid var(--line);position:relative;overflow:hidden;transition:.2s}
+  .card:hover{border-color:var(--gold-sh)}
+  .card .top{padding:18px 22px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);background:var(--ink)}
+  .card .num{font-family:var(--mono);font-size:11px;color:var(--gold-mid);letter-spacing:.22em}
+  .card .num b{color:var(--gold-hi);font-weight:500;margin-left:6px}
+  .card .badge{font-family:var(--mono);font-size:9px;letter-spacing:.2em;color:var(--gold-sh);text-transform:uppercase;border:1px solid var(--gold-sh);padding:3px 8px}
+
+  .preview-wrap{background:#E8E5DC;padding:16px 24px;display:flex;justify-content:center;position:relative}
+  .iphone{width:375px;max-width:100%;background:#fff;border-radius:32px;overflow:hidden;border:8px solid #111;box-shadow:0 20px 40px -10px rgba(0,0,0,.5);position:relative}
+  .iphone::before{content:"";position:absolute;top:10px;left:50%;transform:translateX(-50%);width:90px;height:18px;background:#111;border-radius:14px;z-index:5}
+  .iphone iframe{width:100%;height:520px;border:0;display:block;background:#E8E5DC}
+
+  .meta{padding:22px 24px;display:flex;flex-direction:column;gap:12px}
+  .meta h2{font-family:var(--serif);font-weight:500;font-size:20px;color:var(--gold-hi);letter-spacing:.02em}
+  .meta .sj{font-family:var(--mono);font-size:11px;color:#bcb29a;background:rgba(212,175,55,.06);border-left:2px solid var(--gold);padding:8px 12px;line-height:1.5;letter-spacing:.02em}
+  .meta .sj b{color:var(--gold-hi);font-weight:500;letter-spacing:.16em;text-transform:uppercase;font-size:9px;display:block;margin-bottom:4px}
+  .meta .desc{font-family:var(--body);font-size:13px;color:#bcb29a;line-height:1.6}
+  .meta .desc b{color:#e8dfc6;font-weight:500}
+  .meta .trigger{font-family:var(--mono);font-size:10px;color:var(--gold-sh);letter-spacing:.14em;text-transform:uppercase;padding-top:10px;border-top:1px solid var(--line);margin-top:4px}
+  .meta .trigger b{color:var(--gold-hi);font-weight:500}
+  .meta .vars{display:flex;flex-wrap:wrap;gap:4px}
+  .meta .vars code{font-family:var(--mono);font-size:10px;color:var(--gold);background:rgba(212,175,55,.08);padding:2px 7px;border:1px solid rgba(212,175,55,.18);letter-spacing:.02em}
+
+  .actions{display:flex;gap:0;border-top:1px solid var(--line)}
+  .btn{flex:1;background:transparent;border:0;border-right:1px solid var(--line);padding:14px 16px;font-family:var(--body);font-weight:600;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-hi);cursor:pointer;transition:.18s;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:6px}
+  .btn:last-child{border-right:0}
+  .btn:hover{background:rgba(212,175,55,.08);color:var(--gold)}
+  .btn.copied{background:rgba(127,201,158,.15);color:#7fc99e}
+
+  /* Variables section */
+  section.vars-sec,section.int-sec{margin-top:80px;padding-top:48px;border-top:1px solid var(--line)}
+  section.vars-sec h2,section.int-sec h2{font-family:var(--serif);font-weight:500;font-size:32px;color:var(--gold-hi);margin-bottom:12px;letter-spacing:.02em}
+  .sec-lede{font-family:var(--body);font-size:15px;color:#bcb29a;line-height:1.6;max-width:680px;margin-bottom:32px}
+
+  .var-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+  .var-row{padding:14px 16px;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
+  .var-row code{font-family:var(--mono);font-size:12px;color:var(--gold);letter-spacing:.02em}
+  .var-row span{font-family:var(--body);font-size:11px;color:#8a8076;line-height:1.4}
+
+  .snippets{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:18px;margin-top:24px}
+  .snip{background:#0d0a07;border:1px solid var(--line);display:flex;flex-direction:column}
+  .snip h3{font-family:var(--serif);font-weight:500;font-size:15px;color:var(--gold-hi);padding:12px 16px;background:var(--ink);border-bottom:1px solid var(--line);letter-spacing:.04em;display:flex;justify-content:space-between;align-items:center}
+  .snip h3 .pill{font-family:var(--mono);font-size:9px;letter-spacing:.18em;color:var(--gold-mid);text-transform:uppercase;border:1px solid var(--gold-sh);padding:2px 6px}
+  .snip pre{font-family:var(--mono);font-size:11px;line-height:1.6;color:#cfc4a9;padding:16px 18px;overflow:auto;flex:1;margin:0;white-space:pre-wrap;word-break:break-word}
+  .snip pre .k{color:#d4a26b}
+  .snip pre .s{color:#a8c4b8}
+  .snip pre .c{color:#5a4f3e;font-style:italic}
+
+  /* Toasts */
+  #toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--gold-hi);border:1px solid var(--gold);padding:14px 24px;font-family:var(--body);font-size:13px;letter-spacing:.06em;opacity:0;pointer-events:none;transition:.3s;z-index:100;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+  #toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  footer.foot{margin-top:80px;padding-top:32px;border-top:1px solid var(--line);text-align:center;font-family:var(--mono);font-size:11px;color:var(--gold-sh);letter-spacing:.18em;text-transform:uppercase}
+  footer.foot b{color:var(--gold-hi);font-weight:500}
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+<header class="tt">
+  <div class="eyebrow">§ Bloque 07 · Email transaccional</div>
+  <h1 class="tt-h">6 plantillas HTML responsive.</h1>
+  <p class="tt-sub">Table-based · inline CSS · compatibles Outlook 2016+, Gmail web/móvil, Apple Mail, iOS Mail. Cero dependencias externas, listas para integrar en cualquier ESP.</p>
+  <div class="tt-meta">
+    <span><b>6</b> Plantillas</span>
+    <span><b>600px</b> Max-width</span>
+    <span><b>15+</b> Variables</span>
+    <span><b>ES-RD</b> Idioma</span>
+    <span><b>v1.0</b> 2026</span>
+  </div>
+</header>
+
+<div class="grid" id="grid"></div>
+
+<!-- VARIABLES -->
+<section class="vars-sec">
+  <h2>Variables disponibles</h2>
+  <p class="sec-lede">Las plantillas usan sintaxis <code style="font-family:var(--mono);color:var(--gold);background:rgba(212,175,55,.08);padding:2px 8px;border:1px solid rgba(212,175,55,.2)">[Variable]</code> en placeholders visibles. Para integrar con un ESP, reemplázalas por la sintaxis del motor (Handlebars <code style="font-family:var(--mono);color:var(--gold);background:rgba(212,175,55,.08);padding:2px 8px;border:1px solid rgba(212,175,55,.2)">{{var}}</code>, Mustache, Liquid, etc.).</p>
+  <div class="var-grid">
+    <div class="var-row"><code>{{cliente_nombre}}</code><span>Nombre completo del contacto</span></div>
+    <div class="var-row"><code>{{empresa}}</code><span>Razón social del cliente</span></div>
+    <div class="var-row"><code>{{rnc}}</code><span>RNC del cliente · 130-12345-6</span></div>
+    <div class="var-row"><code>{{gerente_nombre}}</code><span>Account manager asignado</span></div>
+    <div class="var-row"><code>{{contador_nombre}}</code><span>Contador operativo</span></div>
+    <div class="var-row"><code>{{periodo}}</code><span>Período fiscal · "Octubre 2026"</span></div>
+    <div class="var-row"><code>{{tipo_declaracion}}</code><span>IT-1 / IR-2 / 606 / 607</span></div>
+    <div class="var-row"><code>{{fecha_vencimiento}}</code><span>"20 de Noviembre, 2026"</span></div>
+    <div class="var-row"><code>{{dias_restantes}}</code><span>Entero · 6</span></div>
+    <div class="var-row"><code>{{monto_declarado}}</code><span>RD$ formateado · "1,247,580.00"</span></div>
+    <div class="var-row"><code>{{ncf_confirmacion}}</code><span>N° acuse DGII</span></div>
+    <div class="var-row"><code>{{fecha_sometimiento}}</code><span>DD/MM/YYYY HH:MM</span></div>
+    <div class="var-row"><code>{{plan}}</code><span>Básico / Estándar / Premium</span></div>
+    <div class="var-row"><code>{{monto_iguala}}</code><span>RD$ mensualidad</span></div>
+    <div class="var-row"><code>{{itbis_18}}</code><span>RD$ ITBIS calculado</span></div>
+    <div class="var-row"><code>{{total_pago}}</code><span>RD$ total con ITBIS</span></div>
+    <div class="var-row"><code>{{metodo_pago}}</code><span>Transferencia / Cheque / Tarjeta</span></div>
+    <div class="var-row"><code>{{referencia_pago}}</code><span>ID transacción banco</span></div>
+    <div class="var-row"><code>{{reset_url}}</code><span>URL con token JWT firmado</span></div>
+    <div class="var-row"><code>{{reset_ip}}</code><span>IP origen · 200.88.45.127</span></div>
+    <div class="var-row"><code>{{reset_browser}}</code><span>User-agent legible</span></div>
+    <div class="var-row"><code>{{ingresos_mes}}</code><span>RD$ ingresos mensuales</span></div>
+    <div class="var-row"><code>{{egresos_mes}}</code><span>RD$ egresos mensuales</span></div>
+    <div class="var-row"><code>{{resultado_neto}}</code><span>RD$ utilidad / pérdida</span></div>
+    <div class="var-row"><code>{{variacion_pct}}</code><span>+/- X.X% vs mes anterior</span></div>
+  </div>
+</section>
+
+<!-- INTEGRATIONS -->
+<section class="int-sec">
+  <h2>Cómo integrar.</h2>
+  <p class="sec-lede">Estos archivos son <b>HTML puro sin dependencias</b>. Carga el contenido en tu ESP favorito y reemplaza variables con su motor de plantillas. Snippets de ejemplo para los proveedores más usados en RD:</p>
+  <div class="snippets">
+    <div class="snip"><h3>Mailgun · cURL <span class="pill">REST</span></h3><pre><span class="c"># Mailgun simple send</span>
+curl -s --user <span class="s">'api:YOUR_API_KEY'</span> \\
+  https://api.mailgun.net/v3/huyghusrl.com/messages \\
+  -F from=<span class="s">'HUYGHU &lt;notificaciones@huyghusrl.com&gt;'</span> \\
+  -F to=<span class="s">'cliente@empresa.do'</span> \\
+  -F subject=<span class="s">'IT-1 Octubre 2026 enviado a DGII'</span> \\
+  -F html=<span class="s">"$(cat 03-declaracion-enviada.html)"</span></pre></div>
+
+    <div class="snip"><h3>SendGrid · Node.js <span class="pill">SDK</span></h3><pre><span class="k">const</span> sgMail = <span class="k">require</span>(<span class="s">'@sendgrid/mail'</span>);
+sgMail.setApiKey(process.env.<span class="k">SENDGRID_KEY</span>);
+
+<span class="k">const</span> html = fs.readFileSync(<span class="s">'04-informe-mensual.html'</span>, <span class="s">'utf8'</span>)
+  .replaceAll(<span class="s">'[Cliente Nombre]'</span>, cliente.nombre)
+  .replaceAll(<span class="s">'[Empresa]'</span>, cliente.empresa);
+
+<span class="k">await</span> sgMail.send({
+  to: cliente.email,
+  from: <span class="s">'notificaciones@huyghusrl.com'</span>,
+  subject: <span class="s">`Informe mensual ${periodo}`</span>,
+  html,
+});</pre></div>
+
+    <div class="snip"><h3>AWS SES · Python (boto3) <span class="pill">SDK</span></h3><pre><span class="k">import</span> boto3
+ses = boto3.client(<span class="s">'ses'</span>, region_name=<span class="s">'us-east-1'</span>)
+
+<span class="k">with</span> open(<span class="s">'02-recordatorio-dgii.html'</span>) <span class="k">as</span> f:
+    html = f.read().format(
+        cliente_nombre=cliente.name,
+        empresa=cliente.razon_social,
+        tipo_declaracion=<span class="s">'IT-1'</span>,
+        fecha_vencimiento=<span class="s">'20/11/2026'</span>,
+        dias_restantes=<span class="s">'6'</span>,
+    )
+
+ses.send_email(
+    Source=<span class="s">'notificaciones@huyghusrl.com'</span>,
+    Destination={<span class="s">'ToAddresses'</span>: [cliente.email]},
+    Message={
+        <span class="s">'Subject'</span>: {<span class="s">'Data'</span>: <span class="s">'⚠ Próximo vencimiento DGII'</span>},
+        <span class="s">'Body'</span>: {<span class="s">'Html'</span>: {<span class="s">'Data'</span>: html}}
+    }
+)</pre></div>
+
+    <div class="snip"><h3>SMTP genérico · PHP <span class="pill">PHPMailer</span></h3><pre><span class="k">use</span> PHPMailer\PHPMailer\PHPMailer;
+<span class="k">$mail</span> = <span class="k">new</span> PHPMailer(<span class="k">true</span>);
+<span class="k">$mail</span>->isSMTP();
+<span class="k">$mail</span>->Host = <span class="s">'smtp.huyghusrl.com'</span>;
+<span class="k">$mail</span>->SMTPAuth = <span class="k">true</span>;
+<span class="k">$mail</span>->Username = <span class="s">'notificaciones@huyghusrl.com'</span>;
+<span class="k">$mail</span>->Password = <span class="k">getenv</span>(<span class="s">'SMTP_PASS'</span>);
+<span class="k">$mail</span>->Port = <span class="k">587</span>;
+
+<span class="k">$html</span> = <span class="k">file_get_contents</span>(<span class="s">'01-welcome.html'</span>);
+<span class="k">$html</span> = <span class="k">str_replace</span>(
+  [<span class="s">'[Cliente Nombre]'</span>, <span class="s">'[Empresa]'</span>],
+  [<span class="k">$cliente</span>->nombre, <span class="k">$cliente</span>->empresa],
+  <span class="k">$html</span>
+);
+
+<span class="k">$mail</span>->setFrom(<span class="s">'notificaciones@huyghusrl.com'</span>, <span class="s">'HUYGHU'</span>);
+<span class="k">$mail</span>->addAddress(<span class="k">$cliente</span>->email);
+<span class="k">$mail</span>->Subject = <span class="s">'Bienvenido a HUYGHU'</span>;
+<span class="k">$mail</span>->isHTML(<span class="k">true</span>);
+<span class="k">$mail</span>->Body = <span class="k">$html</span>;
+<span class="k">$mail</span>->send();</pre></div>
+  </div>
+</section>
+
+<footer class="foot">HUYGHU &amp; ASOCIADOS <b>·</b> EMAIL TRANSACTIONAL TEMPLATES <b>·</b> v1.0 <b>·</b> 2026 <b>·</b> 6 ARCHIVOS</footer>
+</div>
+
+<div id="toast">📋 HTML copiado al portapapeles</div>
+
+<script>
+const templates = [
+  {
+    id:'01-welcome',
+    badge:'Onboarding',
+    title:'Bienvenida nuevo cliente',
+    subject:'Bienvenido a HUYGHU & Asociados, [Cliente]',
+    desc:'Email automático <b>al firmar contrato</b>. Da contexto, fija expectativas de los primeros 7 días, abre canal con account manager.',
+    trigger:'Disparo · Webhook contrato firmado en CRM',
+    vars:['cliente_nombre','empresa','gerente_nombre'],
+  },
+  {
+    id:'02-recordatorio-dgii',
+    badge:'Recordatorio',
+    title:'Recordatorio vencimiento DGII',
+    subject:'Recordatorio: [Tipo declaración] vence el [fecha]',
+    desc:'Disparado <b>6, 3 y 1 días antes</b> del vencimiento. Lista documentos faltantes específicos del cliente. CTA al portal de upload.',
+    trigger:'Disparo · Cron diario · 8:00 AM RD',
+    vars:['cliente_nombre','empresa','tipo_declaracion','fecha_vencimiento','dias_restantes','contador_nombre'],
+  },
+  {
+    id:'03-declaracion-enviada',
+    badge:'Confirmación',
+    title:'Declaración enviada a DGII',
+    subject:'✅ Declaración [Tipo] de [Periodo] enviada a DGII',
+    desc:'Confirma sometimiento exitoso. Adjunta acuse oficial DGII (PDF). Incluye <b>N° de confirmación verificable</b> y próximo vencimiento.',
+    trigger:'Disparo · Webhook portal DGII (status=ACEPTADA)',
+    vars:['cliente_nombre','empresa','tipo_declaracion','periodo','ncf_confirmacion','fecha_sometimiento','monto_declarado'],
+  },
+  {
+    id:'04-informe-mensual',
+    badge:'Mensual',
+    title:'Informe mensual · estados financieros',
+    subject:'📊 Informe Mensual [Mes Año] — [Empresa]',
+    desc:'Entrega los 5 estados financieros + resumen ejecutivo IA-asistido. <b>KPIs comparativos</b> mes anterior + YTD. CTA agendar revisión.',
+    trigger:'Disparo · Día 10 de cada mes · 9:00 AM RD',
+    vars:['cliente_nombre','empresa','periodo','ingresos_mes','egresos_mes','resultado_neto','variacion_pct'],
+  },
+  {
+    id:'05-pago-recibido',
+    badge:'Billing',
+    title:'Recibo de pago iguala mensual',
+    subject:'✅ Recibo de pago iguala [Mes] — HUYGHU & Asociados',
+    desc:'Comprobante fiscal con <b>NCF B01</b>. Desglose subtotal + ITBIS 18% + total. Incluye método y referencia bancaria.',
+    trigger:'Disparo · Webhook pasarela pago (status=success)',
+    vars:['cliente_nombre','empresa','rnc','plan','monto_iguala','itbis_18','total_pago','metodo_pago','referencia_pago'],
+  },
+  {
+    id:'06-password-reset',
+    badge:'Seguridad',
+    title:'Restablecer contraseña portal',
+    subject:'Restablecer contraseña — Portal HUYGHU',
+    desc:'Reset con <b>token JWT firmado</b> · expira en 60 min · 1 solo uso. Incluye metadata de seguridad (IP, browser, timestamp).',
+    trigger:'Disparo · POST /api/auth/reset · rate-limited',
+    vars:['cliente_nombre','reset_url','reset_ip','reset_browser'],
+  },
+];
+
+const grid = document.getElementById('grid');
+grid.innerHTML = templates.map((t,i)=>`
+  <article class="card" data-id="${t.id}">
+    <div class="top">
+      <div class="num">EMAIL · <b>${String(i+1).padStart(2,'0')} / 06</b></div>
+      <div class="badge">${t.badge}</div>
+    </div>
+    <div class="preview-wrap"><div class="iphone"><iframe src="${t.id}.html" loading="lazy" title="${t.title}"></iframe></div></div>
+    <div class="meta">
+      <h2>${t.title}</h2>
+      <div class="sj"><b>Subject sugerido</b>${t.subject}</div>
+      <div class="desc">${t.desc}</div>
+      <div class="vars">${t.vars.map(v=>`<code>{{${v}}}</code>`).join('')}</div>
+      <div class="trigger"><b>▸</b> ${t.trigger}</div>
+    </div>
+    <div class="actions">
+      <a class="btn" href="${t.id}.html" target="_blank" rel="noopener">👁 &nbsp;Ver completo</a>
+      <button class="btn" data-copy="${t.id}.html">📋 &nbsp;Copiar HTML</button>
+      <button class="btn" data-test="${t.id}.html">✉ &nbsp;Enviar prueba</button>
+    </div>
+  </article>
+`).join('');
+
+// Copy HTML
+grid.addEventListener('click',async (e)=>{
+  const copyBtn = e.target.closest('[data-copy]');
+  if(copyBtn){
+    try{
+      const r = await fetch(copyBtn.dataset.copy);
+      const txt = await r.text();
+      await navigator.clipboard.writeText(txt);
+      copyBtn.classList.add('copied');
+      copyBtn.textContent = '✓  Copiado';
+      toast('📋 HTML copiado al portapapeles · pega en Gmail / Outlook');
+      setTimeout(()=>{copyBtn.classList.remove('copied');copyBtn.innerHTML='📋 &nbsp;Copiar HTML'},2400);
+    }catch(err){
+      toast('⚠ Error al copiar: '+err.message);
+    }
+  }
+  const testBtn = e.target.closest('[data-test]');
+  if(testBtn){
+    const email = prompt('Enviar prueba de esta plantilla a:','tu-correo@huyghusrl.com');
+    if(email && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){
+      toast(`✉ Solicitud registrada — prueba será enviada a ${email} en próximos minutos.`);
+    } else if(email){
+      toast('⚠ Correo inválido.');
+    }
+  }
+});
+
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('on');
+  clearTimeout(window.__tt);
+  window.__tt = setTimeout(()=>t.classList.remove('on'),3500);
+}
+</script>
+</body>
+</html>

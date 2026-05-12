@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"></stop><stop offset=".35" stop-color="#D4AF37"></stop><stop offset=".7" stop-color="#B8862B"></stop><stop offset="1" stop-color="#8B5E1A"></stop></linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(212,175,55,.18)"></stop><stop offset="1" stop-color="rgba(212,175,55,0)"></stop></linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.4" r="0.8"><stop offset="0" stop-color="rgba(212,175,55,0)"></stop><stop offset="1" stop-color="rgba(0,0,0,.45)"></stop></radialGradient>
+    <pattern id="grain" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse"><circle cx="10" cy="20" r=".7" fill="#F4D773" opacity=".06"></circle><circle cx="35" cy="50" r=".5" fill="#F4D773" opacity=".05"></circle><circle cx="60" cy="15" r=".6" fill="#F4D773" opacity=".06"></circle><circle cx="70" cy="65" r=".4" fill="#F4D773" opacity=".04"></circle><circle cx="20" cy="70" r=".5" fill="#F4D773" opacity=".05"></circle></pattern>
+    <clipPath id="sphereClip"><circle cx="50" cy="50" r="42"></circle></clipPath>
+    <symbol id="sphere" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="42" fill="#0A0A0A"></circle>
+      <g clip-path="url(#sphereClip)">
+        <path d="M50 8A42 42 0 0 0 8 50 42 42 0 0 0 50 92Q30 70 30 50Q30 30 50 8Z" fill="url(#g)"></path>
+        <g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#g)"></rect><rect x="8" y="44" width="84" height="6" fill="url(#g)"></rect><rect x="8" y="60" width="84" height="6" fill="url(#g)"></rect></g>
+      </g>
+    </symbol>
+    <symbol id="crown" viewBox="0 0 120 100">
+      <path d="M 22 32 Q 60 6 98 32" fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round"></path>
+      <path d="M 28 36 Q 60 14 92 36" fill="none" stroke="url(#g)" stroke-width="3" stroke-linecap="round" opacity=".7"></path>
+      <path d="M 18 50 Q 60 38 102 50" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"></path>
+      <text x="60" y="92" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-weight="700" font-size="76" fill="#FFFFFF">G</text>
+    </symbol>
+  </defs>
+
+    
+    <rect id="bg" width="1080" height="1080" fill="#0A0A0A"></rect>
+    <rect width="1080" height="1080" fill="url(#grain)" opacity=".7"></rect>
+    <rect width="1080" height="1080" fill="url(#vignette)"></rect>
+    
+  
+    <g id="confetti" opacity=".8"><rect x="0" y="0" width="6" height="6" fill="#D4AF37" opacity=".18" transform="rotate(0 3 3)"></rect><rect x="97" y="53" width="9" height="9" fill="#D4AF37" opacity=".18" transform="rotate(37 101.5 57.5)"></rect><rect x="194" y="106" width="12" height="12" fill="#D4AF37" opacity=".18" transform="rotate(74 200 112)"></rect><rect x="291" y="159" width="15" height="15" fill="#D4AF37" opacity=".18" transform="rotate(111 298.5 166.5)"></rect><rect x="388" y="212" width="6" height="6" fill="#D4AF37" opacity=".18" transform="rotate(148 391 215)"></rect><rect x="485" y="265" width="9" height="9" fill="#D4AF37" opacity=".18" transform="rotate(185 489.5 269.5)"></rect><rect x="582" y="318" width="12" height="12" fill="#D4AF37" opacity=".18" transform="rotate(222 588 324)"></rect><rect x="679" y="371" width="15" height="15" fill="#D4AF37" opacity=".18" transform="rotate(259 686.5 378.5)"></rect><rect x="776" y="424" width="6" height="6" fill="#D4AF37" opacity=".18" transform="rotate(296 779 427)"></rect><rect x="873" y="477" width="9" height="9" fill="#D4AF37" opacity=".18" transform="rotate(333 877.5 481.5)"></rect><rect x="970" y="530" width="12" height="12" fill="#D4AF37" opacity=".18" transform="rotate(370 976 536)"></rect><rect x="1067" y="583" width="15" height="15" fill="#D4AF37" opacity=".18" transform="rotate(407 1074.5 590.5)"></rect><rect x="84" y="636" width="6" height="6" fill="#D4AF37" opacity=".18" transform="rotate(444 87 639)"></rect><rect x="181" y="689" width="9" height="9" fill="#D4AF37" opacity=".18" transform="rotate(481 185.5 693.5)"></rect><rect x="278" y="742" width="12" height="12" fill="#D4AF37" opacity=".18" transform="rotate(518 284 748)"></rect><rect x="375" y="795" width="15" height="15" fill="#D4AF37" opacity=".18" transform="rotate(555 382.5 802.5)"></rect><rect x="472" y="848" width="6" height="6" fill="#D4AF37" opacity=".18" transform="rotate(592 475 851)"></rect><rect x="569" y="901" width="9" height="9" fill="#D4AF37" opacity=".18" transform="rotate(629 573.5 905.5)"></rect><rect x="666" y="954" width="12" height="12" fill="#D4AF37" opacity=".18" transform="rotate(666 672 960)"></rect><rect x="763" y="1007" width="15" height="15" fill="#D4AF37" opacity=".18" transform="rotate(703 770.5 1014.5)"></rect><rect x="860" y="1060" width="6" height="6" fill="#D4AF37" opacity=".18" transform="rotate(740 863 1063)"></rect><rect x="957" y="33" width="9" height="9" fill="#D4AF37" opacity=".18" transform="rotate(777 961.5 37.5)"></rect><rect x="1054" y="86" width="12" height="12" fill="#D4AF37" opacity=".18" transform="rotate(814 1060 92)"></rect><rect x="71" y="139" width="15" height="15" fill="#D4AF37" opacity=".18" transform="rotate(851 78.5 146.5)"></rect></g>
+    <g id="symbol" transform="translate(540,345.6)">
+      <text text-anchor="middle" font-family="Cinzel,Georgia,serif" font-weight="700" font-size="150" fill="url(#g)" dominant-baseline="middle">✦</text>
+    </g>
+    <g id="headline" transform="translate(540,594)">
+      <text text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-weight="500" font-size="80" fill="#F4D773">Feliz Día del Contador</text>
+      <text y="88" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-weight="500" font-size="46" fill="#D4AF37">Dominicano.</text>
+      <rect x="-80" y="140" width="160" height="1" fill="url(#g)"></rect>
+    </g>
+    <g id="message" transform="translate(540,810)">
+      <text text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="300" font-size="24" fill="#bcb29a" letter-spacing="1">A las y los profesionales que sostienen</text>
+      <text y="36" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="300" font-size="24" fill="#bcb29a" letter-spacing="1">la transparencia financiera del país.</text>
+    </g>
+    <g id="signature" transform="translate(540,939.6)">
+      <text text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="500" font-size="14" fill="#8B5E1A" letter-spacing="4">— EQUIPO HUYGHU &amp; ASOCIADOS · REPÚBLICA DOMINICANA</text>
+    </g>
+    
+    <g id="logo">
+      <use href="#sphere" x="60" y="964" width="56" height="56"></use>
+      <text x="130" y="999.7" font-family="Cinzel,Georgia,serif" font-weight="600" font-size="22" fill="#F4D773" letter-spacing="1.3199999999999998">HUYGHU &amp; ASOCIADOS</text>
+      <text x="130" y="1017.7" font-family="Inter,Arial,sans-serif" font-weight="500" font-size="10" fill="#B8862B" letter-spacing="3.2">CONTADORES PÚBLICOS</text>
+      <text x="1020" y="1016" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="11" fill="#8B5E1A" letter-spacing="1.98">@huyghu_rd</text>
+    </g>
+  
+  </svg>

@@ -1,0 +1,13 @@
+/* Reference only — emails use inline CSS. This documents the design tokens.
+   GOLD       #D4AF37
+   GOLD-HI    #F4D773
+   GOLD-MID   #B8862B
+   GOLD-SH    #8B5E1A
+   INK        #0A0A0A
+   PAPER      #FAFAF8
+   TEXT       #2A2A2A
+   MUTED      #6B6B6B
+   FONT-H1    'Cinzel', Georgia, serif
+   FONT-BODY  'Inter', Arial, sans-serif
+   MAX-WIDTH  600px (mobile collapses to 100%)
+*/
