@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sypnose Brand Guidelines</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Lora:ital@1&family=DM+Sans&display=swap');
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .page {
+            width: 210mm;
+            height: 297mm;
+            margin: 20px auto;
+            padding: 20mm;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #da7756;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            border-radius: 5px;
+            z-index: 1000;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+            }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+            }
+            .print-button {
+                display: none;
+            }
+            @page {
+                size: A4;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="print-button" onclick="window.print()">IMPRIMIR/PDF</button>
+
+    <section class="page">
+        <h1>P01: Portada</h1>
+        <div style="text-align: center; margin-top: 100mm;">
+        <h2>Sypnose Mithos</h2>
+        <h3>Brand Guidelines</h3>
+        </div>
+    </section>
+    <section class="page">
+        <h1>P02: Filosofía</h1>
+        <div style="margin-top: 50mm;">
+        <h2 style="text-align: center;">Iron Rule: "No proof, no done"</h2>
+        <p style="font-family: 'Lora', serif; font-style: italic; text-align: center; font-size: 1.2em;">Nuestra filosofía se basa en la evidencia. No consideramos que un trabajo esté terminado hasta que se demuestre que funciona. Cada tarea, cada módulo, cada línea de código es verificada y validada. La prueba es la única medida del éxito.</p>
+        </div>
+    </section>
+    <section class="page">
+        <h1>P03: Logo system anatomía</h1>
+        <p>El logo de Sypnose se compone de un isotipo y un logotipo. El isotipo representa una red neuronal estilizada, y el logotipo muestra el nombre "Sypnose" en la tipografía Poppins.</p>
+        <!-- Placeholder for logo anatomy image -->
+        <div style="width:100%; height: 200mm; background: #eee; text-align:center; line-height:200mm;">[IMAGEN DE ANATOMIA DE LOGO]</div>
+    </section>
+    <section class="page">
+        <h1>P04: Variantes logo</h1>
+        <p>Se utilizará el logo principal a color siempre que sea posible. Se proporcionan versiones en blanco y negro para casos de uso específicos.</p>
+        <!-- Placeholders for logo variants -->
+        <div style="width:100%; height: 50mm; background: #eee; text-align:center; line-height:50mm; margin-bottom: 10mm;">[LOGO A COLOR]</div>
+        <div style="width:100%; height: 50mm; background: #3d3929; color: white; text-align:center; line-height:50mm; margin-bottom: 10mm;">[LOGO EN BLANCO]</div>
+        <div style="width:100%; height: 50mm; background: #eeece2; text-align:center; line-height:50mm;">[LOGO EN NEGRO]</div>
+    </section>
+    <section class="page">
+        <h1>P05: Tamaños mínimos</h1>
+        <p>Para asegurar la legibilidad del logo, no se debe reproducir en un tamaño menor a 20mm de ancho para impresión y 60px de ancho para digital.</p>
+        <!-- Placeholder for minimum size examples -->
+        <div style="width:60px; height: 60px; background: #eee; text-align:center; font-size: 8px; line-height:60px;">[Logo 60px]</div>
+        <div style="width:20mm; height: 20mm; background: #eee; text-align:center; font-size: 8px; line-height:20mm; margin-top: 10mm;">[Logo 20mm]</div>
+    </section>
+    <section class="page">
+        <h1>P06: Usos incorrectos</h1>
+        <p>No alterar, distorsionar, o cambiar el color del logo. No añadir efectos visuales. No colocar sobre fondos que dificulten su legibilidad.</p>
+        <!-- Placeholder for incorrect usage examples -->
+        <div style="width:100%; height: 100mm; background: #eee; text-align:center; line-height:100mm;">[EJEMPLOS DE USOS INCORRECTOS]</div>
+    </section>
+    <section class="page">
+        <h1>P07: Paleta primaria</h1>
+        <div style="display: flex; justify-content: space-between;">
+            <div style="width: 30%; text-align: center;">
+                <div style="width: 100%; height: 100px; background-color: #da7756;"></div>
+                <p>Terra Cotta<br>#da7756<br>rgb(218, 119, 86)<br>cmyk(0, 45, 61, 15)<br>PANTONE 15-1335 TPG</p>
+            </div>
+            <div style="width: 30%; text-align: center;">
+                <div style="width: 100%; height: 100px; background-color: #eeece2;"></div>
+                <p>Cream<br>#eeece2<br>rgb(238, 236, 226)<br>cmyk(0, 1, 5, 7)<br>PANTONE 9043 C</p>
+            </div>
+            <div style="width: 30%; text-align: center;">
+                <div style="width: 100%; height: 100px; background-color: #3d3929;"></div>
+                <p>Dark Slate<br>#3d3929<br>rgb(61, 57, 41)<br>cmyk(0, 7, 33, 76)<br>PANTONE 448 C</p>
+            </div>
+        </div>
+    </section>
+    <section class="page">
+        <h1>P08: Paleta secundaria (acentos hover/disabled)</h1>
+        <p>Colores secundarios para estados de interfaz, como botones deshabilitados o enlaces al pasar el mouse.</p>
+        <!-- Placeholders for secondary colors -->
+        <div style="display: flex; justify-content: space-around; margin-top: 50mm;">
+            <div style="text-align:center;">
+                <div style="width: 80px; height: 80px; background-color: #e8a087;"></div>
+                <p>Hover</p>
+            </div>
+             <div style="text-align:center;">
+                <div style="width: 80px; height: 80px; background-color: #f4f3ed;"></div>
+                <p>Disabled</p>
+            </div>
+        </div>
+    </section>
+    <section class="page">
+        <h1>P09: Tipografías</h1>
+        <h2>Poppins - Titulares</h2>
+        <p style="font-family: 'Poppins', sans-serif; font-size: 2em;">Aa Bb Cc Dd Ee Ff Gg</p>
+        <h2>Lora - Citas en Serif</h2>
+        <p style="font-family: 'Lora', serif; font-style: italic; font-size: 1.5em;">"El futuro de la IA es la colaboración."</p>
+        <h2>DM Sans - Cuerpo de texto</h2>
+        <p style="font-family: 'DM Sans', sans-serif; font-size: 1em;">Sypnose es un sistema de inteligencia artificial multi-agente diseñado para acelerar el desarrollo de software. Con más de 300 workers especializados y una memoria compartida de 4 años, Sypnose puede completar tareas complejas en una fracción del tiempo.</p>
+    </section>
+    <section class="page">
+        <h1>P10: Wordmark Sypnose Mithos</h1>
+        <p>El wordmark "Sypnose Mithos" se utiliza para identificar la suite de productos y servicios de Sypnose. Se debe usar la tipografía Poppins Bold.</p>
+        <!-- Placeholder for wordmark -->
+        <div style="width:100%; height: 100mm; background: #eee; text-align:center; line-height:100mm; font-family: 'Poppins', sans-serif; font-size: 3em;">Sypnose Mithos</div>
+    </section>
+    <section class="page">
+        <h1>P11: Iconografía red neuronal</h1>
+        <p>La iconografía se inspira en las redes neuronales, utilizando líneas finas y nodos para representar la conexión y el flujo de información.</p>
+        <!-- Placeholder for iconography examples -->
+        <div style="width:100%; height: 150mm; background: #eee; text-align:center; line-height:150mm;">[EJEMPLOS DE ICONOGRAFÍA]</div>
+    </section>
+    <section class="page">
+        <h1>P12: Fotografía estilo</h1>
+        <p>El estilo fotográfico de Sypnose es limpio, moderno y centrado en la tecnología y la colaboración humana. Las imágenes deben ser brillantes, con una paleta de colores coherente con la marca.</p>
+    </section>
+    <section class="page">
+        <h1>P13: Aplicaciones impresas</h1>
+        <p>Ejemplos de aplicaciones del branding en material impreso.</p>
+        <!-- Placeholders for printed applications -->
+        <div style="display: flex; justify-content: space-between;">
+            <div style="width: 48%; height: 150mm; background: #eee; text-align:center; line-height:150mm;">[TARJETA DE VISITA]</div>
+            <div style="width: 48%; height: 150mm; background: #eee; text-align:center; line-height:150mm;">[PAPEL MEMBRETADO]</div>
+        </div>
+    </section>
+    <section class="page">
+        <h1>P14: Aplicaciones digitales</h1>
+        <p>Ejemplos de aplicaciones del branding en interfaces digitales.</p>
+        <!-- Placeholders for digital applications -->
+        <div style="width:100%; height: 150mm; background: #eee; text-align:center; line-height:150mm;">[VISTA DE APP]</div>
+    </section>
+    <section class="page">
+        <h1>P15: Email signatures</h1>
+        <div style="border: 1px solid #ccc; padding: 20px;">
+            <p><strong>Nombre Apellido</strong><br>Cargo<br>Sypnose<br>hello@sypnose.cloud<br>sypnose.cloud</p>
+        </div>
+    </section>
+    <section class="page">
+        <h1>P16: Documentos plantilla</h1>
+        <p>Plantillas para presentaciones y documentos internos, manteniendo la coherencia de la marca.</p>
+        <!-- Placeholder for document templates -->
+        <div style="width:100%; height: 150mm; background: #eee; text-align:center; line-height:150mm;">[PLANTILLA DE PRESENTACIÓN]</div>
+    </section>
+    <section class="page">
+        <h1>P17: Social media templates</h1>
+        <p>Plantillas para publicaciones en redes sociales.</p>
+        <!-- Placeholder for social media templates -->
+        <div style="width:100%; height: 150mm; background: #eee; text-align:center; line-height:150mm;">[PLANTILLA DE POST]</div>
+    </section>
+    <section class="page">
+        <h1>P18: Tono de voz Sypnose</h1>
+        <p>El tono de voz de Sypnose es profesional, inteligente y directo. Nos comunicamos con claridad y confianza, evitando la jerga innecesaria. Somos un socio experto, no un vendedor.</p>
+    </section>
+    <section class="page">
+        <h1>P19: Mensajes clave</h1>
+        <ul>
+            <li><strong>300 workers:</strong> Un equipo de agentes de IA especializados para cada tarea.</li>
+            <li><strong>4-year memory:</strong> Memoria a largo plazo que permite un aprendizaje y una mejora continuos.</li>
+            <li><strong>No proof, no done:</strong> Un compromiso inquebrantable con la calidad y la verificación.</li>
+        </ul>
+    </section>
+    <section class="page">
+        <h1>P20: RRSS LinkedIn/X</h1>
+        <p>En LinkedIn y X (Twitter), compartimos insights sobre el futuro del desarrollo de software, la IA y la productividad. Mantenemos un tono profesional y participamos en conversaciones relevantes.</p>
+    </section>
+    <section class="page">
+        <h1>P21: Casos de éxito</h1>
+        <h2>HUYGHU Brand Kit en 6 horas</h2>
+        <p>Generación completa de un brand kit (logo, favicons, guidelines, deck, web) para la consultora HUYGHU en un tiempo récord de 6 horas.</p>
+        <h2>GestoriaRD: 314 nuevos clientes</h2>
+        <p>Automatización de procesos para GestoriaRD que resultó en la captación de 314 nuevos clientes en el primer trimestre.</p>
+    </section>
+    <section class="page">
+        <h1>P22: Contacto</h1>
+        <div style="text-align: center; margin-top: 100mm;">
+        <h2>¿Listo para construir el futuro?</h2>
+        <p>hello@sypnose.cloud</p>
+        </div>
+    </section>
+
+</body>
+</html>

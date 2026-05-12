@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sypnose Brand Studio | Tu identidad corporativa en 3 horas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Lora:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        @keyframes fade-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-up-on-scroll {
+            animation: fade-up 0.8s ease-out forwards;
+            animation-play-state: paused;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'syp-terracotta': '#da7756',
+                        'syp-cream': '#eeece2',
+                        'syp-dark-slate': '#3d3929',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'lora': ['Lora', 'serif'],
+                        'dmsans': ['DM Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-syp-cream text-syp-dark-slate font-dmsans antialiased">
+
+    <!-- HERO -->
+    <header id="hero" class="flex flex-col items-center justify-center min-h-screen text-center px-6">
+        <h1 class="font-poppins text-5xl md:text-7xl lg:text-8xl max-w-4xl leading-tight">
+            Tu identidad corporativa en <span class="text-syp-terracotta">3 horas</span>, no 3 meses
+        </h1>
+        <p class="font-lora text-lg md:text-xl max-w-2xl mt-6 mb-8">
+            Sypnose Brand Studio utiliza agentes de IA para crear un brand kit completo y profesional a la velocidad de una idea.
+        </p>
+        <a href="mailto:hello@sypnose.cloud?subject=Solicitud de Propuesta para Brand Kit" class="bg-syp-terracotta text-white font-bold font-dmsans py-4 px-8 rounded-full text-lg hover:bg-opacity-90 transition-colors">
+            Solicita tu propuesta
+        </a>
+    </header>
+
+    <main class="px-6 md:px-12 lg:px-24">
+        
+        <!-- CIFRAS -->
+        <section id="cifras" class="py-20 lg:py-32 fade-up-on-scroll">
+            <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <p class="font-poppins text-5xl md:text-6xl text-syp-terracotta">314</p>
+                    <p class="font-lora text-lg mt-2">Clientes Satisfechos</p>
+                </div>
+                <div>
+                    <p class="font-poppins text-5xl md:text-6xl text-syp-terracotta">5</p>
+                    <p class="font-lora text-lg mt-2">Productos Lanzados</p>
+                </div>
+                <div>
+                    <p class="font-poppins text-5xl md:text-6xl text-syp-terracotta">9</p>
+                    <p class="font-lora text-lg mt-2">Agentes IA Dedicados</p>
+                </div>
+                <div>
+                    <p class="font-poppins text-5xl md:text-6xl text-syp-terracotta">0</p>
+                    <p class="font-lora text-lg mt-2">Errores Overnight</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CASO HUYGHU -->
+        <section id="caso-huyghu" class="py-20 lg:py-32 fade-up-on-scroll">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="font-poppins text-4xl md:text-5xl">Caso de Éxito: HUYGHU & ASOCIADOS</h2>
+                <p class="font-lora text-lg mt-4 max-w-3xl mx-auto">En 6 horas, transformamos una idea en una identidad visual completa, lista para producción.</p>
+                <div class="mt-12 bg-syp-dark-slate/10 p-4 rounded-lg">
+                    <p class="font-lora text-syp-dark-slate">[Galería de screenshots del brand kit completo: logos, web, deck, etc. - Placeholder]</p>
+                    <div class="h-96 flex items-center justify-center">
+                         <svg class="w-16 h-16 text-syp-dark-slate/50" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l-1.586-1.586a2 2 0 00-2.828 0L6 14m6-6l.01.01"></path></svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUE RECIBES -->
+        <section id="entregables" class="py-20 lg:py-32 fade-up-on-scroll">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="font-poppins text-4xl md:text-5xl">¿Qué recibes en tu Brand Kit?</h2>
+                <p class="font-lora text-lg mt-4 max-w-3xl mx-auto">Un paquete completo con todos los activos que necesitas para lanzar tu marca al mundo.</p>
+                <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                    <div class="bg-white/50 p-6 rounded-lg border border-syp-dark-slate/10"><strong>12</strong> Variantes de logo (SVG)</div>
+                    <div class="bg-white/50 p-6 rounded-lg border border-syp-dark-slate/10"><strong>20</strong> Favicons PWA/Mobile</div>
+                    <div class="bg-white/50 p-6 rounded-lg border border-syp-dark-slate/10"><strong>12</strong> Firmas de email</div>
+                    <div class="bg-white/50 p-6 rounded-lg border border-syp-dark-slate/10"><strong>4</strong> Tarjetas de visita</div>
+                    <div class="bg-white/50 p-6 rounded-lg border border-syp-dark-slate/10"><strong>1</strong> Pitch Deck de 15 slides</div>
+                    <div class="bg-white/50 p-6 rounded-lg border border-syp-dark-slate/10"><strong>22pp</strong> Brand Guidelines</div>
+                    <div class="bg-white/50 p-6 rounded-lg border border-syp-dark-slate/10"><strong>6</strong> Emails de lanzamiento</div>
+                    <div class="bg-white/50 p-6 rounded-lg border border-syp-dark-slate/10"><strong>36</strong> Recursos para redes sociales</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESO -->
+        <section id="proceso" class="py-20 lg:py-32 fade-up-on-scroll">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="font-poppins text-4xl md:text-5xl">Nuestro Proceso de 3 Pasos</h2>
+                <div class="mt-12 grid md:grid-cols-3 gap-12 text-left relative">
+                     <!-- Line connecting the steps -->
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-syp-dark-slate/20" style="transform: translateY(-50%); z-index: -1;"></div>
+                    <div class="relative">
+                        <div class="bg-syp-terracotta text-white w-12 h-12 flex items-center justify-center rounded-full font-poppins text-2xl mb-4">1</div>
+                        <h3 class="font-bold text-xl mb-2">Kickoff (30 min)</h3>
+                        <p class="font-lora">Definimos juntos la visión, el tono y los objetivos de tu marca en una llamada rápida.</p>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-syp-terracotta text-white w-12 h-12 flex items-center justify-center rounded-full font-poppins text-2xl mb-4">2</div>
+                        <h3 class="font-bold text-xl mb-2">Ejecución IA (3h)</h3>
+                        <p class="font-lora">Nuestros agentes de IA generan en paralelo todos los activos de tu identidad visual.</p>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-syp-terracotta text-white w-12 h-12 flex items-center justify-center rounded-full font-poppins text-2xl mb-4">3</div>
+                        <h3 class="font-bold text-xl mb-2">Entrega del Bundle</h3>
+                        <p class="font-lora">Recibes un enlace con tu brand kit completo, listo para descargar y usar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRECIOS -->
+        <section id="precios" class="py-20 lg:py-32 fade-up-on-scroll">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="font-poppins text-4xl md:text-5xl">Precios Flexibles</h2>
+                <div class="mt-12 grid lg:grid-cols-3 gap-8 text-left">
+                    <div class="border border-syp-dark-slate/20 rounded-lg p-8 flex flex-col">
+                        <h3 class="font-poppins text-2xl">Brand Kit</h3>
+                        <p class="font-lora mt-2 text-syp-dark-slate/80">La identidad visual completa.</p>
+                        <p class="font-poppins text-4xl my-6">$800 - $2,500 <span class="text-lg font-dmsans">USD</span></p>
+                        <ul class="font-lora space-y-2 mb-8 flex-grow"><li>✓ Todo en "Qué recibes"</li></ul>
+                        <a href="mailto:hello@sypnose.cloud?subject=Interesado en Brand Kit" class="text-center w-full bg-syp-dark-slate text-syp-cream font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors">Empezar</a>
+                    </div>
+                    <div class="border-2 border-syp-terracotta rounded-lg p-8 relative flex flex-col">
+                         <span class="absolute top-0 right-8 -mt-3 bg-syp-terracotta text-white text-sm font-bold px-3 py-1 rounded-full">Más Popular</span>
+                        <h3 class="font-poppins text-2xl">Brand + Web</h3>
+                        <p class="font-lora mt-2 text-syp-dark-slate/80">Tu kit de marca y tu nueva web.</p>
+                        <p class="font-poppins text-4xl my-6">$3,000 - $5,000 <span class="text-lg font-dmsans">USD</span></p>
+                         <ul class="font-lora space-y-2 mb-8 flex-grow"><li>✓ Brand Kit completo</li><li>✓ One-pager responsive</li><li>✓ CMS para editar contenido</li></ul>
+                        <a href="mailto:hello@sypnose.cloud?subject=Interesado en Brand + Web" class="text-center w-full bg-syp-terracotta text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors">Empezar</a>
+                    </div>
+                    <div class="border border-syp-dark-slate/20 rounded-lg p-8 flex flex-col">
+                        <h3 class="font-poppins text-2xl">Full Visual</h3>
+                        <p class="font-lora mt-2 text-syp-dark-slate/80">Identidad y marketing visual completo.</p>
+                        <p class="font-poppins text-4xl my-6">$5,000 - $10,000 <span class="text-lg font-dmsans">USD</span></p>
+                        <ul class="font-lora space-y-2 mb-8 flex-grow"><li>✓ Brand + Web</li><li>✓ Contenido para 3 meses</li><li>✓ Videos y animaciones</li></ul>
+                        <a href="mailto:hello@sypnose.cloud?subject=Interesado en Full Visual" class="text-center w-full bg-syp-dark-slate text-syp-cream font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition-colors">Empezar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIOS -->
+        <section id="testimonios" class="py-20 lg:py-32 fade-up-on-scroll">
+            <div class="max-w-4xl mx-auto text-center">
+                 <h2 class="font-poppins text-4xl md:text-5xl mb-12">Lo que dicen nuestros clientes</h2>
+                 <div class="font-lora text-2xl italic leading-relaxed">
+                     "Placeholder: El proceso fue increíblemente rápido y el resultado superó todas nuestras expectativas. Sypnose entendió nuestra visión al instante."
+                 </div>
+                 <p class="font-dmsans font-bold text-lg mt-6">- CEO, Startup de Tecnología</p>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="py-20 lg:py-32 fade-up-on-scroll">
+            <div class="max-w-4xl mx-auto">
+                 <h2 class="font-poppins text-4xl md:text-5xl text-center mb-12">Preguntas Frecuentes</h2>
+                 <div class="space-y-6">
+                    <div>
+                        <h3 class="font-bold text-xl">¿Cómo puede la IA crear una marca tan rápido?</h3>
+                        <p class="font-lora mt-2">Utilizamos un sistema de agentes de IA especializados que trabajan en paralelo. Mientras un agente diseña el logo, otro escribe los textos y otro prepara los favicons, todo basado en el mismo brief inicial. Esto comprime semanas de trabajo en horas.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl">¿Puedo pedir revisiones?</h3>
+                        <p class="font-lora mt-2">Sí. Nuestro proceso incluye puntos de control para afinar la dirección. Aunque la velocidad es clave, la calidad y tu satisfacción son la prioridad. El precio incluye rondas de ajuste para asegurar que el resultado final sea perfecto para ti.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl">¿Qué pasa si no me gusta el resultado?</h3>
+                        <p class="font-lora mt-2">Es muy improbable, ya que el kickoff inicial alinea las expectativas. En el caso excepcional de que el resultado no cumpla con lo acordado, trabajaremos contigo para ajustarlo o, en última instancia, ofrecemos una garantía de satisfacción.</p>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-syp-dark-slate text-syp-cream mt-20">
+        <div class="max-w-6xl mx-auto py-12 px-6 md:px-12 lg:px-24 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <div>
+                <h3 class="font-poppins text-xl">Sypnose Brand Studio</h3>
+                <p class="font-lora text-syp-cream/70">Identidad corporativa a la velocidad de la IA.</p>
+            </div>
+            <div class="flex items-center space-x-6 mt-8 md:mt-0">
+                <a href="mailto:hello@sypnose.cloud" class="hover:text-syp-terracotta transition-colors">hello@sypnose.cloud</a>
+                <a href="https://linkedin.com/in/carlosdelatorre-ai" target="_blank" rel="noopener noreferrer" class="hover:text-syp-terracotta transition-colors">LinkedIn</a>
+            </div>
+        </div>
+        <div class="border-t border-syp-cream/20">
+            <p class="text-center py-4 text-sm text-syp-cream/50">&copy; 2026 Sypnose. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-up-on-scroll').forEach(elem => {
+                observer.observe(elem);
+            });
+        });
+    </script>
+
+</body>
+</html>
