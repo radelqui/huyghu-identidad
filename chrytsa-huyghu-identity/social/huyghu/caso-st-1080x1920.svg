@@ -1,27 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D773"></stop><stop offset=".35" stop-color="#D4AF37"></stop><stop offset=".7" stop-color="#B8862B"></stop><stop offset="1" stop-color="#8B5E1A"></stop></linearGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5B9BD5"></stop><stop offset=".35" stop-color="#2B6CB0"></stop><stop offset=".7" stop-color="#1E5090"></stop><stop offset="1" stop-color="#163B6B"></stop></linearGradient>
     <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="rgba(212,175,55,.18)"></stop><stop offset="1" stop-color="rgba(212,175,55,0)"></stop></linearGradient>
     <radialGradient id="vignette" cx="0.5" cy="0.4" r="0.8"><stop offset="0" stop-color="rgba(212,175,55,0)"></stop><stop offset="1" stop-color="rgba(0,0,0,.45)"></stop></radialGradient>
-    <pattern id="grain" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse"><circle cx="10" cy="20" r=".7" fill="#F4D773" opacity=".06"></circle><circle cx="35" cy="50" r=".5" fill="#F4D773" opacity=".05"></circle><circle cx="60" cy="15" r=".6" fill="#F4D773" opacity=".06"></circle><circle cx="70" cy="65" r=".4" fill="#F4D773" opacity=".04"></circle><circle cx="20" cy="70" r=".5" fill="#F4D773" opacity=".05"></circle></pattern>
-    <clipPath id="sphereClip"><circle cx="50" cy="50" r="42"></circle></clipPath>
-    <symbol id="sphere" viewBox="0 0 100 100">
-      <circle cx="50" cy="50" r="42" fill="#0A0A0A"></circle>
-      <g clip-path="url(#sphereClip)">
-        <path d="M50 8A42 42 0 0 0 8 50 42 42 0 0 0 50 92Q30 70 30 50Q30 30 50 8Z" fill="url(#g)"></path>
-        <g transform="skewY(-7)"><rect x="8" y="28" width="84" height="6" fill="url(#g)"></rect><rect x="8" y="44" width="84" height="6" fill="url(#g)"></rect><rect x="8" y="60" width="84" height="6" fill="url(#g)"></rect></g>
-      </g>
-    </symbol>
-    <symbol id="crown" viewBox="0 0 120 100">
-      <path d="M 22 32 Q 60 6 98 32" fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round"></path>
-      <path d="M 28 36 Q 60 14 92 36" fill="none" stroke="url(#g)" stroke-width="3" stroke-linecap="round" opacity=".7"></path>
-      <path d="M 18 50 Q 60 38 102 50" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"></path>
-      <text x="60" y="92" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-weight="700" font-size="76" fill="#FFFFFF">G</text>
-    </symbol>
+    <pattern id="grain" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse"><circle cx="10" cy="20" r=".7" fill="#5B9BD5" opacity=".06"></circle><circle cx="35" cy="50" r=".5" fill="#5B9BD5" opacity=".05"></circle><circle cx="60" cy="15" r=".6" fill="#5B9BD5" opacity=".06"></circle><circle cx="70" cy="65" r=".4" fill="#5B9BD5" opacity=".04"></circle><circle cx="20" cy="70" r=".5" fill="#5B9BD5" opacity=".05"></circle></pattern>
+    <clipPath id="sphereClip"><circle cx="50" cy="49" r="38"></circle></clipPath>
+    <symbol id="sphere" viewBox="0 0 100 100"><g transform="translate(-51.675 4.276) scale(0.4851)"><path d="M251.345 50.640 C253.822 53.458 255.769 56.325 255.673 58.179 C255.453 62.410 249.136 76.693 247.008 79.442 C246.148 79.575 245.165 79.037 244.059 77.820 C241.517 75.279 237.597 69.750 230.472 62.838 C221.170 53.814 204.110 40.495 191.200 36.283 C187.896 35.204 187.478 35.115 184.892 36.834 C181.568 39.044 173.416 45.078 171.540 47.576 L205.705 73.017 C211.892 78.204 232.880 95.329 235.051 103.399 C233.395 106.441 224.599 116.746 222.268 118.671 C213.944 117.692 180.143 87.258 171.311 80.142 C168.649 77.997 165.812 75.046 163.528 72.702 C162.012 71.148 157.916 66.462 155.452 65.792 C147.227 82.271 144.833 81.277 149.304 88.165 C156.833 99.764 172.085 112.243 183.093 120.388 C186.325 122.780 189.862 125.251 193.039 126.948 C195.108 128.054 196.031 128.843 198.236 130.018 C200.172 131.050 201.848 131.741 203.200 133.214 C201.710 135.827 188.789 143.109 186.083 144.596 C181.214 147.272 181.794 148.348 176.395 145.472 C165.723 139.785 152.808 129.681 144.774 121.273 C141.965 118.334 140.502 115.871 137.900 113.974 L134.232 130.500 C133.500 134.733 133.073 138.721 134.093 140.832 C135.250 143.228 145.444 151.732 148.396 153.825 C158.763 161.180 172.261 167.279 187.965 168.846 C222.931 172.337 248.100 156.454 263.865 136.746 C282.999 112.828 286.099 79.914 274.694 52.270 C267.560 34.977 257.387 24.998 243.958 15.098 C239.806 12.036 238.274 12.801 232.690 14.226 C227.686 15.504 215.829 18.821 212.423 20.933 C213.314 21.896 228.857 30.521 237.310 37.373 C241.291 40.598 248.216 47.081 251.345 50.640" fill="url(#g)"></path><path d="M134.727 104.159 C135.478 104.595 140.356 110.028 141.472 111.255 C149.894 120.515 167.974 136.296 178.853 141.792 C182.826 143.798 184.690 141.991 188.291 139.856 C190.694 138.431 194.506 136.723 196.025 133.848 L192.819 132.091 C183.785 127.506 163.458 109.601 156.894 102.798 C154.187 99.991 151.006 96.540 148.452 93.462 C138.203 81.114 144.690 80.287 155.617 60.260 C157.598 60.980 158.287 62.130 159.774 63.768 C168.926 73.852 214.420 113.490 221.635 113.948 C223.963 111.812 229.753 105.476 230.677 102.765 C227.398 95.448 206.525 78.781 199.850 73.186 C194.554 68.748 189.064 64.908 183.698 60.770 C180.683 58.445 167.682 50.049 166.321 48.210 C167.976 44.622 181.039 34.708 185.039 32.480 C192.643 28.245 223.149 51.107 228.662 55.805 C233.870 60.245 237.309 63.600 241.612 68.833 C245.038 72.998 244.604 72.615 246.050 73.256 C247.440 69.256 249.378 65.758 250.836 60.898 C251.844 57.539 251.337 56.029 250.239 54.693 C243.468 46.453 234.910 40.927 226.416 34.491 C215.552 27.513 214.921 27.453 204.151 21.567 C205.465 17.913 231.031 11.264 233.945 10.448 C231.373 6.165 213.209 2.457 207.740 1.716 C196.301 0.168 186.004 1.259 176.140 3.755 C148.825 10.667 131.518 27.636 119.889 51.735 C111.770 68.560 111.178 94.019 117.106 110.846 C119.173 116.712 125.110 131.777 129.018 133.970 C129.499 133.181 130.232 129.482 130.506 128.367 C130.897 126.103 131.307 123.775 131.594 121.703 C132.463 115.416 133.548 110.244 134.727 104.159" fill="#99FF00"></path><path d="M 150.6,5.7 A 96,92 0 1,0 288.8,116.9" fill="none" stroke="url(#g)" stroke-width="7.01" stroke-linecap="round"></path></g></symbol>
+    <symbol id="crown" viewBox="0 0 120 100"><g transform="translate(-41.675 5.276) scale(0.4851)"><path d="M251.345 50.640 C253.822 53.458 255.769 56.325 255.673 58.179 C255.453 62.410 249.136 76.693 247.008 79.442 C246.148 79.575 245.165 79.037 244.059 77.820 C241.517 75.279 237.597 69.750 230.472 62.838 C221.170 53.814 204.110 40.495 191.200 36.283 C187.896 35.204 187.478 35.115 184.892 36.834 C181.568 39.044 173.416 45.078 171.540 47.576 L205.705 73.017 C211.892 78.204 232.880 95.329 235.051 103.399 C233.395 106.441 224.599 116.746 222.268 118.671 C213.944 117.692 180.143 87.258 171.311 80.142 C168.649 77.997 165.812 75.046 163.528 72.702 C162.012 71.148 157.916 66.462 155.452 65.792 C147.227 82.271 144.833 81.277 149.304 88.165 C156.833 99.764 172.085 112.243 183.093 120.388 C186.325 122.780 189.862 125.251 193.039 126.948 C195.108 128.054 196.031 128.843 198.236 130.018 C200.172 131.050 201.848 131.741 203.200 133.214 C201.710 135.827 188.789 143.109 186.083 144.596 C181.214 147.272 181.794 148.348 176.395 145.472 C165.723 139.785 152.808 129.681 144.774 121.273 C141.965 118.334 140.502 115.871 137.900 113.974 L134.232 130.500 C133.500 134.733 133.073 138.721 134.093 140.832 C135.250 143.228 145.444 151.732 148.396 153.825 C158.763 161.180 172.261 167.279 187.965 168.846 C222.931 172.337 248.100 156.454 263.865 136.746 C282.999 112.828 286.099 79.914 274.694 52.270 C267.560 34.977 257.387 24.998 243.958 15.098 C239.806 12.036 238.274 12.801 232.690 14.226 C227.686 15.504 215.829 18.821 212.423 20.933 C213.314 21.896 228.857 30.521 237.310 37.373 C241.291 40.598 248.216 47.081 251.345 50.640" fill="url(#g)"></path><path d="M134.727 104.159 C135.478 104.595 140.356 110.028 141.472 111.255 C149.894 120.515 167.974 136.296 178.853 141.792 C182.826 143.798 184.690 141.991 188.291 139.856 C190.694 138.431 194.506 136.723 196.025 133.848 L192.819 132.091 C183.785 127.506 163.458 109.601 156.894 102.798 C154.187 99.991 151.006 96.540 148.452 93.462 C138.203 81.114 144.690 80.287 155.617 60.260 C157.598 60.980 158.287 62.130 159.774 63.768 C168.926 73.852 214.420 113.490 221.635 113.948 C223.963 111.812 229.753 105.476 230.677 102.765 C227.398 95.448 206.525 78.781 199.850 73.186 C194.554 68.748 189.064 64.908 183.698 60.770 C180.683 58.445 167.682 50.049 166.321 48.210 C167.976 44.622 181.039 34.708 185.039 32.480 C192.643 28.245 223.149 51.107 228.662 55.805 C233.870 60.245 237.309 63.600 241.612 68.833 C245.038 72.998 244.604 72.615 246.050 73.256 C247.440 69.256 249.378 65.758 250.836 60.898 C251.844 57.539 251.337 56.029 250.239 54.693 C243.468 46.453 234.910 40.927 226.416 34.491 C215.552 27.513 214.921 27.453 204.151 21.567 C205.465 17.913 231.031 11.264 233.945 10.448 C231.373 6.165 213.209 2.457 207.740 1.716 C196.301 0.168 186.004 1.259 176.140 3.755 C148.825 10.667 131.518 27.636 119.889 51.735 C111.770 68.560 111.178 94.019 117.106 110.846 C119.173 116.712 125.110 131.777 129.018 133.970 C129.499 133.181 130.232 129.482 130.506 128.367 C130.897 126.103 131.307 123.775 131.594 121.703 C132.463 115.416 133.548 110.244 134.727 104.159" fill="#99FF00"></path><path d="M 150.6,5.7 A 96,92 0 1,0 288.8,116.9" fill="none" stroke="url(#g)" stroke-width="7.01" stroke-linecap="round"></path></g></symbol>
   </defs>
 
     
-    <rect id="bg" width="1080" height="1920" fill="#0A0A0A"></rect>
+    <rect id="bg" width="1080" height="1920" fill="#1A1A2E"></rect>
     <rect width="1080" height="1920" fill="url(#grain)" opacity=".7"></rect>
     <rect width="1080" height="1920" fill="url(#vignette)"></rect>
     
@@ -29,8 +18,8 @@
     
     <rect x="0" y="0" width="1080" height="6" fill="url(#g)"></rect>
     <g id="eyebrow" transform="translate(540,160)">
-      <text text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="600" font-size="26" fill="#B8862B" letter-spacing="6">▶ CASO DE ÉXITO · 2025</text>
-      <text y="60" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-weight="500" font-size="42" fill="#F4D773" letter-spacing="2">[Cliente Ejemplo]</text>
+      <text text-anchor="middle" font-family="Inter,Arial,sans-serif" font-weight="600" font-size="26" fill="#1E5090" letter-spacing="6">▶ CASO DE ÉXITO · 2025</text>
+      <text y="60" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-weight="500" font-size="42" fill="#5B9BD5" letter-spacing="2">[Cliente Ejemplo]</text>
     </g>
     
     <g id="metric" transform="translate(540,960)">
@@ -38,22 +27,22 @@
     </g>
     <g id="subtitle" transform="translate(540,1305.6000000000001)">
       <rect x="-120" y="0" width="240" height="1" fill="url(#g)"></rect>
-      <text y="54" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-weight="500" font-size="32" fill="#e8dfc6" letter-spacing="1">Reducción carga fiscal efectiva</text>
-      <text y="98" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="22" fill="#bcb29a" letter-spacing="2">12 meses · 2024 → 2025 · dentro de norma DGII</text>
+      <text y="54" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-weight="500" font-size="32" fill="#dce9f4" letter-spacing="1">Reducción carga fiscal efectiva</text>
+      <text y="98" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="22" fill="#9CA8B8" letter-spacing="2">12 meses · 2024 → 2025 · dentro de norma DGII</text>
     </g>
     <g id="testimonio" transform="translate(540,1555.2)">
-      <text text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-size="28" fill="#8a7f6a">&#34;HUYGHU detectó deducciones que dejábamos sobre la mesa</text>
-      <text y="40" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-size="28" fill="#8a7f6a">cada año. Cifras verificables, sin trucos.&#34;</text>
+      <text text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-size="28" fill="#6B7A8C">&#34;HUYGHU detectó deducciones que dejábamos sobre la mesa</text>
+      <text y="40" text-anchor="middle" font-family="Cormorant Garamond,Georgia,serif" font-style="italic" font-size="28" fill="#6B7A8C">cada año. Cifras verificables, sin trucos.&#34;</text>
     </g>
     <g id="footer" transform="translate(540,1740)">
-      <text text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="20" fill="#5a4f3e" letter-spacing="6">RETAIL · 80 EMPLEADOS · SANTO DOMINGO</text>
+      <text text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="20" fill="#3F4858" letter-spacing="6">RETAIL · 80 EMPLEADOS · SANTO DOMINGO</text>
     </g>
     
     <g id="logo">
       <use href="#sphere" x="60" y="1804" width="56" height="56"></use>
-      <text x="130" y="1839.7" font-family="Cinzel,Georgia,serif" font-weight="600" font-size="22" fill="#F4D773" letter-spacing="1.3199999999999998">HUYGHU &amp; ASOCIADOS</text>
-      <text x="130" y="1857.7" font-family="Inter,Arial,sans-serif" font-weight="500" font-size="10" fill="#B8862B" letter-spacing="3.2">CONTADORES PÚBLICOS</text>
-      <text x="1020" y="1856" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="11" fill="#8B5E1A" letter-spacing="1.98">@huyghu_rd</text>
+      <text x="130" y="1839.7" font-family="Cinzel,Georgia,serif" font-weight="600" font-size="22" fill="#5B9BD5" letter-spacing="1.3199999999999998">HUYGHU &amp; ASOCIADOS</text>
+      <text x="130" y="1857.7" font-family="Inter,Arial,sans-serif" font-weight="500" font-size="10" fill="#1E5090" letter-spacing="3.2">CONTADORES PÚBLICOS</text>
+      <text x="1020" y="1856" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="11" fill="#163B6B" letter-spacing="1.98">@huyghu_rd</text>
     </g>
   
   </svg>
