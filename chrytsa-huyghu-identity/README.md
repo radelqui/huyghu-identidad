@@ -60,11 +60,11 @@ Los únicos campos que Carlos debe llenar manualmente antes de imprimir o enviar
 
 - `[Nombre del Socio Director]` → nombre real del socio (Carlos De La Torre u otro firmante)
 - `[+1 809-XXX-XXXX]` → teléfono oficina real
-- `[RNC: XXX-XXXXX-X]` → RNC oficial HUYGHU y Chrytsa
+- `[RNC: 131-047939]` → RNC oficial HUYGHU y Chrytsa
 - `[Cliente Ejemplo XX]` en casos de éxito → 3 nombres de clientes reales (con permiso)
 - `[ICPARD #XXXX]` → número de colegiación profesional
 - `[Filial 03]` y `[Filial 04]` → las 2 empresas del Grupo Chrytsa aún sin nombre
-- `info@huyghu.com` / `www.huyghu.com` → confirmar dominio definitivo (huyghu.com vs huyghusrl.com)
+- `info@huyghusrl.com` / `www.huyghusrl.com` → confirmar dominio definitivo (huyghu.com vs huyghusrl.com)
 
 ---
 
