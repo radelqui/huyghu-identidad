@@ -1,4 +1,4 @@
-/**
+﻿/**
  * <deck-stage> — reusable web component for HTML decks.
  *
  * Handles:
@@ -77,7 +77,7 @@
       position: fixed;
       inset: 0;
       display: block;
-      background: #000;
+      background: #2E4470;
       color: #fff;
       font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
       overflow: hidden;
@@ -147,7 +147,7 @@
       align-items: center;
       gap: 4px;
       padding: 4px;
-      background: #000;
+      background: #2E4470;
       color: #fff;
       border-radius: 999px;
       font-size: 12px;

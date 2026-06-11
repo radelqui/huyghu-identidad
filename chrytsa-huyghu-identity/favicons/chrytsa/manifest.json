@@ -1,11 +1,11 @@
-{
+﻿{
   "name": "Grupo Chrytsa Asesores",
   "short_name": "Chrytsa",
   "description": "Grupo Chrytsa Asesores — Identidad Corporativa",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1A1A2E",
-  "theme_color": "#1A1A2E",
+  "background_color": "#2E4470",
+  "theme_color": "#2E4470",
   "icons": [
     {
       "src": "/favicons/favicon-16.png",

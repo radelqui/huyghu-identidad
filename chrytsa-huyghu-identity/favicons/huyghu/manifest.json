@@ -1,11 +1,11 @@
-{
+﻿{
   "name": "Huyghu & Asociados — Contadores Públicos",
   "short_name": "Huyghu",
   "description": "Huyghu & Asociados — Contadores Públicos — Identidad Corporativa",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1A1A2E",
-  "theme_color": "#1A1A2E",
+  "background_color": "#2E4470",
+  "theme_color": "#2E4470",
   "icons": [
     {
       "src": "/favicons/favicon-16.png",

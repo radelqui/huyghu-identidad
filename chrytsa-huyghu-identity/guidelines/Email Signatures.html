@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
@@ -9,13 +9,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Montserrat:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --gold-hi:#5B9BD5; --gold:#2B6CB0; --gold-mid:#1E5090; --gold-sh:#163B6B;
-    --ink:#1A1A2E; --paper:#fff; --cream:#FFFFFF; --rule:rgba(10,10,10,.10);
+    --gold-hi:#4A7BB5; --gold:#2E4470; --gold-mid:#2E4470; --gold-sh:#2E4470;
+    --ink:#2E4470; --paper:#fff; --cream:#FFFFFF; --rule:rgba(10,10,10,.10);
     --serif:'Cinzel',Georgia,serif; --sans:'Montserrat',sans-serif;
     --body:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
   }
   *{box-sizing:border-box}
-  html,body{margin:0;background:#E8EEF5;color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased}
+  html,body{margin:0;background:#F5F8FC;color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased}
   .page{max-width:1440px;margin:0 auto;padding:72px 56px 96px}
   header.brand-hdr{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:28px 0 24px;display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:24px;margin-bottom:48px}
   .eyebrow{font-family:var(--sans);font-size:11px;letter-spacing:.32em;text-transform:uppercase;opacity:.7}
@@ -33,11 +33,11 @@
     background:#F6F5F2;padding:12px 18px;border-bottom:1px solid var(--rule);
     display:flex;align-items:center;gap:10px;font-family:var(--body);font-size:11.5px;color:#555;
   }
-  .sig-card .gmail-hd .pill{background:#1A1A2E;color:#5B9BD5;font-family:var(--mono);font-size:10px;letter-spacing:.14em;padding:3px 8px;border-radius:2px;text-transform:uppercase}
-  .sig-card .gmail-hd .pill.dark{background:#2B6CB0;color:#1A1A2E}
+  .sig-card .gmail-hd .pill{background:#2E4470;color:#4A7BB5;font-family:var(--mono);font-size:10px;letter-spacing:.14em;padding:3px 8px;border-radius:2px;text-transform:uppercase}
+  .sig-card .gmail-hd .pill.dark{background:#2E4470;color:#2E4470}
   .sig-card .gmail-hd .who{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:#888}
   .gmail-body{padding:24px;background:#fff}
-  .gmail-body.dark-preview{background:#1a1a1a}
+  .gmail-body.dark-preview{background:#2E4470}
   .gmail-body .reply{font-family:Arial,sans-serif;font-size:13px;color:#333;line-height:1.6;margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid #eee}
   .gmail-body.dark-preview .reply{color:#ccc;border-bottom-color:#333}
 
@@ -47,11 +47,11 @@
   }
   .sig-actions .label{margin-right:auto;font-family:var(--mono);font-size:11px;color:#666;letter-spacing:.04em}
   .sig-actions button{
-    background:#1A1A2E;color:#5B9BD5;border:1px solid #2B6CB0;padding:7px 16px;
+    background:#2E4470;color:#4A7BB5;border:1px solid #2E4470;padding:7px 16px;
     font-family:var(--mono);font-size:11px;letter-spacing:.08em;cursor:pointer;text-transform:uppercase;
   }
-  .sig-actions button:hover{background:#1A1A2E}
-  .sig-actions button.view-src{background:transparent;color:#1A1A2E;border-color:#999}
+  .sig-actions button:hover{background:#2E4470}
+  .sig-actions button.view-src{background:transparent;color:#2E4470;border-color:#999}
   .sig-actions button.view-src:hover{background:#fff}
 
   .install{
@@ -60,21 +60,21 @@
   }
   .install h4{font-family:var(--serif);font-weight:500;font-size:16px;letter-spacing:.06em;margin:0 0 10px;padding-bottom:8px;border-bottom:1px solid var(--gold)}
   .install p{font-family:var(--body);font-size:12.5px;line-height:1.7;color:#3b3b3b;margin:0 0 10px}
-  .install code{font-family:var(--mono);background:#FFFFFF;padding:1px 5px;font-size:11.5px;color:#163B6B;border:1px solid var(--rule)}
+  .install code{font-family:var(--mono);background:#FFFFFF;padding:1px 5px;font-size:11.5px;color:#2E4470;border:1px solid var(--rule)}
   .install .step{font-family:var(--mono);font-size:10.5px;color:var(--gold-sh);letter-spacing:.12em;margin-right:6px}
 
-  .placeholders{background:#1A1A2E;color:#DCE9F4;padding:24px 28px;border:1px solid rgba(43,108,176,.18);font-family:var(--mono);font-size:12px;line-height:1.9}
-  .placeholders b{color:#5B9BD5;font-weight:500}
+  .placeholders{background:#2E4470;color:#DCE9F4;padding:24px 28px;border:1px solid rgba(46,68,112,.18);font-family:var(--mono);font-size:12px;line-height:1.9}
+  .placeholders b{color:#4A7BB5;font-weight:500}
   .placeholders code{color:#9fcf99}
 
   footer{margin-top:80px;padding-top:24px;border-top:1px solid var(--ink);display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;font-family:var(--mono);font-size:11px;color:#3b3b3b;letter-spacing:.04em;line-height:1.7}
   footer .r{text-align:right}footer .c{text-align:center}
 
-  dialog#srcView{padding:0;border:1px solid var(--gold);max-width:880px;width:90vw;max-height:80vh;background:#1A1A2E}
+  dialog#srcView{padding:0;border:1px solid var(--gold);max-width:880px;width:90vw;max-height:80vh;background:#2E4470}
   dialog#srcView::backdrop{background:rgba(0,0,0,.65)}
-  dialog#srcView .hd{display:flex;align-items:center;justify-content:space-between;background:#1A1A2E;color:#5B9BD5;padding:12px 20px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em}
-  dialog#srcView .hd button{background:transparent;border:1px solid rgba(91,155,213,.4);color:#5B9BD5;padding:4px 12px;font-family:var(--mono);font-size:10.5px;cursor:pointer}
-  dialog#srcView pre{margin:0;padding:24px;font-family:var(--mono);font-size:11px;line-height:1.6;color:#DCE9F4;background:#1A1A2E;overflow:auto;max-height:calc(80vh - 48px);white-space:pre-wrap;word-break:break-all}
+  dialog#srcView .hd{display:flex;align-items:center;justify-content:space-between;background:#2E4470;color:#4A7BB5;padding:12px 20px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em}
+  dialog#srcView .hd button{background:transparent;border:1px solid rgba(91,155,213,.4);color:#4A7BB5;padding:4px 12px;font-family:var(--mono);font-size:10.5px;cursor:pointer}
+  dialog#srcView pre{margin:0;padding:24px;font-family:var(--mono);font-size:11px;line-height:1.6;color:#DCE9F4;background:#2E4470;overflow:auto;max-height:calc(80vh - 48px);white-space:pre-wrap;word-break:break-all}
 </style>
 </head>
 <body>
@@ -156,28 +156,28 @@ const MARK_HUYGHU  = 'https://app.huyghusrl.com/assets/huyghu-logo.png';
 function sig(opts){
   const { brand, style, theme, mark, companyLine, taglineLine, address, web, social, regNote, banner } = opts;
   const isDark  = theme === 'dark';
-  const bg      = isDark ? '#1B3A6B' : '#FFFFFF';
-  const fg      = isDark ? '#FFFFFF' : '#1B3A6B';   /* texto principal — azul corporativo */
-  const muted   = isDark ? '#CFE0F2' : '#1E5090';   /* texto secundario — azul medio */
-  const muted2  = isDark ? '#A9C4E0' : '#1E5090';
-  const accent  = '#99FF00';                         /* acentos / separadores — verde lima */
+  const bg      = isDark ? '#2E4470' : '#FFFFFF';
+  const fg      = isDark ? '#FFFFFF' : '#2E4470';   /* texto principal — azul corporativo */
+  const muted   = isDark ? '#CFE0F2' : '#2E4470';   /* texto secundario — azul medio */
+  const muted2  = isDark ? '#A9C4E0' : '#2E4470';
+  const accent  = '#2F8F48';                         /* acentos / separadores — verde lima */
   const gold    = accent;                            /* divisores/rules usan verde */
-  const linkColor = isDark ? '#CFE0F2' : '#1E5090';  /* enlaces — azul medio */
+  const linkColor = isDark ? '#CFE0F2' : '#2E4470';  /* enlaces — azul medio */
   const SERIF = "'Cinzel','Trajan Pro','Cormorant Garamond',Georgia,serif";
   const SANS  = "'Inter','Helvetica Neue',Arial,sans-serif";
 
   const promoBanner = (style === 'promotional') ? `
         <tr><td style="height:14px;font-size:0;line-height:0;">&nbsp;</td></tr>
         <tr>
-          <td colspan="3" bgcolor="#1B3A6B" style="background:#1B3A6B;padding:16px 20px;border:1px solid #99FF00;">
+          <td colspan="3" bgcolor="#2E4470" style="background:#2E4470;padding:16px 20px;border:1px solid #2F8F48;">
             <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
               <tr>
-                <td style="font-family:${SANS};font-size:10px;letter-spacing:2.6px;color:#99FF00;text-transform:uppercase;font-weight:600;">Servicio destacado</td>
+                <td style="font-family:${SANS};font-size:10px;letter-spacing:2.6px;color:#2F8F48;text-transform:uppercase;font-weight:600;">Servicio destacado</td>
                 <td align="right" style="font-family:${SANS};font-size:10px;letter-spacing:1.8px;color:#CFE0F2;text-transform:uppercase;">${banner.tag}</td>
               </tr>
               <tr><td colspan="2" style="height:6px;font-size:0;line-height:0;">&nbsp;</td></tr>
               <tr>
-                <td colspan="2" style="font-family:${SERIF};font-size:18px;color:#5B9BD5;letter-spacing:1px;line-height:1.2;">
+                <td colspan="2" style="font-family:${SERIF};font-size:18px;color:#4A7BB5;letter-spacing:1px;line-height:1.2;">
                   ${banner.title}
                 </td>
               </tr>
@@ -190,7 +190,7 @@ function sig(opts){
               <tr><td colspan="2" style="height:12px;font-size:0;line-height:0;">&nbsp;</td></tr>
               <tr>
                 <td colspan="2">
-                  <a href="${banner.cta_url}" style="font-family:${SANS};font-size:11px;letter-spacing:2.2px;color:#1B3A6B;background:#99FF00;text-decoration:none;padding:9px 18px;font-weight:600;text-transform:uppercase;display:inline-block;">${banner.cta} →</a>
+                  <a href="${banner.cta_url}" style="font-family:${SANS};font-size:11px;letter-spacing:2.2px;color:#2E4470;background:#2F8F48;text-decoration:none;padding:9px 18px;font-weight:600;text-transform:uppercase;display:inline-block;">${banner.cta} →</a>
                 </td>
               </tr>
             </table>
@@ -334,7 +334,7 @@ function buildAll(cfg, banner, gridId, brandLabel){
       const card = document.createElement('div');
       card.className = 'sig-card';
       const id = `${cfg.brand}-${s.key}-${t.key}`;
-      const srcDoc = `<!doctype html><html><head><meta charset="utf-8"></head><body style="margin:0;padding:24px;background:${t.key==='dark'?'#1a1a1a':'#ffffff'};">
+      const srcDoc = `<!doctype html><html><head><meta charset="utf-8"></head><body style="margin:0;padding:24px;background:${t.key==='dark'?'#2E4470':'#ffffff'};">
         <div style="font-family:Arial,sans-serif;font-size:13px;color:${t.key==='dark'?'#cccccc':'#444444'};line-height:1.6;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid ${t.key==='dark'?'#333':'#eee'};">
           Saludos cordiales,<br>
         </div>
@@ -347,7 +347,7 @@ function buildAll(cfg, banner, gridId, brandLabel){
           <span style="font-family:'JetBrains Mono';font-size:10.5px;color:#888;">${brandLabel} · ${String(idx).padStart(2,'0')}/06</span>
           <span class="who">${s.desc}</span>
         </div>
-        <iframe srcdoc='${srcDoc.replace(/'/g,"&#39;")}' style="width:100%;height:${minH}px;border:0;display:block;background:${t.key==='dark'?'#1a1a1a':'#fff'};"></iframe>
+        <iframe srcdoc='${srcDoc.replace(/'/g,"&#39;")}' style="width:100%;height:${minH}px;border:0;display:block;background:${t.key==='dark'?'#2E4470':'#fff'};"></iframe>
         <div class="sig-actions">
           <span class="label">${id}.html</span>
           <button class="view-src" data-id="${id}">Ver código</button>
