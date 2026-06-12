@@ -159,7 +159,7 @@
               <line x1="148" y1="156" x2="192" y2="156" stroke="#27426E" stroke-width=".5"/>
               <text x="170" y="174" text-anchor="middle" font-family="Cinzel,serif" font-style="italic" font-size="8" letter-spacing=".4" fill="#4A7BB5">Asesoramos su patrimonio,</text>
               <text x="170" y="185" text-anchor="middle" font-family="Cinzel,serif" font-style="italic" font-size="8" letter-spacing=".4" fill="#4A7BB5">custodiamos su legado.</text>
-              <text x="170" y="206" text-anchor="middle" font-family="Inter,sans-serif" font-size="5" fill="#9CA8B8">Puerto Plata · Santo Domingo · Punta Cana</text>
+              <text x="170" y="206" text-anchor="middle" font-family="Inter,sans-serif" font-size="5" fill="#4A7BB5">Puerto Plata · Santo Domingo · Punta Cana</text>
             </svg>
           </div>
         </div>
@@ -220,7 +220,7 @@
               <text x="170" y="150" text-anchor="middle" font-family="Cinzel,serif" font-weight="600" font-size="10" letter-spacing="2.2" fill="#4A7BB5">HUYGHU &amp; ASOCIADOS</text>
               <line x1="148" y1="158" x2="192" y2="158" stroke="#27426E" stroke-width=".5"/>
               <text x="170" y="178" text-anchor="middle" font-family="Cinzel,serif" font-style="italic" font-size="9" letter-spacing=".4" fill="#4A7BB5">Su cumplimiento, nuestra prioridad.</text>
-              <text x="170" y="206" text-anchor="middle" font-family="Inter,sans-serif" font-size="5" fill="#9CA8B8">Puerto Plata · Santo Domingo · Punta Cana</text>
+              <text x="170" y="206" text-anchor="middle" font-family="Inter,sans-serif" font-size="5" fill="#4A7BB5">Puerto Plata · Santo Domingo · Punta Cana</text>
             </svg>
           </div>
         </div>
@@ -354,9 +354,9 @@ function vcardSVG(brand){
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid meet">
     <defs>
       <linearGradient id="gBg" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#27426E"/>
-        <stop offset=".5" stop-color="#27426E"/>
-        <stop offset="1" stop-color="#27426E"/>
+        <stop offset="0" stop-color="#FFFFFF"/>
+        <stop offset=".5" stop-color="#F5F8FC"/>
+        <stop offset="1" stop-color="#FFFFFF"/>
       </linearGradient>
       <clipPath id="cHV"><circle cx="50" cy="49" r="38"/></clipPath>
       <radialGradient id="gGlow" cx=".5" cy=".18" r=".6">
@@ -376,19 +376,19 @@ function vcardSVG(brand){
     <text x="540" y="722" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="500" font-size="20" letter-spacing="6" fill="#27426E">${tagline}</text>
 
     <!-- CENTER 40% : contact -->
-    <text x="540" y="852" text-anchor="middle" font-family="Cinzel,serif" font-weight="500" font-size="64" fill="#F4F8FB">[Nombre del Socio Director]</text>
+    <text x="540" y="852" text-anchor="middle" font-family="Cinzel,serif" font-weight="500" font-size="64" fill="#27426E">[Nombre del Socio Director]</text>
     <text x="540" y="912" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="500" font-size="26" letter-spacing="6" fill="#27426E">[ DIRECTOR GENERAL ]</text>
     <line x1="440" y1="950" x2="640" y2="950" stroke="#27426E" stroke-width="1"/>
 
-    <g font-family="Inter,sans-serif" font-size="30" fill="#DCE9F4">
+    <g font-family="Inter,sans-serif" font-size="30" fill="#27426E">
       <text x="540" y="1030" text-anchor="middle"><tspan fill="#27426E">e </tspan>${email}</text>
       <text x="540" y="1078" text-anchor="middle"><tspan fill="#27426E">m </tspan>+1 809-261-7938</text>
       <text x="540" y="1126" text-anchor="middle"><tspan fill="#27426E">w </tspan><tspan fill="#27426E">${web}</tspan></text>
-      <text x="540" y="1180" text-anchor="middle" font-size="22" fill="#9CA8B8">Puerto Plata · Santo Domingo · Punta Cana</text>
+      <text x="540" y="1180" text-anchor="middle" font-size="22" fill="#4A7BB5">Puerto Plata · Santo Domingo · Punta Cana</text>
     </g>
 
     <!-- BOTTOM 30% : QR -->
-    <rect x="${qrX-28}" y="${qrY-28}" width="${qrSize+56}" height="${qrSize+56}" fill="#F4F8FB"/>
+    <rect x="${qrX-28}" y="${qrY-28}" width="${qrSize+56}" height="${qrSize+56}" fill="#27426E"/>
     <rect x="${qrX-20}" y="${qrY-20}" width="${qrSize+40}" height="${qrSize+40}" fill="#FFFFFF"/>
     <g transform="translate(${qrX} ${qrY}) scale(${qrCell})" fill="#27426E"><path d="${qr.path}"/></g>
     <text x="540" y="1730" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="500" font-size="22" letter-spacing="6" fill="#8A98A8">ESCANEA · GUARDAR CONTACTO</text>
