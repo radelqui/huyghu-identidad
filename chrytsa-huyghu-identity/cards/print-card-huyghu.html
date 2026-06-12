@@ -48,10 +48,78 @@
     .actions button{background:#27426E;color:#fff;border:none;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:.1em;padding:8px 16px;cursor:pointer;text-transform:uppercase;border-radius:2px;}
     .actions button:hover{background:#248444;}
   }
-  @media print{.actions,.label{display:none !important}}
+  @media print{.actions,.label,.editor{display:none !important}}
+  /* EDITOR FORM */
+  .editor{
+    background:#F5F8FC;
+    border:1.5px solid #27426E;
+    border-radius:3px;
+    padding:20px 24px 16px;
+    margin-bottom:32px;
+    font-family:'Inter',sans-serif;
+    max-width:600px;
+  }
+  .editor h2{
+    font-family:'Montserrat',sans-serif;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:#27426E;
+    margin:0 0 6px 0;
+  }
+  .editor p{
+    font-size:11px;
+    color:#27426E;
+    margin:0 0 14px 0;
+    line-height:1.5;
+    opacity:.8;
+  }
+  .editor-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;margin-bottom:14px;}
+  .editor label{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#27426E;
+  }
+  .editor input{
+    font-family:'Inter',sans-serif;
+    font-size:12px;
+    color:#27426E;
+    background:#fff;
+    border:1px solid #27426E;
+    border-radius:2px;
+    padding:6px 9px;
+    outline:none;
+  }
+  .editor input:focus{border-color:#248444;box-shadow:0 0 0 2px rgba(36,132,68,.15);}
 </style>
 </head>
 <body>
+  <!-- EDITOR — oculto al imprimir -->
+  <div class="editor">
+    <h2>Editor de tarjeta</h2>
+    <p>Rellena tu nombre, cargo y teléfono. Las tarjetas se actualizarán automáticamente. Pulsa "Imprimir / PDF" para guardar.</p>
+    <div class="editor-grid">
+      <label>Nombre
+        <input id="ed-nombre" type="text" placeholder="Ej: Carlos" value="">
+      </label>
+      <label>Apellidos
+        <input id="ed-apellidos" type="text" placeholder="Ej: de la Torre" value="">
+      </label>
+      <label>Cargo
+        <input id="ed-cargo" type="text" placeholder="Ej: Director Financiero · CPA" value="">
+      </label>
+      <label>Teléfono
+        <input id="ed-telefono" type="text" placeholder="Ej: +1 809-000-0000" value="">
+      </label>
+    </div>
+  </div>
+
   <div class="actions">
     <button onclick="window.print()">Imprimir / PDF</button>
     <button onclick="window.close()">Cerrar</button>
@@ -150,5 +218,48 @@
     </div>
   </div>
 
+<script>
+(function(){
+  var defaults = {
+    nombre: '',
+    apellidos: '',
+    cargo: '',
+    telefono: ''
+  };
+
+  function update(){
+    var nombre    = document.getElementById('ed-nombre').value.trim()    || '[Nombre]';
+    var apellidos = document.getElementById('ed-apellidos').value.trim() || '[Apellidos]';
+    var cargo     = document.getElementById('ed-cargo').value.trim()     || '[Cargo]';
+    var telefono  = document.getElementById('ed-telefono').value.trim()  || '+1 809-000-0000';
+
+    // Update all person-name elements
+    document.querySelectorAll('.person-name').forEach(function(el){
+      el.innerHTML = nombre + '<br>' + apellidos;
+    });
+    // Update all person-role elements
+    document.querySelectorAll('.person-role').forEach(function(el){
+      el.textContent = cargo;
+    });
+    // Update all contact blocks — replace the phone number line
+    document.querySelectorAll('.contact').forEach(function(el){
+      // The contact block has: <span class="lbl">T</span>&nbsp; PHONE<br>LOCATIONS
+      var lbl = el.querySelector('.lbl');
+      if(lbl){
+        // Rebuild innerHTML keeping label and locations
+        var lines = el.innerHTML.split('<br>');
+        if(lines.length >= 2){
+          var loc = lines.slice(1).join('<br>');
+          el.innerHTML = '<span class="lbl">T</span>&nbsp; ' + telefono + '<br>' + loc;
+        }
+      }
+    });
+  }
+
+  ['ed-nombre','ed-apellidos','ed-cargo','ed-telefono'].forEach(function(id){
+    document.getElementById(id).addEventListener('input', update);
+  });
+})();
+</script>
 </body>
 </html>
