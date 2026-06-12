@@ -4,8 +4,8 @@
   "description": "Huyghu & Asociados — Contadores Públicos — Identidad Corporativa",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#2E4470",
-  "theme_color": "#2E4470",
+  "background_color": "#27426E",
+  "theme_color": "#27426E",
   "icons": [
     {
       "src": "/favicons/favicon-16.png",

@@ -9,8 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Montserrat:wght@500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --gold-hi:#4A7BB5; --gold:#2E4470; --gold-mid:#2E4470; --gold-sh:#2E4470;
-    --ink:#2E4470; --paper:#fff; --cream:#FFFFFF; --rule:rgba(10,10,10,.10);
+    --gold-hi:#4A7BB5; --gold:#27426E; --gold-mid:#27426E; --gold-sh:#27426E;
+    --ink:#27426E; --paper:#fff; --cream:#FFFFFF; --rule:rgba(10,10,10,.10);
     --serif:'Cinzel',Georgia,serif; --sans:'Montserrat',sans-serif;
     --body:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
   }
@@ -46,12 +46,12 @@
     background:#fff;border:1px solid var(--rule);padding:18px;display:flex;flex-direction:column;align-items:center;gap:10px;
   }
   .file-card .frame{
-    background:#2E4470;width:96px;height:96px;display:flex;align-items:center;justify-content:center;
+    background:#27426E;width:96px;height:96px;display:flex;align-items:center;justify-content:center;
     border:1px solid rgba(46,68,112,.18);
   }
   .file-card .frame img{display:block;image-rendering:auto}
   .file-card .nm{font-family:var(--mono);font-size:10.5px;color:#3b3b3b;letter-spacing:.04em;text-align:center}
-  .file-card .nm b{display:block;font-family:var(--sans);font-weight:600;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#2E4470;margin-bottom:2px}
+  .file-card .nm b{display:block;font-family:var(--sans);font-weight:600;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#27426E;margin-bottom:2px}
 
   /* === Browser tabs mock === */
   .browser-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
@@ -66,7 +66,7 @@
   .browser .dots{display:flex;gap:6px;margin-right:6px}
   .browser .dots span{width:10px;height:10px;border-radius:50%;background:#d3cfc6}
   .browser .tab{
-    background:#fff;padding:8px 12px;border-radius:6px 6px 0 0;display:flex;align-items:center;gap:8px;font-family:var(--body);font-size:12px;color:#2E4470;
+    background:#fff;padding:8px 12px;border-radius:6px 6px 0 0;display:flex;align-items:center;gap:8px;font-family:var(--body);font-size:12px;color:#27426E;
     box-shadow:0 -1px 0 rgba(46,68,112,.05);
     min-width:200px;
   }
@@ -75,13 +75,13 @@
   .browser .addr{padding:8px 14px 12px;background:#E9E7E1}
   .browser .addr .inp{
     background:#fff;border:1px solid rgba(46,68,112,.08);border-radius:14px;padding:6px 12px;
-    font-family:var(--body);font-size:11.5px;color:#2E4470;display:flex;align-items:center;gap:8px;
+    font-family:var(--body);font-size:11.5px;color:#27426E;display:flex;align-items:center;gap:8px;
   }
   .browser .addr .inp::before{content:"";width:10px;height:10px;border:1.4px solid #888;border-radius:50%;display:inline-block}
   .browser .body{height:140px;background:#fff;background-image:repeating-linear-gradient(180deg,#fff 0 10px,#fafafa 10px 11px)}
-  .browser-label{font-family:var(--mono);font-size:10.5px;color:#2E4470;text-align:center;margin-top:8px;letter-spacing:.06em}
+  .browser-label{font-family:var(--mono);font-size:10.5px;color:#27426E;text-align:center;margin-top:8px;letter-spacing:.06em}
   .safari .chrome-hd{background:#D9D5CB}
-  .safari .tab{border-radius:6px;background:#EFEDE7;color:#2E4470}
+  .safari .tab{border-radius:6px;background:#EFEDE7;color:#27426E}
   .safari .tab.active{background:#fff}
   .firefox .chrome-hd{background:#E9E7E1}
   .firefox .tab{border-radius:6px 6px 0 0}
@@ -90,17 +90,17 @@
   .device-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;align-items:start}
   .iphone{
     width:280px;height:560px;border-radius:42px;
-    background:linear-gradient(180deg,#2E4470,#2E4470);
+    background:linear-gradient(180deg,#27426E,#27426E);
     padding:14px;position:relative;margin:0 auto;
-    box-shadow:0 30px 60px -30px rgba(46,68,112,.4), inset 0 0 0 1.5px #2E4470;
+    box-shadow:0 30px 60px -30px rgba(46,68,112,.4), inset 0 0 0 1.5px #27426E;
   }
-  .iphone .notch{position:absolute;top:18px;left:50%;transform:translateX(-50%);width:84px;height:24px;background:#2E4470;border-radius:14px;z-index:2}
+  .iphone .notch{position:absolute;top:18px;left:50%;transform:translateX(-50%);width:84px;height:24px;background:#27426E;border-radius:14px;z-index:2}
   .iphone .screen{
     width:100%;height:100%;border-radius:30px;overflow:hidden;
     background:
       radial-gradient(circle at 30% 20%, rgba(43,108,176,.22), transparent 55%),
       radial-gradient(circle at 80% 70%, rgba(22,59,107,.25), transparent 55%),
-      linear-gradient(160deg,#2E4470,#2E4470);
+      linear-gradient(160deg,#27426E,#27426E);
     position:relative;
     padding:38px 16px 80px;
     display:flex;flex-direction:column;
@@ -115,39 +115,39 @@
     flex:1;align-content:start;
   }
   .iphone .app{display:flex;flex-direction:column;align-items:center;gap:6px;color:#fff;font-family:var(--body);font-size:10.5px}
-  .iphone .app .ic{width:50px;height:50px;border-radius:12px;background:#2E4470;overflow:hidden;display:flex;align-items:center;justify-content:center;
+  .iphone .app .ic{width:50px;height:50px;border-radius:12px;background:#27426E;overflow:hidden;display:flex;align-items:center;justify-content:center;
     box-shadow:0 2px 4px rgba(46,68,112,.25);}
   .iphone .app .ic img{width:100%;height:100%;display:block}
   .iphone .app .ic.gen{
-    background:linear-gradient(135deg,#4A7BB5,#2E4470);
+    background:linear-gradient(135deg,#4A7BB5,#27426E);
   }
   .iphone .dock{
     position:absolute;bottom:18px;left:14px;right:14px;
     background:rgba(255,255,255,.18);backdrop-filter:blur(20px);
     border-radius:22px;padding:10px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;
   }
-  .iphone .dock .ic{width:46px;height:46px;border-radius:12px;background:#2E4470;margin:0 auto}
+  .iphone .dock .ic{width:46px;height:46px;border-radius:12px;background:#27426E;margin:0 auto}
 
   /* Android home */
   .android{
     width:280px;height:560px;border-radius:32px;padding:8px;
-    background:#2E4470;position:relative;margin:0 auto;
-    box-shadow:0 30px 60px -30px rgba(46,68,112,.4), inset 0 0 0 1.5px #2E4470;
+    background:#27426E;position:relative;margin:0 auto;
+    box-shadow:0 30px 60px -30px rgba(46,68,112,.4), inset 0 0 0 1.5px #27426E;
   }
   .android .screen{
     width:100%;height:100%;border-radius:26px;overflow:hidden;
     background:
       radial-gradient(circle at 70% 30%, rgba(46,68,112,.18), transparent 50%),
-      linear-gradient(180deg,#2E4470,#2E4470);
+      linear-gradient(180deg,#27426E,#27426E);
     padding:36px 14px 70px;display:flex;flex-direction:column;
   }
   .android .status{display:flex;justify-content:space-between;color:#ccc;font-family:var(--body);font-size:11px;padding:0 8px 14px}
   .android .grid-apps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px 0;flex:1;align-content:start}
   .android .app{display:flex;flex-direction:column;align-items:center;gap:6px;color:#fff;font-family:var(--body);font-size:10px}
-  .android .app .ic{width:48px;height:48px;border-radius:50%;background:#2E4470;overflow:hidden}
+  .android .app .ic{width:48px;height:48px;border-radius:50%;background:#27426E;overflow:hidden}
   .android .app .ic img{width:100%;height:100%;display:block;border-radius:50%}
   .android .dock{position:absolute;bottom:14px;left:14px;right:14px;display:grid;grid-template-columns:repeat(5,1fr);gap:8px;background:rgba(255,255,255,.06);border-radius:18px;padding:8px}
-  .android .dock .ic{width:38px;height:38px;border-radius:50%;background:#2E4470;margin:0 auto}
+  .android .dock .ic{width:38px;height:38px;border-radius:50%;background:#27426E;margin:0 auto}
 
   /* Windows tile */
   .winframe{
@@ -160,7 +160,7 @@
   .winframe .ttl{font-family:var(--body);font-weight:600;color:#fff;font-size:13px;margin-bottom:10px;letter-spacing:.02em}
   .winframe .tiles{display:grid;grid-template-columns:1fr 1fr;gap:6px}
   .winframe .tile{background:rgba(255,255,255,.08);padding:10px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;font-family:var(--body);font-size:11px;min-height:74px;border:1px solid rgba(255,255,255,.10)}
-  .winframe .tile.lg{grid-column:span 2;min-height:110px;background:#2E4470;padding:16px;align-items:flex-start;justify-content:space-between;flex-direction:column}
+  .winframe .tile.lg{grid-column:span 2;min-height:110px;background:#27426E;padding:16px;align-items:flex-start;justify-content:space-between;flex-direction:column}
   .winframe .tile.lg img{width:64px;height:64px;display:block;margin-bottom:6px}
   .winframe .tile.lg .nm{font-family:var(--sans);font-weight:600;letter-spacing:.16em;font-size:10px;text-transform:uppercase;color:var(--gold)}
 
@@ -168,17 +168,17 @@
 
   /* Code blocks */
   pre.code{
-    background:#2E4470;color:#DCE9F4;font-family:var(--mono);font-size:11.5px;line-height:1.7;
+    background:#27426E;color:#DCE9F4;font-family:var(--mono);font-size:11.5px;line-height:1.7;
     padding:24px 28px;border-radius:4px;overflow:auto;white-space:pre;
     border:1px solid rgba(46,68,112,.18);
   }
   pre.code .c{color:#6b6b6b}
   pre.code .k{color:#4A7BB5}
   pre.code .s{color:#9fcf99}
-  pre.code .a{color:#2E4470}
+  pre.code .a{color:#27426E}
   .code-hdr{
     display:flex;align-items:center;justify-content:space-between;
-    background:#2E4470;color:#4A7BB5;padding:10px 16px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;
+    background:#27426E;color:#4A7BB5;padding:10px 16px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;
     border:1px solid rgba(46,68,112,.18);border-bottom:none;
   }
   .code-hdr button{background:transparent;border:1px solid rgba(91,155,213,.4);color:#4A7BB5;padding:4px 10px;font-family:var(--mono);font-size:10.5px;cursor:pointer;letter-spacing:.06em}
@@ -229,7 +229,7 @@
       <div class="file-card"><div class="frame"><img src="../favicons/chrytsa/mstile-150.png" width="80" height="80" alt=""></div><div class="nm"><b>mstile-150</b>150×150 · Windows</div></div>
       <div class="file-card"><div class="frame"><img src="../favicons/chrytsa/maskable-icon-512.png" width="80" height="80" alt=""></div><div class="nm"><b>maskable-512</b>512×512 · safe zone</div></div>
       <div class="file-card"><div class="frame" style="background:#fff;border:1px solid #ddd"><img src="../favicons/chrytsa/safari-pinned-tab.svg" width="60" height="60" alt=""></div><div class="nm"><b>safari-pinned</b>SVG monochrome</div></div>
-      <div class="file-card"><div class="frame" style="background:#fff;color:#2E4470;font-family:'JetBrains Mono';font-size:11px;letter-spacing:.06em;flex-direction:column;gap:4px">
+      <div class="file-card"><div class="frame" style="background:#fff;color:#27426E;font-family:'JetBrains Mono';font-size:11px;letter-spacing:.06em;flex-direction:column;gap:4px">
         <div style="font-family:var(--sans);font-weight:600;letter-spacing:.16em;font-size:10px">ICO</div>
         <div style="font-size:9.5px;color:#6b6b6b">16+32+48</div>
       </div><div class="nm"><b>favicon.ico</b>multi-size pack</div></div>
@@ -248,7 +248,7 @@
       <div class="file-card"><div class="frame"><img src="../favicons/huyghu/mstile-150.png" width="80" height="80" alt=""></div><div class="nm"><b>mstile-150</b>150×150 · Windows</div></div>
       <div class="file-card"><div class="frame"><img src="../favicons/huyghu/maskable-icon-512.png" width="80" height="80" alt=""></div><div class="nm"><b>maskable-512</b>512×512 · safe zone</div></div>
       <div class="file-card"><div class="frame" style="background:#fff;border:1px solid #ddd"><img src="../favicons/huyghu/safari-pinned-tab.svg" width="60" height="60" alt=""></div><div class="nm"><b>safari-pinned</b>SVG monochrome</div></div>
-      <div class="file-card"><div class="frame" style="background:#fff;color:#2E4470;font-family:'JetBrains Mono';font-size:11px;letter-spacing:.06em;flex-direction:column;gap:4px">
+      <div class="file-card"><div class="frame" style="background:#fff;color:#27426E;font-family:'JetBrains Mono';font-size:11px;letter-spacing:.06em;flex-direction:column;gap:4px">
         <div style="font-family:var(--sans);font-weight:600;letter-spacing:.16em;font-size:10px">ICO</div>
         <div style="font-size:9.5px;color:#6b6b6b">16+32+48</div>
       </div><div class="nm"><b>favicon.ico</b>multi-size pack</div></div>
@@ -486,10 +486,10 @@
 <span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"icon"</span> <span class="a">type</span>=<span class="s">"image/png"</span> <span class="a">sizes</span>=<span class="s">"16x16"</span> <span class="a">href</span>=<span class="s">"/favicons/favicon-16.png"</span><span class="k">&gt;</span>
 <span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"icon"</span> <span class="a">type</span>=<span class="s">"image/png"</span> <span class="a">sizes</span>=<span class="s">"32x32"</span> <span class="a">href</span>=<span class="s">"/favicons/favicon-32.png"</span><span class="k">&gt;</span>
 <span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"apple-touch-icon"</span> <span class="a">sizes</span>=<span class="s">"180x180"</span> <span class="a">href</span>=<span class="s">"/favicons/apple-touch-icon-180.png"</span><span class="k">&gt;</span>
-<span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"mask-icon"</span> <span class="a">href</span>=<span class="s">"/favicons/safari-pinned-tab.svg"</span> <span class="a">color</span>=<span class="s">"#2E4470"</span><span class="k">&gt;</span>
+<span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"mask-icon"</span> <span class="a">href</span>=<span class="s">"/favicons/safari-pinned-tab.svg"</span> <span class="a">color</span>=<span class="s">"#27426E"</span><span class="k">&gt;</span>
 <span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"manifest"</span> <span class="a">href</span>=<span class="s">"/favicons/manifest.json"</span><span class="k">&gt;</span>
-<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"theme-color"</span> <span class="a">content</span>=<span class="s">"#2E4470"</span><span class="k">&gt;</span>
-<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"msapplication-TileColor"</span> <span class="a">content</span>=<span class="s">"#2E4470"</span><span class="k">&gt;</span>
+<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"theme-color"</span> <span class="a">content</span>=<span class="s">"#27426E"</span><span class="k">&gt;</span>
+<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"msapplication-TileColor"</span> <span class="a">content</span>=<span class="s">"#27426E"</span><span class="k">&gt;</span>
 <span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"msapplication-TileImage"</span> <span class="a">content</span>=<span class="s">"/favicons/mstile-150.png"</span><span class="k">&gt;</span>
 <span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"application-name"</span> <span class="a">content</span>=<span class="s">"Grupo Chrytsa"</span><span class="k">&gt;</span>
 <span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"apple-mobile-web-app-title"</span> <span class="a">content</span>=<span class="s">"Chrytsa"</span><span class="k">&gt;</span>
@@ -503,10 +503,10 @@
 <span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"icon"</span> <span class="a">type</span>=<span class="s">"image/png"</span> <span class="a">sizes</span>=<span class="s">"16x16"</span> <span class="a">href</span>=<span class="s">"/favicons/favicon-16.png"</span><span class="k">&gt;</span>
 <span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"icon"</span> <span class="a">type</span>=<span class="s">"image/png"</span> <span class="a">sizes</span>=<span class="s">"32x32"</span> <span class="a">href</span>=<span class="s">"/favicons/favicon-32.png"</span><span class="k">&gt;</span>
 <span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"apple-touch-icon"</span> <span class="a">sizes</span>=<span class="s">"180x180"</span> <span class="a">href</span>=<span class="s">"/favicons/apple-touch-icon-180.png"</span><span class="k">&gt;</span>
-<span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"mask-icon"</span> <span class="a">href</span>=<span class="s">"/favicons/safari-pinned-tab.svg"</span> <span class="a">color</span>=<span class="s">"#2E4470"</span><span class="k">&gt;</span>
+<span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"mask-icon"</span> <span class="a">href</span>=<span class="s">"/favicons/safari-pinned-tab.svg"</span> <span class="a">color</span>=<span class="s">"#27426E"</span><span class="k">&gt;</span>
 <span class="k">&lt;link</span> <span class="a">rel</span>=<span class="s">"manifest"</span> <span class="a">href</span>=<span class="s">"/favicons/manifest.json"</span><span class="k">&gt;</span>
-<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"theme-color"</span> <span class="a">content</span>=<span class="s">"#2E4470"</span><span class="k">&gt;</span>
-<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"msapplication-TileColor"</span> <span class="a">content</span>=<span class="s">"#2E4470"</span><span class="k">&gt;</span>
+<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"theme-color"</span> <span class="a">content</span>=<span class="s">"#27426E"</span><span class="k">&gt;</span>
+<span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"msapplication-TileColor"</span> <span class="a">content</span>=<span class="s">"#27426E"</span><span class="k">&gt;</span>
 <span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"msapplication-TileImage"</span> <span class="a">content</span>=<span class="s">"/favicons/mstile-150.png"</span><span class="k">&gt;</span>
 <span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"application-name"</span> <span class="a">content</span>=<span class="s">"Huyghu &amp; Asociados"</span><span class="k">&gt;</span>
 <span class="k">&lt;meta</span> <span class="a">name</span>=<span class="s">"apple-mobile-web-app-title"</span> <span class="a">content</span>=<span class="s">"Huyghu"</span><span class="k">&gt;</span>
@@ -530,8 +530,8 @@
   <span class="a">"description"</span>: <span class="s">"Grupo Chrytsa Asesores — Identidad Corporativa"</span>,
   <span class="a">"start_url"</span>: <span class="s">"/"</span>,
   <span class="a">"display"</span>: <span class="s">"standalone"</span>,
-  <span class="a">"background_color"</span>: <span class="s">"#2E4470"</span>,
-  <span class="a">"theme_color"</span>: <span class="s">"#2E4470"</span>,
+  <span class="a">"background_color"</span>: <span class="s">"#27426E"</span>,
+  <span class="a">"theme_color"</span>: <span class="s">"#27426E"</span>,
   <span class="a">"icons"</span>: [
     { <span class="a">"src"</span>: <span class="s">"/favicons/favicon-16.png"</span>,         <span class="a">"sizes"</span>: <span class="s">"16x16"</span>,   <span class="a">"type"</span>: <span class="s">"image/png"</span> },
     { <span class="a">"src"</span>: <span class="s">"/favicons/favicon-32.png"</span>,         <span class="a">"sizes"</span>: <span class="s">"32x32"</span>,   <span class="a">"type"</span>: <span class="s">"image/png"</span> },
@@ -550,8 +550,8 @@
   <span class="a">"description"</span>: <span class="s">"Huyghu &amp; Asociados — Contadores Públicos · Identidad"</span>,
   <span class="a">"start_url"</span>: <span class="s">"/"</span>,
   <span class="a">"display"</span>: <span class="s">"standalone"</span>,
-  <span class="a">"background_color"</span>: <span class="s">"#2E4470"</span>,
-  <span class="a">"theme_color"</span>: <span class="s">"#2E4470"</span>,
+  <span class="a">"background_color"</span>: <span class="s">"#27426E"</span>,
+  <span class="a">"theme_color"</span>: <span class="s">"#27426E"</span>,
   <span class="a">"icons"</span>: [
     { <span class="a">"src"</span>: <span class="s">"/favicons/favicon-16.png"</span>,         <span class="a">"sizes"</span>: <span class="s">"16x16"</span>,   <span class="a">"type"</span>: <span class="s">"image/png"</span> },
     { <span class="a">"src"</span>: <span class="s">"/favicons/favicon-32.png"</span>,         <span class="a">"sizes"</span>: <span class="s">"32x32"</span>,   <span class="a">"type"</span>: <span class="s">"image/png"</span> },
@@ -567,7 +567,7 @@
   <footer>
     <div>Grupo Chrytsa · Identidad Corporativa<br>Bloque 02 / 08 — Favicon Set</div>
     <div class="c">Confidencial · Uso interno autorizado<br>v1.0 — 2026.05</div>
-    <div class="r">20 archivos · ICO · PNG · SVG · JSON<br>theme-color #2E4470 · accent #2E4470</div>
+    <div class="r">20 archivos · ICO · PNG · SVG · JSON<br>theme-color #27426E · accent #27426E</div>
   </footer>
 
 </div>

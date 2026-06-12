@@ -11,16 +11,16 @@ Entrega completa en 8 bloques. Material editable en herramientas estándar (Figm
 El símbolo definitivo (extraído del bordado/PDF originales) es una **esfera azul** con una **S serpentina lima** de 3 segmentos. **HUYGHU** añade un **arco exterior fino** que abraza la esfera; **Grupo Chrytsa** usa la esfera limpia **sin arco** (ya no lleva anillo orbital punteado). Geometría + colores propagados a los 8 bloques: guías, deck, tarjetas, firmas, emails, favicons (PNG + SVG regenerados) y 36 piezas sociales (SVG + PNG). Fuente única de verdad en `logo/` (`huyghu-mark.svg`, `chrytsa-mark.svg`, `*-lockup.svg`).
 Nota: los `favicon.ico` binarios multi-tamaño no se regeneraron (formato ICO); reexportar desde `favicon-48.png` si se requiere.
 
-Colores oficiales: **Azul** `#2E4470` · **Verde lima** `#2F8F48`.
+Colores oficiales: **Azul** `#27426E` · **Verde lima** `#248444`.
 
 ## ⚠ v2.0 — Cambio de paleta (mayo 2026)
 
 Esta versión sustituye a v1.0 (oro/negro). La nueva identidad oficial vuelve a los **colores originales del bordado HUYGHU**:
 
-- **Azul Corporativo** `#2E4470` — color estructural (esfera, arco, taglines, divisores)
-- **Verde Lima** `#2F8F48` — acento de marca (wordmark, S serpentina, CTAs)
+- **Azul Corporativo** `#27426E` — color estructural (esfera, arco, taglines, divisores)
+- **Verde Lima** `#248444` — acento de marca (wordmark, S serpentina, CTAs)
 - **Blanco** `#FFFFFF` — fondo principal canónico
-- **Gris Oscuro** `#2E4470` — body text, fondos premium oscuros
+- **Gris Oscuro** `#27426E` — body text, fondos premium oscuros
 
 Ver `BRAND-PALETTE.md` para la paleta completa con HEX/RGB/CMYK/Pantone.
 

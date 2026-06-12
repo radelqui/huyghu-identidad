@@ -11,7 +11,7 @@ Paleta institucional actualizada (mayo 2026). Reemplaza la paleta oro/negro v1.0
 | **Azul Corporativo** | `#2B6CB0` | 43 · 108 · 176 | 76 · 39 · 0 · 31 | 285 C | Contorno esfera, tagline "CONTADORES PÚBLICOS", elementos estructurales, divisores |
 | **Verde Lima** | `#8DC63F` | 141 · 198 · 63 | 29 · 0 · 68 · 22 | 369 C | Wordmark "Huyghu & Asoc. SRL", bandas internas de la esfera, CTAs, highlights |
 | **Blanco Papel** | `#FFFFFF` | 255 · 255 · 255 | 0 · 0 · 0 · 0 | — | Fondo principal canónico |
-| **Gris Oscuro** | `#2E4470` | 26 · 26 · 46 | 43 · 43 · 0 · 82 | Black 7 C | Body text, fondos premium oscuros |
+| **Gris Oscuro** | `#27426E` | 26 · 26 · 46 | 43 · 43 · 0 · 82 | Black 7 C | Body text, fondos premium oscuros |
 
 ---
 
@@ -67,7 +67,7 @@ linear-gradient(135deg,
 
 1. **Lima `#8DC63F` es exclusivo del wordmark y CTAs**. No usar en body text largo (cansa la vista).
 2. **Azul `#2B6CB0` es el color estructural**: contornos, taglines, divisores, eyebrows. No mezclar con otros azules.
-3. **Fondo canónico = `#FFFFFF`** (blanco puro). Para variantes premium oscuras usar `#2E4470` (gris oscuro azulado), nunca negro puro.
+3. **Fondo canónico = `#FFFFFF`** (blanco puro). Para variantes premium oscuras usar `#27426E` (gris oscuro azulado), nunca negro puro.
 4. **Contraste mínimo AA**: lima sobre blanco = 2.5:1 ⚠ (usar SOLO para wordmark/CTAs grandes 18pt+) · azul sobre blanco = 5.2:1 ✓ · gris oscuro sobre blanco = 14.8:1 ✓
 5. **Para impresión foil**: Pantone 285 C (azul) + Pantone 369 C (lima). Para Touche Cover 350g + UV selectivo sobre lima.
 6. **No combinar lima con amarillos, naranjas o dorados**. La paleta es bicolor: azul + lima sobre blanco.
