@@ -40,6 +40,9 @@
   .back-rule{height:.3mm;background:#248444;width:20mm;}
   .back-slogan{font-family:'Montserrat',sans-serif;font-weight:500;font-size:6pt;letter-spacing:.08em;color:#248444;text-align:center;}
   .back-locations{font-family:'Inter',sans-serif;font-weight:400;font-size:5.2pt;color:#27426E;opacity:.7;letter-spacing:.08em;text-align:center;margin-top:.5mm;}
+  /* QR */
+  .qr-wrap{display:flex;align-items:center;justify-content:center;margin-top:1.5mm;}
+  .qr-wrap canvas{display:block;}
   @media screen{
     body{padding:40px;display:flex;flex-direction:column;align-items:center;gap:36px;}
     .sheet{box-shadow:0 8px 32px rgba(46,68,112,.18),0 0 0 .5px rgba(46,68,112,.12);}
@@ -116,6 +119,9 @@
       </label>
       <label>Teléfono
         <input id="ed-telefono" type="text" placeholder="Ej: +1 809-000-0000" value="">
+      </label>
+      <label>Email
+        <input id="ed-email" type="text" placeholder="Ej: nombre@huyghusrl.com" value="">
       </label>
     </div>
   </div>
@@ -215,17 +221,53 @@
       <div class="back-rule"></div>
       <div class="back-slogan">Su cumplimiento, nuestra prioridad.</div>
       <div class="back-locations">Puerto Plata &middot; Santo Domingo &middot; Punta Cana</div>
+      <div class="qr-wrap" id="qr-container"></div>
     </div>
   </div>
 
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 <script>
 (function(){
-  var defaults = {
-    nombre: '',
-    apellidos: '',
-    cargo: '',
-    telefono: ''
-  };
+  var qrInstance = null;
+
+  function buildVCard(){
+    var nombre    = document.getElementById('ed-nombre').value.trim()    || '';
+    var apellidos = document.getElementById('ed-apellidos').value.trim() || '';
+    var cargo     = document.getElementById('ed-cargo').value.trim()     || '';
+    var telefono  = document.getElementById('ed-telefono').value.trim()  || '';
+    var email     = document.getElementById('ed-email').value.trim()     || '';
+    var fullName  = (nombre + ' ' + apellidos).trim();
+    if(!fullName) return '';
+    var lines = [
+      'BEGIN:VCARD',
+      'VERSION:3.0',
+      'N:' + apellidos + ';' + nombre + ';;;',
+      'FN:' + fullName,
+      'ORG:HUYGHU Y ASOC, SRL',
+      'TITLE:' + cargo
+    ];
+    if(telefono) lines.push('TEL;TYPE=CELL:' + telefono);
+    if(email)    lines.push('EMAIL:' + email);
+    lines.push('URL:https://www.huyghusrl.com');
+    lines.push('ADR;TYPE=WORK:;;Puerto Plata, Santo Domingo, Punta Cana;;;;');
+    lines.push('END:VCARD');
+    return lines.join('\n');
+  }
+
+  function updateQR(){
+    var container = document.getElementById('qr-container');
+    var vcard = buildVCard();
+    container.innerHTML = '';
+    if(!vcard) return;
+    qrInstance = new QRCode(container, {
+      text: vcard,
+      width: 64,
+      height: 64,
+      colorDark: '#27426E',
+      colorLight: '#FFFFFF',
+      correctLevel: QRCode.CorrectLevel.M
+    });
+  }
 
   function update(){
     var nombre    = document.getElementById('ed-nombre').value.trim()    || '[Nombre]';
@@ -233,20 +275,15 @@
     var cargo     = document.getElementById('ed-cargo').value.trim()     || '[Cargo]';
     var telefono  = document.getElementById('ed-telefono').value.trim()  || '+1 809-000-0000';
 
-    // Update all person-name elements
     document.querySelectorAll('.person-name').forEach(function(el){
       el.innerHTML = nombre + '<br>' + apellidos;
     });
-    // Update all person-role elements
     document.querySelectorAll('.person-role').forEach(function(el){
       el.textContent = cargo;
     });
-    // Update all contact blocks — replace the phone number line
     document.querySelectorAll('.contact').forEach(function(el){
-      // The contact block has: <span class="lbl">T</span>&nbsp; PHONE<br>LOCATIONS
       var lbl = el.querySelector('.lbl');
       if(lbl){
-        // Rebuild innerHTML keeping label and locations
         var lines = el.innerHTML.split('<br>');
         if(lines.length >= 2){
           var loc = lines.slice(1).join('<br>');
@@ -254,9 +291,10 @@
         }
       }
     });
+    updateQR();
   }
 
-  ['ed-nombre','ed-apellidos','ed-cargo','ed-telefono'].forEach(function(id){
+  ['ed-nombre','ed-apellidos','ed-cargo','ed-telefono','ed-email'].forEach(function(id){
     document.getElementById(id).addEventListener('input', update);
   });
 })();

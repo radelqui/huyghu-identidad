@@ -52,6 +52,8 @@
   .back-wordmark-secondary{font-family:'Montserrat',sans-serif;font-weight:600;font-size:6.5pt;letter-spacing:.1em;color:#248444;text-align:center;}
   .back-slogan{font-family:'Montserrat',sans-serif;font-weight:500;font-size:5.6pt;letter-spacing:.08em;color:#27426E;text-align:center;opacity:.7;margin-top:.5mm;}
   .back-locations{font-family:'Inter',sans-serif;font-weight:400;font-size:5pt;color:#27426E;opacity:.6;letter-spacing:.08em;text-align:center;margin-top:.5mm;}
+  .qr-wrap{display:flex;align-items:center;justify-content:center;margin-top:1.5mm;}
+  .qr-wrap canvas{display:block;}
 
   @media screen{
     body{padding:40px;display:flex;flex-direction:column;align-items:center;gap:36px;}
@@ -129,6 +131,9 @@
       </label>
       <label>Teléfono
         <input id="ed-telefono" type="text" placeholder="Ej: +1 809-261-7938" value="">
+      </label>
+      <label>Email
+        <input id="ed-email" type="text" placeholder="Ej: nombre@grupochrytsa.com" value="">
       </label>
     </div>
   </div>
@@ -210,26 +215,66 @@
       </div>
       <div class="back-slogan">Su cumplimiento, nuestra prioridad.</div>
       <div class="back-locations">Puerto Plata &middot; Santo Domingo &middot; Punta Cana</div>
+      <div class="qr-wrap" id="qr-container"></div>
     </div>
   </div>
 
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 <script>
 (function(){
+  var qrInstance = null;
+
+  function buildVCard(){
+    var nombre    = document.getElementById('ed-nombre').value.trim()    || '';
+    var apellidos = document.getElementById('ed-apellidos').value.trim() || '';
+    var cargo     = document.getElementById('ed-cargo').value.trim()     || '';
+    var telefono  = document.getElementById('ed-telefono').value.trim()  || '';
+    var email     = document.getElementById('ed-email').value.trim()     || '';
+    var fullName  = (nombre + ' ' + apellidos).trim();
+    if(!fullName) return '';
+    var lines = [
+      'BEGIN:VCARD',
+      'VERSION:3.0',
+      'N:' + apellidos + ';' + nombre + ';;;',
+      'FN:' + fullName,
+      'ORG:Grupo Chrytsa;HUYGHU Y ASOC, SRL',
+      'TITLE:' + cargo
+    ];
+    if(telefono) lines.push('TEL;TYPE=CELL:' + telefono);
+    if(email)    lines.push('EMAIL:' + email);
+    lines.push('URL:https://www.grupochrytsa.com');
+    lines.push('ADR;TYPE=WORK:;;Puerto Plata, Santo Domingo, Punta Cana;;;;');
+    lines.push('END:VCARD');
+    return lines.join('\n');
+  }
+
+  function updateQR(){
+    var container = document.getElementById('qr-container');
+    var vcard = buildVCard();
+    container.innerHTML = '';
+    if(!vcard) return;
+    qrInstance = new QRCode(container, {
+      text: vcard,
+      width: 64,
+      height: 64,
+      colorDark: '#27426E',
+      colorLight: '#FFFFFF',
+      correctLevel: QRCode.CorrectLevel.M
+    });
+  }
+
   function update(){
     var nombre    = document.getElementById('ed-nombre').value.trim()    || 'Cristian';
     var apellidos = document.getElementById('ed-apellidos').value.trim() || 'de la Torre';
     var cargo     = document.getElementById('ed-cargo').value.trim()     || 'Director General';
     var telefono  = document.getElementById('ed-telefono').value.trim()  || '+1 809-261-7938';
 
-    // Update all person-name elements
     document.querySelectorAll('.person-name').forEach(function(el){
       el.innerHTML = nombre + '<br>' + apellidos;
     });
-    // Update all person-role elements
     document.querySelectorAll('.person-role').forEach(function(el){
       el.textContent = cargo;
     });
-    // Update all contact blocks — replace the phone number line
     document.querySelectorAll('.contact').forEach(function(el){
       var lbl = el.querySelector('.lbl');
       if(lbl){
@@ -240,9 +285,10 @@
         }
       }
     });
+    updateQR();
   }
 
-  ['ed-nombre','ed-apellidos','ed-cargo','ed-telefono'].forEach(function(id){
+  ['ed-nombre','ed-apellidos','ed-cargo','ed-telefono','ed-email'].forEach(function(id){
     document.getElementById(id).addEventListener('input', update);
   });
 })();
