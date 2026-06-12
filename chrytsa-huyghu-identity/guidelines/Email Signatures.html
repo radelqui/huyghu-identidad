@@ -38,8 +38,8 @@
   .sig-card .gmail-hd .who{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:#888}
   .gmail-body{padding:24px;background:#fff}
   .gmail-body.dark-preview{background:#2E4470}
-  .gmail-body .reply{font-family:Arial,sans-serif;font-size:13px;color:#333;line-height:1.6;margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid #eee}
-  .gmail-body.dark-preview .reply{color:#ccc;border-bottom-color:#333}
+  .gmail-body .reply{font-family:Arial,sans-serif;font-size:13px;color:#2E4470;line-height:1.6;margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid #eee}
+  .gmail-body.dark-preview .reply{color:#ccc;border-bottom-color:#4A7BB5}
 
   .sig-actions{
     background:#FFFFFF;padding:12px 18px;border-top:1px solid var(--rule);
@@ -71,7 +71,7 @@
   footer .r{text-align:right}footer .c{text-align:center}
 
   dialog#srcView{padding:0;border:1px solid var(--gold);max-width:880px;width:90vw;max-height:80vh;background:#2E4470}
-  dialog#srcView::backdrop{background:rgba(0,0,0,.65)}
+  dialog#srcView::backdrop{background:rgba(46,68,112,.65)}
   dialog#srcView .hd{display:flex;align-items:center;justify-content:space-between;background:#2E4470;color:#4A7BB5;padding:12px 20px;font-family:var(--mono);font-size:11.5px;letter-spacing:.08em}
   dialog#srcView .hd button{background:transparent;border:1px solid rgba(91,155,213,.4);color:#4A7BB5;padding:4px 12px;font-family:var(--mono);font-size:10.5px;cursor:pointer}
   dialog#srcView pre{margin:0;padding:24px;font-family:var(--mono);font-size:11px;line-height:1.6;color:#DCE9F4;background:#2E4470;overflow:auto;max-height:calc(80vh - 48px);white-space:pre-wrap;word-break:break-all}
@@ -335,7 +335,7 @@ function buildAll(cfg, banner, gridId, brandLabel){
       card.className = 'sig-card';
       const id = `${cfg.brand}-${s.key}-${t.key}`;
       const srcDoc = `<!doctype html><html><head><meta charset="utf-8"></head><body style="margin:0;padding:24px;background:${t.key==='dark'?'#2E4470':'#ffffff'};">
-        <div style="font-family:Arial,sans-serif;font-size:13px;color:${t.key==='dark'?'#cccccc':'#444444'};line-height:1.6;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid ${t.key==='dark'?'#333':'#eee'};">
+        <div style="font-family:Arial,sans-serif;font-size:13px;color:${t.key==='dark'?'#cccccc':'#2E4470'};line-height:1.6;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid ${t.key==='dark'?'#4A7BB5':'#eee'};">
           Saludos cordiales,<br>
         </div>
         ${html}
