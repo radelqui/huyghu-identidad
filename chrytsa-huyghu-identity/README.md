@@ -24,9 +24,9 @@ Esta versión sustituye a v1.0 (oro/negro). La nueva identidad oficial vuelve a 
 
 Ver `BRAND-PALETTE.md` para la paleta completa con HEX/RGB/CMYK/Pantone.
 
-### Logo de Chrytsa (derivado del de HUYGHU)
+### Logo compartido — Todas las empresas del grupo
 
-Ambas marcas comparten la **esfera azul con la S serpentina lima** como base. La única diferencia es que **HUYGHU lleva un arco exterior fino** que abraza la esfera, mientras que **Grupo Chrytsa usa la esfera limpia sin arco**. El logo de Chrytsa **no usa corona, "G" coronada ni anillo orbital punteado** (legacy descartado).
+Todas las empresas del grupo (Chrytsa, HUYGHU, HUSPEC, HTRN, HODA EDUCA, IDEAS DE NEGOCIO) comparten **el mismo logotipo**: esfera azul con la S serpentina verde y arco exterior relleno azul. Solo cambia el wordmark (nombre de la empresa). Legacy "G coronada" y anillo orbital punteado están descartados.
 
 ---
 

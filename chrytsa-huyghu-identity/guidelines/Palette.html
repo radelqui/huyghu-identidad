@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Paleta Canonica — Chrytsa & HUYGHU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#27426E;
+    --green:#248444;
+    --paper:#FFFFFF;
+    --bg:#F5F8FC;
+    --rule:rgba(39,66,110,.14);
+    --mute:#5A7A9A;
+    --light:#EFF3F7;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--paper);color:var(--blue);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  body{padding:48px 24px 80px;max-width:960px;margin:0 auto}
+
+  .back{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--mute);text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;margin-bottom:40px;transition:.15s}
+  .back:hover{color:var(--green);border-bottom-color:var(--green)}
+
+  h1{font-family:'Cinzel',Georgia,serif;font-weight:500;font-size:clamp(24px,4vw,36px);letter-spacing:.04em;color:var(--blue);line-height:1.1;margin-bottom:8px}
+  .sub{font-family:'Inter',sans-serif;font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute);margin-bottom:48px}
+
+  h2{font-family:'Cinzel',Georgia,serif;font-weight:500;font-size:20px;color:var(--blue);letter-spacing:.06em;margin:48px 0 20px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+
+  .swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;margin-bottom:32px}
+  .swatch{border:1px solid var(--rule);overflow:hidden}
+  .swatch .color{height:80px}
+  .swatch .info{padding:12px 14px}
+  .swatch .name{font-family:'Inter',sans-serif;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
+  .swatch .hex{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--blue);margin-bottom:2px}
+  .swatch .meta{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--mute);letter-spacing:.04em;line-height:1.5}
+
+  .gradient-bar{height:48px;border-radius:4px;margin:16px 0 24px}
+
+  .rules{list-style:none;padding:0;margin:0 0 32px}
+  .rules li{font-family:'Inter',sans-serif;font-size:14px;line-height:1.7;color:var(--blue);padding:8px 0;border-bottom:1px solid var(--rule)}
+  .rules li b{font-weight:600}
+  .rules li code{font-family:'JetBrains Mono',monospace;font-size:12px;background:var(--light);padding:2px 6px;border:1px solid var(--rule)}
+
+  .typo-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px}
+  .typo-card{border:1px solid var(--rule);padding:20px}
+  .typo-card .family{font-size:24px;margin-bottom:8px;color:var(--blue)}
+  .typo-card .label{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);margin-bottom:4px}
+  .typo-card .use{font-family:'Inter',sans-serif;font-size:12px;color:var(--mute)}
+
+  footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--rule);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);text-align:center}
+
+  @media(max-width:600px){
+    .swatches{grid-template-columns:1fr 1fr}
+    .typo-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<a class="back" href="/huyghu-identidad/">&larr; Volver al inicio</a>
+
+<h1>Paleta Canonica</h1>
+<div class="sub">Colores corporativos &middot; HEX &middot; RGB &middot; CMYK &middot; Pantone</div>
+
+<!-- ===== PRIMARIOS ===== -->
+<h2>Colores Primarios</h2>
+<div class="swatches">
+  <div class="swatch">
+    <div class="color" style="background:#27426E"></div>
+    <div class="info">
+      <div class="name">Azul Corporativo</div>
+      <div class="hex">#27426E</div>
+      <div class="meta">RGB 39 &middot; 66 &middot; 110<br>CMYK 65 &middot; 40 &middot; 0 &middot; 57<br>Pantone 2767 C</div>
+    </div>
+  </div>
+  <div class="swatch">
+    <div class="color" style="background:#248444"></div>
+    <div class="info">
+      <div class="name">Verde Corporativo</div>
+      <div class="hex">#248444</div>
+      <div class="meta">RGB 36 &middot; 132 &middot; 68<br>CMYK 73 &middot; 0 &middot; 48 &middot; 48<br>Pantone 349 C</div>
+    </div>
+  </div>
+  <div class="swatch">
+    <div class="color" style="background:#FFFFFF;border:1px solid #ddd"></div>
+    <div class="info">
+      <div class="name">Blanco Papel</div>
+      <div class="hex">#FFFFFF</div>
+      <div class="meta">RGB 255 &middot; 255 &middot; 255<br>CMYK 0 &middot; 0 &middot; 0 &middot; 0<br>Fondo canonico</div>
+    </div>
+  </div>
+  <div class="swatch">
+    <div class="color" style="background:#29426E"></div>
+    <div class="info">
+      <div class="name">Azul Arco</div>
+      <div class="hex">#29426E</div>
+      <div class="meta">RGB 41 &middot; 66 &middot; 110<br>Arco exterior del logo<br>Variante del azul principal</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== COLORES DEL LOGO ===== -->
+<h2>Colores del Logo (fuente de verdad)</h2>
+<p style="font-size:13px;color:var(--mute);margin-bottom:16px;line-height:1.6">Extraidos directamente del archivo <code style="font-family:'JetBrains Mono',monospace;font-size:11px;background:var(--light);padding:2px 6px;border:1px solid var(--rule)">logo-final-vectorizado.svg</code>. El logo de Gemini AI, fuente de verdad para todas las marcas del grupo.</p>
+<div class="swatches">
+  <div class="swatch">
+    <div class="color" style="background:#27426E"></div>
+    <div class="info"><div class="name">Esfera Azul</div><div class="hex">#27426E</div><div class="meta">Contorno principal</div></div>
+  </div>
+  <div class="swatch">
+    <div class="color" style="background:#248444"></div>
+    <div class="info"><div class="name">S Serpentina</div><div class="hex">#248444</div><div class="meta">Bandas diagonales internas</div></div>
+  </div>
+  <div class="swatch">
+    <div class="color" style="background:#29426E"></div>
+    <div class="info"><div class="name">Arco Exterior</div><div class="hex">#29426E</div><div class="meta">Arco relleno que abraza la esfera</div></div>
+  </div>
+  <div class="swatch">
+    <div class="color" style="background:#E1F8EB"></div>
+    <div class="info"><div class="name">Verde Claro</div><div class="hex">#E1F8EB</div><div class="meta">Detalle interior</div></div>
+  </div>
+  <div class="swatch">
+    <div class="color" style="background:#44835A"></div>
+    <div class="info"><div class="name">Verde Medio</div><div class="hex">#44835A</div><div class="meta">Acento secundario</div></div>
+  </div>
+  <div class="swatch">
+    <div class="color" style="background:#3E8056"></div>
+    <div class="info"><div class="name">Verde Oscuro</div><div class="hex">#3E8056</div><div class="meta">Sombra verde</div></div>
+  </div>
+  <div class="swatch">
+    <div class="color" style="background:#3B4D6B"></div>
+    <div class="info"><div class="name">Azul Sombra</div><div class="hex">#3B4D6B</div><div class="meta">Detalle de profundidad</div></div>
+  </div>
+  <div class="swatch">
+    <div class="color" style="background:#CAEAD7"></div>
+    <div class="info"><div class="name">Verde Pastel</div><div class="hex">#CAEAD7</div><div class="meta">Detalle suave</div></div>
+  </div>
+</div>
+
+<!-- ===== SECUNDARIOS UI ===== -->
+<h2>Colores Secundarios (interfaz &amp; web)</h2>
+<div class="swatches">
+  <div class="swatch">
+    <div class="color" style="background:#4A7BB5"></div>
+    <div class="info"><div class="name">Azul Claro</div><div class="hex">#4A7BB5</div><div class="meta">Headlines, highlights</div></div>
+  </div>
+  <div class="swatch">
+    <div class="color" style="background:#1E5090"></div>
+    <div class="info"><div class="name">Azul Medio</div><div class="hex">#1E5090</div><div class="meta">Hover, mid-tones</div></div>
+  </div>
+  <div class="swatch">
+    <div class="color" style="background:#163B6B"></div>
+    <div class="info"><div class="name">Azul Profundo</div><div class="hex">#163B6B</div><div class="meta">Sombras, eyebrows</div></div>
+  </div>
+  <div class="swatch">
+    <div class="color" style="background:#F4F8FB"></div>
+    <div class="info"><div class="name">Card Claro</div><div class="hex">#F4F8FB</div><div class="meta">Surface cards light</div></div>
+  </div>
+  <div class="swatch">
+    <div class="color" style="background:#1F8A5B"></div>
+    <div class="info"><div class="name">Success</div><div class="hex">#1F8A5B</div><div class="meta">Confirmaciones DGII</div></div>
+  </div>
+  <div class="swatch">
+    <div class="color" style="background:#D97757"></div>
+    <div class="info"><div class="name">Warning</div><div class="hex">#D97757</div><div class="meta">Recordatorios</div></div>
+  </div>
+  <div class="swatch">
+    <div class="color" style="background:#B83A26"></div>
+    <div class="info"><div class="name">Error</div><div class="hex">#B83A26</div><div class="meta">Errores criticos</div></div>
+  </div>
+</div>
+
+<!-- ===== GRADIENTE ===== -->
+<h2>Gradiente Azul Oficial</h2>
+<div class="gradient-bar" style="background:linear-gradient(135deg,#4A7BB5 0%,#27426E 35%,#1E5090 70%,#163B6B 100%)"></div>
+<div class="swatches" style="grid-template-columns:repeat(4,1fr)">
+  <div class="swatch"><div class="color" style="background:#4A7BB5;height:40px"></div><div class="info"><div class="hex">#4A7BB5</div><div class="meta">0% &middot; Highlight</div></div></div>
+  <div class="swatch"><div class="color" style="background:#27426E;height:40px"></div><div class="info"><div class="hex">#27426E</div><div class="meta">35% &middot; Base</div></div></div>
+  <div class="swatch"><div class="color" style="background:#1E5090;height:40px"></div><div class="info"><div class="hex">#1E5090</div><div class="meta">70% &middot; Medio</div></div></div>
+  <div class="swatch"><div class="color" style="background:#163B6B;height:40px"></div><div class="info"><div class="hex">#163B6B</div><div class="meta">100% &middot; Profundo</div></div></div>
+</div>
+
+<!-- ===== REGLAS ===== -->
+<h2>Reglas de Uso</h2>
+<ul class="rules">
+  <li><b>Fondo canonico = <code>#FFFFFF</code></b> (blanco puro). Para variantes premium oscuras usar <code>#27426E</code>, nunca negro puro.</li>
+  <li><b>Verde <code>#248444</code></b> es el color del logo y CTAs. No usar en body text largo.</li>
+  <li><b>Azul <code>#27426E</code></b> es el color estructural: contornos, taglines, divisores, textos.</li>
+  <li><b>Contraste minimo AA</b>: azul sobre blanco = 7.5:1 &check; &middot; verde sobre blanco = 5.3:1 &check;</li>
+  <li><b>Para impresion</b>: Pantone 2767 C (azul) + Pantone 349 C (verde). Touche Cover 350g.</li>
+  <li><b>No combinar verde con amarillos, naranjas o dorados</b>. La paleta es bicolor: azul + verde sobre blanco.</li>
+</ul>
+
+<!-- ===== TIPOGRAFIA ===== -->
+<h2>Tipografia Aparejada</h2>
+<div class="typo-grid">
+  <div class="typo-card">
+    <div class="label">Headlines Display</div>
+    <div class="family" style="font-family:'Cinzel',Georgia,serif">Cinzel</div>
+    <div class="use">Serif inscripcional &middot; Google Fonts</div>
+  </div>
+  <div class="typo-card">
+    <div class="label">Body &amp; UI</div>
+    <div class="family" style="font-family:'Inter',sans-serif">Inter</div>
+    <div class="use">Sans-serif neutro &middot; Google Fonts</div>
+  </div>
+  <div class="typo-card">
+    <div class="label">Tracking Labels</div>
+    <div class="family" style="font-family:'Inter',sans-serif;font-weight:600;letter-spacing:.3em;font-size:18px">MONTSERRAT</div>
+    <div class="use">Sans-serif geometrico &middot; Google Fonts</div>
+  </div>
+  <div class="typo-card">
+    <div class="label">Code &amp; Meta</div>
+    <div class="family" style="font-family:'JetBrains Mono',monospace">JetBrains Mono</div>
+    <div class="use">Monospace tecnico &middot; Google Fonts</div>
+  </div>
+</div>
+
+<footer>v2.0.2 &middot; Paleta oficial vigente &middot; Junio 2026 &middot; Grupo Chrytsa &amp; HUYGHU</footer>
+
+</body>
+</html>
